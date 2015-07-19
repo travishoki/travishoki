@@ -1,0 +1,45 @@
+/* Variables
+----------------------*/
+$primaryColor : #83c347;
+$secondaryColor : #499900;
+
+$sidebarWidth : 75px;
+
+$maxContentWidth : 1024px;
+
+
+/* Mixin
+----------------------*/
+@mixin border-radius-all($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin border-radius($r1, $r2, $r3, $r4) {
+  -webkit-border-radius: $r1 $r2 $r3 $r4;
+     -moz-border-radius: $r1 $r2 $r3 $r4;
+      -ms-border-radius: $r1 $r2 $r3 $r4;
+          border-radius: $r1 $r2 $r3 $r4;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin no-select(){
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
