@@ -304,11 +304,9 @@ div.home-gallery ul.site-gallery {
         max-width: 900px;
         overflow: hidden; }
         div.home-gallery ul.site-gallery li.full .info-holder img {
-          float: left; }
+          width: 100%; }
         div.home-gallery ul.site-gallery li.full .info-holder .info {
-          color: white;
-          padding: 20px;
-          margin-left: 200px; }
+          color: white; }
 
 /*============================================================ About ============================================================*/
 div.about-page h2 {
