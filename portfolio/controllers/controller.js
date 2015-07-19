@@ -260,7 +260,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				title : 'International Fulfillment',
 				url : 'http://enspark.net/internationalfulfillment/',
 				siteDesc : 'We provide discounted integrated solutions to ship your products or your customers products for less money.',
-				img : 'internationalfulfillment.png',
+				img : 'international-fulfillment.png',
 				contribution : 'All back-end. Worked with the Flash developer sending information to and from the mobile app. Creating a delivery route system, "text message like" system, and automated tasks.',
 				lang : 'PHP, JavaScript, jQuery, HTML, CSS',
 			},
@@ -308,7 +308,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				title : 'All American Sod Farms',
 				url : 'http://allamericansod.com/',
 				desc : 'All American Sod Farms is a family owned and operated business.',
-				img : 'allAmSod.png',
+				img : 'all-american-sod.png',
 				contribution : 'Before I started working full time as a web developer I was the office manager on the farm. I created and am maintaining this site. It is still a work in progress. I designed and created this custom WordPress theme.',
 				lang : 'PHP, JavaScript, jQuery, HTML, CSS',
 			},
@@ -322,9 +322,9 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 			},
 			{
 				title : 'Debt Free Planning',
-				url : 'http://debtfreeplanning.com',
+				url : 'http://debt-free-planning.com',
 				desc : 'Get a Free Online Report and recommended solution to your debt problem.',
-				img : 'debtFreePlanning.png',
+				img : 'debt-free-planning.png',
 				contribution : 'Front-end construction. Creating a email form for user information requests.',
 				lang : 'PHP, Less CSS, HTML, JavaScript'
 			},
@@ -332,7 +332,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				title : 'Southam Consulting',
 				url : 'http://southamconsulting.net',
 				desc : 'Southam Consulting is a consortium of business specialists in several states who have extensive experience and expertise in helping clients achieve peak performance.',
-				img : 'southamConsulting.png',
+				img : 'southam-consulting.png',
 				contribution : 'Creating a email form for user information requests. Other front-end fixes.',
 				lang : 'PHP, CSS, HTML, JavaScript'
 			}

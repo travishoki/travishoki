@@ -1,0 +1,79 @@
+/*============================================================ Home ============================================================*/
+div.home-gallery{
+	p{
+		display:block;
+		margin-bottom:5px;
+	}
+	h2{
+		text-align: center;
+		padding-top:0px;
+	}
+	ul.site-gallery {
+		list-style:none;
+		padding:0;
+		li{
+			overflow: hidden;
+			position: relative;
+			h2 {
+				color: white;
+			}
+			&.item {
+				.title {
+					height: 70px;
+					position: relative;
+					background: $primaryColor;				
+					h2 {
+						position: absolute;
+						bottom: 0;
+						width: 100%;
+					}
+				}
+				img {
+					margin: 20px auto;
+					display: block;
+					cursor: pointer;
+				}
+				&.active {
+					.active-icon {
+						position: absolute;
+						bottom: 0;
+						width: 100%;
+						img {
+							margin: 0 auto;
+							display: block;
+						}
+					}
+				}
+			}	
+			&.full {
+				background: #333;
+				width: 100%;
+				clear: both;
+				margin-bottom: 20px;
+				padding-bottom: 20px;
+				div.gallery-img-holder {
+					float: left;
+					margin: 0;
+				}				
+				h2 {
+					padding: 20px;
+				}
+				h4 {
+					margin-top: 10px;
+					font-weight: bold;
+				}
+				.info-holder {
+					margin: 0 auto;
+					max-width: 900px;
+					overflow: hidden;
+					img {
+						width: 100%;
+					}
+					.info {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+}
