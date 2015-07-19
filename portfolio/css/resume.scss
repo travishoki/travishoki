@@ -1,0 +1,30 @@
+/*============================================================ Resume =========================================================*/
+div.resume-page{
+	div.resume-content {
+		ul{
+			list-style:none;
+			padding: 0 0 0 20px;
+			li{
+				margin-top:10px;
+				padding-top:10px;
+				border-top:solid 1px $secondaryColor;
+			}
+			
+			p.job-position{
+				font-weight:bold;
+				clear:both;
+			}
+	
+			ul{
+				list-style:disc;
+				margin-top:5px;
+	
+				li{
+					margin-top:0px;
+					padding-top:0px;
+					border:none;
+				}
+			}
+		}
+	}
+}
