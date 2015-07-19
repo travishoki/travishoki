@@ -1,0 +1,147 @@
+/* Phone */
+
+.tabletOnly{display:none;}
+.desktopOnly{display:none;}
+
+.phoneVisible{display:block;}
+
+#header{
+	padding:20px;
+}
+
+div.branding{
+	img{
+		display:block;
+		margin:0 auto;
+	}
+}
+
+nav{
+	ul{
+		
+		li{
+			width:40%;
+			text-align:center;
+			margin: 5px 5%  0 5%;
+			padding:3px 0;
+		}
+	}
+}
+
+div.banner-holder{
+	div.banner{
+		div.bannerText{
+			width: 200px;
+		}
+	}
+}
+
+.portfolio-menu{
+	width:280px;
+	
+	button{
+		width:83px;
+		margin: 0 3px;
+	}
+}
+
+.content-holder{
+	.content{
+		padding:20px;
+	}
+}
+
+/*===== Home Page =====*/
+div.home-gallery{
+	div.gallery-img-holder{
+		margin:0 auto 5px auto;
+	}
+}
+
+/*===== Flash Page =====*/
+div.flash-gallery{
+	ul.ensparkCourseThumbs{
+		li{
+			width:39%;
+			padding:10px 5%;
+		}
+		li:nth-child(odd){
+			clear:both;
+		}
+	}
+}
+
+/*===== Contact Page =====*/
+div.contact-page{
+	h1{
+		margin-top:20px;
+	}
+	img{
+		display:block;
+		margin:0 auto;
+	}
+}
+
+/*===== About Page =====*/
+div.about-page{
+	h1{
+		margin-top:20px;
+	}
+	img{
+		display:block;
+		margin:0 auto;
+	}
+}
+
+/*===== Flash Page =====*/
+div.flash-gallery ul{
+	li{
+		width:50%;
+		
+		img{
+			width:100%;
+		}
+	}
+	li:nth-child(odd){
+		clear:left;
+	}
+}
+
+/*===== Resume Page =====*/
+div.resume-page{
+	ul{
+		padding:0;
+		
+		ul li{
+			margin-left: 40px;
+		}
+		
+		p.date{
+			font-size:12px;
+			margin-bottom: 5px;
+		}
+		p.location{
+			font-size:12px;
+		}
+	}
+}
+
+/*===== Apps Page =====*/
+div.app-gallery{
+	.section{
+		img{
+			margin:0 auto;
+			display:block;
+		}
+	}
+	.allamsod{
+		img{
+			width:200px;
+		}
+	}
+	.puttingTour{
+		img{
+			width:300px;
+		}
+	}
+}
