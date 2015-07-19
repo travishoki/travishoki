@@ -390,12 +390,10 @@ div.home-gallery{
 					max-width: 900px;
 					overflow: hidden;
 					img {
-						float: left;
+						width: 100%;
 					}
 					.info {
 						color: white;
-						padding: 20px;
-						margin-left: 200px;
 					}
 				}
 			}
