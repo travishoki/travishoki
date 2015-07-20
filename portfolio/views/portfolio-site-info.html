@@ -1,10 +1,10 @@
 <h2>{{site.title}}</h2>
 
 <div class="row info-holder">
-	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-		<img ng-src="portfolio/imgs/websites/{{site.img}}" width="200" height="300" title="{{site.title}}"/>
+	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+		<img ng-src="portfolio/imgs/websites/{{site.img}}" width="200" height="300" title="{{site.title}}" class="website-img"/>
 	</div>
-	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 info">
+	<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 info">
 		<h4>Site Description:</h4>
 		<p>{{site.desc}}</p>
 
@@ -12,7 +12,13 @@
 		<p>{{site.contribution}}</p>
 
 		<h4>Languages:</h4>
-		<p>{{site.lang}}</p>
+
+		<div class="centeredmenu">
+			<ul class="techs">
+				<li ng-repeat="tech in site.techs" ng-class="tech" class="lite" title="{{tech}}"></li>
+			</ul>
+		</div>
+
 
 		<a href="{{site.url}}" class="btn btn-green" target="_blank">View</a>
 	</div>	

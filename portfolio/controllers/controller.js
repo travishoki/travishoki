@@ -14,7 +14,7 @@ app.controller('mainCtrl', function($scope, $http, $location){
 	};//setRoute
 
 	$scope.backToTop = function(route){
-		$('body,html').animate({
+		$('body|html').animate({
 			scrollTop: 0
 		}, 800);
 	}	
@@ -63,6 +63,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 
 	$scope.init = function(){
 		$scope.sites = $scope.getSites();
+		$scope.site_filters = $scope.getFilters();
 	};//init
 
 	$scope.openModal = function ($event, $index, site) {		
@@ -109,10 +110,10 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 		var breakpoint = getBreakpoint();
 		switch(breakpoint){
 			case 'xs':
-			case 'sm':
 				diff = current_index % 2;
 				diff = 2 - diff;
 				break;
+			case 'sm':
 			case 'md':
 			case 'lg':
 				diff = current_index % 3;
@@ -182,47 +183,51 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 
 	};
 
+	$scope.getFilters = function(){
+		return ['HTML','JavaScript','CSS','jQuery','AngularJs','WordPress','Python','PHP','LESS CSS'];
+	};//getFilters
+
 	$scope.getSites = function(){
-		return [
+		var array = [
 			{
 				title : 'Room Choice',
 				url : 'http://roomchoice.com/',
 				desc : 'This is a steady downhill race perfect for first time runners, as well as those looking to improve their time. Fun to be had includes saints and sinners aid stations and heaven and heck finish lines.',
 				img: 'roomchoice.png',
-				contribution : 'Creationg of registration form, authorize.net intergration, customization of wordpress theme.',
-				lang : 'AngularJs, Python, JavaScript, jQuery, HTML, CSS',
+				contribution : 'Creationg of registration form, authorize.net intergration, customization of WordPress theme.',
+				techs: 'AngularJs|Python|JavaScript|jQuery|HTML|LESS CSS',
 			},
 			{
 				title : 'Eric Aroca',
 				url : 'http://ericaroca.com/',
 				desc : 'This is a steady downhill race perfect for first time runners, as well as those looking to improve their time. Fun to be had includes saints and sinners aid stations and heaven and heck finish lines.',
 				img: 'ericaroca.png',
-				contribution : 'Creationg of registration form, authorize.net intergration, customization of wordpress theme.',
-				lang : 'Wordpress, JavaScript, jQuery, HTML, CSS',
+				contribution : 'Creationg of registration form, authorize.net intergration, customization of WordPress theme.',
+				techs: 'WordPress|JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'Rooke Capital Management',
 				url : 'http://rookecapital.com/',
 				desc : 'This is a steady downhill race perfect for first time runners, as well as those looking to improve their time. Fun to be had includes saints and sinners aid stations and heaven and heck finish lines.',
 				img: 'rooke-capital-management.png',
-				contribution : 'Creationg of registration form, authorize.net intergration, customization of wordpress theme.',
-				lang : 'Wordpress, PHP, JavaScript, jQuery, HTML, CSS',
+				contribution : 'Creationg of registration form, authorize.net intergration, customization of WordPress theme.',
+				techs: 'WordPress,PHP|JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'Saints and Sinners Half Marathon and Team Relay',
 				url : 'http://saintsandsinnershalf.com/',
 				desc : 'This is a steady downhill race perfect for first time runners, as well as those looking to improve their time. Fun to be had includes saints and sinners aid stations and heaven and heck finish lines.',
 				img: 'saints-and-sinners.png',
-				contribution : 'Creationg of registration form, authorize.net intergration, customization of wordpress theme.',
-				lang : 'AngularJs, PHP, JavaScript, jQuery, HTML, CSS',
+				contribution : 'Creationg of registration form, authorize.net intergration, customization of WordPress theme.',
+				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'New Life Recovery',
 				url : 'http://www.newlife-recovery.org/',
 				desc : 'Creative Media Group is a full service media production house based in Orem, Utah. We specialize in high quality digital video production, post-production, and motion graphics.',
 				img: 'newLife-recovery.png',
-				contribution : 'Customization of wordpress theme.',
-				lang : 'AngularJs, PHP, JavaScript, jQuery, HTML, CSS',
+				contribution : 'Customization of WordPress theme.',
+				techs: 'PHP|JavaScript|jQuery|HTML|CSS|WordPress',
 			},
 			{
 				title : 'Creative Media Education',
@@ -230,7 +235,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'Creative Media Group is a full service media production house based in Orem, Utah. We specialize in high quality digital video production, post-production, and motion graphics.',
 				img: 'cmeducation.png',
 				contribution : 'Front-end and Back-end, integrating courses the custom LMS.',
-				lang : 'AngularJs, PHP, JavaScript, jQuery, HTML, CSS',
+				techs: 'AngularJs|PHP|JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'LavaVolt',
@@ -238,7 +243,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'LavaVolt is an online film festival and digital distribution solution for independent filmmakers.',
 				img: 'lavavolt.png',
 				contribution : 'All of the back-end, everything from user accounts, to film uploading, to querying from the film library.',
-				lang : 'PHP, JavaScript, jQuery, HTML, CSS',
+				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'Enspark LMS',
@@ -246,7 +251,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'From Leadership Skills to Time Management, our interactive e-Learning courses make people better.',
 				img : 'enspark-lms.png',
 				contribution : 'Finished the second version of the LMS. Restructured the user account and course tracking database. Made information requests dynamic with page jQuery AJAX.',
-				lang : 'PHP, JavaScript, jQuery, HTML, CSS',
+				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'Paradigm Life LMS (Infinite Banking)',
@@ -254,7 +259,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'Infinite Banking is a concept that allows individuals to utilize Permanent Life Insurance in ways that most individuals and even insurance professionals could never have imagined.',
 				img : 'paradigm-life-lms.png',
 				contribution : 'The Paradigm Life LMS was created from the base of the Enspark LMS then customized to fit the needs of Paradigm Life. I added the functionality for multiple user tracks.',
-				lang : 'PHP, JavaScript, jQuery, HTML, CSS',
+				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'International Fulfillment',
@@ -262,7 +267,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				siteDesc : 'We provide discounted integrated solutions to ship your products or your customers products for less money.',
 				img : 'international-fulfillment.png',
 				contribution : 'All back-end. Worked with the Flash developer sending information to and from the mobile app. Creating a delivery route system, "text message like" system, and automated tasks.',
-				lang : 'PHP, JavaScript, jQuery, HTML, CSS',
+				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'The Putting Tour',
@@ -270,7 +275,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'The Putting Tour at Qualifiers Golf will train your nervous system by challenging you with dozens of such putts in a 30 minute round. It really works!',
 				img : 'the-putting-tour.png',
 				contribution : 'Created the user account system, sending information to and from the mobile app. Helped to develop the mobile app for the golf kiosk, as well as the bracket system for the online competitions.',
-				lang : 'PHP, JavaScript, jQuery, HTML, CSS',
+				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'WinInsights',
@@ -278,7 +283,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'WIN Insights is a Diversity and Inclusion - focused learning management system that delivers training, networking, tools, resources, and analytics.',
 				img : 'wininsights.png',
 				contribution : 'Hand created a custom blog for communities to converse about their executive and cultural groups. Also created a custom slider, and several WordPress pages.',
-				lang : 'PHP, JavaScript, jQuery, HTML, CSS',
+				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'Barrier Pest Control',
@@ -286,7 +291,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'Barrier Pest Control will proactively conquer your existing pest populations and prevent future invasions.',
 				img : 'barrier.png',
 				contribution : "Created a cronjob to store customer transactions in a MYSQL database then email a list of those transactions in a daily report to the company owners. Front-end fixes to the WordPress site, fixing styles and updating images. ",
-				lang : 'JavaScript, jQuery, HTML, CSS',
+				techs: 'JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'Enspark',
@@ -294,7 +299,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'From Leadership Skills to Time Management, our interactive e-Learning courses make people better.',
 				img : 'enspark.png',
 				contribution : 'Helping to push the second version of Enspark.com live. Implementing a feed, creating forms, and various front-end fixes.',
-				lang : 'JavaScript, jQuery, HTML, CSS',
+				techs: 'JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'Utah Casa',
@@ -302,7 +307,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'Casa is a volunteer organization that empowers everyday citizens with the ability to transform the lives of abused and neglected children.',
 				img : 'utah-casa.png',
 				contribution : 'Helped to fix the blog functionality and structure in WordPress as well as front-end fixes.',
-				lang : 'PHP, HTML, CSS',
+				techs: 'PHP|HTML|CSS',
 			},
 			{
 				title : 'All American Sod Farms',
@@ -310,7 +315,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'All American Sod Farms is a family owned and operated business.',
 				img : 'all-american-sod.png',
 				contribution : 'Before I started working full time as a web developer I was the office manager on the farm. I created and am maintaining this site. It is still a work in progress. I designed and created this custom WordPress theme.',
-				lang : 'PHP, JavaScript, jQuery, HTML, CSS',
+				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'Paradigm Life (Infinite Banking)',
@@ -318,7 +323,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'Infinite Banking is a concept that allows individuals to utilize Permanent Life Insurance in ways that most individuals and even insurance professionals could never have imagined.',
 				img : 'paradigm-life.png',
 				contribution : 'Helped with the WordPress theme and structure architecture.',
-				lang : 'PHP, JavaScript, jQuery, HTML, CSS'
+				techs: 'PHP|JavaScript|jQuery|HTML|CSS'
 			},
 			{
 				title : 'Debt Free Planning',
@@ -326,7 +331,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'Get a Free Online Report and recommended solution to your debt problem.',
 				img : 'debt-free-planning.png',
 				contribution : 'Front-end construction. Creating a email form for user information requests.',
-				lang : 'PHP, Less CSS, HTML, JavaScript'
+				techs: 'PHP,Less CSS|HTML|JavaScript'
 			},
 			{
 				title : 'Southam Consulting',
@@ -334,9 +339,13 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'Southam Consulting is a consortium of business specialists in several states who have extensive experience and expertise in helping clients achieve peak performance.',
 				img : 'southam-consulting.png',
 				contribution : 'Creating a email form for user information requests. Other front-end fixes.',
-				lang : 'PHP, CSS, HTML, JavaScript'
+				techs: 'PHP|CSS|HTML|JavaScript'
 			}
 		];
+		angular.forEach(array, function(site){
+			site.techs = site.techs.split('|');
+		});
+		return array;
 	};//getSites
 
 	$scope.init();

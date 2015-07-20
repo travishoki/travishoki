@@ -269,6 +269,77 @@ div.banner-holder {
         border: none; } }
 /* Pages
 ---------------------------------*/
+/*============================================================ Tech Icons ============================================================*/
+ul.techs li {
+  width: 32px;
+  height: 32px; }
+  ul.techs li.dark {
+    background-image: url("../imgs/icons/tech-icons-dark.png"); }
+  ul.techs li.lite {
+    background-image: url("../imgs/icons/tech-icons-lite.png"); }
+  ul.techs li.HTML {
+    background-position: 0 0; }
+  ul.techs li.JavaScript {
+    background-position: -32px 0; }
+  ul.techs li.CSS {
+    background-position: -64px 0; }
+  ul.techs li.jQuery {
+    background-position: -96px 0; }
+  ul.techs li.AngularJs {
+    background-position: -128px 0; }
+  ul.techs li.WordPress {
+    background-position: -160px 0; }
+  ul.techs li.Python {
+    background-position: -192px 0; }
+  ul.techs li.PHP {
+    background-position: -224px 0; }
+  ul.techs li.LESS CSS {
+    background-position: -256px 0; }
+
+/*============================================================ Centered Menu ============================================================*/
+.centeredmenu {
+  width: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.centeredmenu ul {
+  clear: left;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  text-align: center; }
+
+.centeredmenu ul li {
+  display: block;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  right: 50%; }
+
+.centeredmenu ul li a {
+  display: block;
+  margin: 0 0 0 1px;
+  padding: 3px 10px;
+  background: #ddd;
+  color: #000;
+  text-decoration: none;
+  line-height: 1.3em; }
+
+.centeredmenu ul li a:hover {
+  background: #369;
+  color: #fff; }
+
+.centeredmenu ul li a.active,
+.centeredmenu ul li a.active:hover {
+  color: #fff;
+  background: #000;
+  font-weight: bold; }
+
 /*============================================================ Home ============================================================*/
 div.home-gallery p {
   display: block;
@@ -276,6 +347,15 @@ div.home-gallery p {
 div.home-gallery h2 {
   text-align: center;
   padding-top: 0px; }
+div.home-gallery ul.techs li {
+  margin: 2px; }
+div.home-gallery .site-filters {
+  background: #39B54C;
+  margin-bottom: 20px;
+  padding: 20px; }
+  div.home-gallery .site-filters ul li img {
+    width: 32px;
+    height: 32px; }
 div.home-gallery ul.site-gallery {
   list-style: none;
   padding: 0; }
@@ -284,25 +364,26 @@ div.home-gallery ul.site-gallery {
     position: relative; }
     div.home-gallery ul.site-gallery li h2 {
       color: white; }
-    div.home-gallery ul.site-gallery li.item .title {
-      height: 70px;
-      position: relative;
-      background: #39B54C; }
-      div.home-gallery ul.site-gallery li.item .title h2 {
+    div.home-gallery ul.site-gallery li.item {
+      cursor: pointer; }
+      div.home-gallery ul.site-gallery li.item .title {
+        height: 70px;
+        position: relative;
+        background: #39B54C; }
+        div.home-gallery ul.site-gallery li.item .title h2 {
+          position: absolute;
+          bottom: 0;
+          width: 100%; }
+      div.home-gallery ul.site-gallery li.item img.website-img {
+        width: 100%;
+        margin-bottom: 10px; }
+      div.home-gallery ul.site-gallery li.item.active .active-icon {
         position: absolute;
         bottom: 0;
         width: 100%; }
-    div.home-gallery ul.site-gallery li.item img {
-      margin: 20px auto;
-      display: block;
-      cursor: pointer; }
-    div.home-gallery ul.site-gallery li.item.active .active-icon {
-      position: absolute;
-      bottom: 0;
-      width: 100%; }
-      div.home-gallery ul.site-gallery li.item.active .active-icon img {
-        margin: 0 auto;
-        display: block; }
+        div.home-gallery ul.site-gallery li.item.active .active-icon img {
+          margin: 0 auto;
+          display: block; }
     div.home-gallery ul.site-gallery li.full {
       background: #333;
       width: 100%;
@@ -321,7 +402,7 @@ div.home-gallery ul.site-gallery {
         margin: 0 auto;
         max-width: 900px;
         overflow: hidden; }
-        div.home-gallery ul.site-gallery li.full .info-holder img {
+        div.home-gallery ul.site-gallery li.full .info-holder img.website-img {
           width: 100%; }
         div.home-gallery ul.site-gallery li.full .info-holder .info {
           color: white; }
