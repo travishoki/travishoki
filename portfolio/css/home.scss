@@ -1,3 +1,91 @@
+/*============================================================ Tech Icons ============================================================*/
+ul.techs {
+	li {
+		width: 32px;
+		height: 32px;
+		&.dark {
+			background-image: url('../imgs/icons/tech-icons-dark.png');
+		}
+		&.lite {
+			background-image: url('../imgs/icons/tech-icons-lite.png');
+		}
+
+		&.HTML {
+			background-position: 0 0;
+		}
+		&.JavaScript {
+			background-position: -32px 0;
+		}
+		&.CSS {
+			background-position: -64px 0;
+		}
+		&.jQuery {
+			background-position: -96px 0;
+		}
+		&.AngularJs {
+			background-position: -128px 0;
+		}
+		&.WordPress {
+			background-position: -160px 0;
+		}
+		&.Python {
+			background-position: -192px 0;
+		}
+		&.PHP {
+			background-position: -224px 0;
+		}
+		&.LESS CSS {
+			background-position: -256px 0;
+		}
+	}
+}
+
+/*============================================================ Centered Menu ============================================================*/
+.centeredmenu {
+   width:100%;
+   overflow:hidden;
+   position:relative;
+}
+.centeredmenu ul {
+   clear:left;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   left:50%;
+   text-align:center;
+}
+.centeredmenu ul li {
+   display:block;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   right:50%;
+}
+.centeredmenu ul li a {
+   display:block;
+   margin:0 0 0 1px;
+   padding:3px 10px;
+   background:#ddd;
+   color:#000;
+   text-decoration:none;
+   line-height:1.3em;
+}
+.centeredmenu ul li a:hover {
+   background:#369;
+   color:#fff;
+}
+.centeredmenu ul li a.active,
+.centeredmenu ul li a.active:hover {
+   color:#fff;
+   background:#000;
+   font-weight:bold;
+}
+
+
 /*============================================================ Home ============================================================*/
 div.home-gallery{
 	p{
@@ -7,6 +95,22 @@ div.home-gallery{
 	h2{
 		text-align: center;
 		padding-top:0px;
+	}
+	ul.techs {
+		li {
+			margin: 2px;
+		}
+	}
+	.site-filters {
+		background: $primaryColor;
+		margin-bottom: 20px;
+		padding: 20px;
+		ul li {
+			img {
+				width: 32px;
+				height: 32px;
+			}
+		}
 	}
 	ul.site-gallery {
 		list-style:none;
@@ -18,6 +122,7 @@ div.home-gallery{
 				color: white;
 			}
 			&.item {
+				cursor: pointer;
 				.title {
 					height: 70px;
 					position: relative;
@@ -28,10 +133,9 @@ div.home-gallery{
 						width: 100%;
 					}
 				}
-				img {
-					margin: 20px auto;
-					display: block;
-					cursor: pointer;
+				img.website-img {
+					width: 100%;
+					margin-bottom: 10px;
 				}
 				&.active {
 					.active-icon {
@@ -66,7 +170,7 @@ div.home-gallery{
 					margin: 0 auto;
 					max-width: 900px;
 					overflow: hidden;
-					img {
+					img.website-img {
 						width: 100%;
 					}
 					.info {
