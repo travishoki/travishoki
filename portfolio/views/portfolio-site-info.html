@@ -5,14 +5,19 @@
 		<img ng-src="portfolio/imgs/websites/{{site.img}}" width="200" height="300" title="{{site.title}}" class="website-img"/>
 	</div>
 	<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 info">
-		<h4>Site Description:</h4>
-		<p>{{site.desc}}</p>
+
+		<div class="client-info">
+			<img ng-src="portfolio/imgs/clients/{{site.img}}" title="{{site.title}}" class="website-logo"/>
+			<p>{{site.desc}}</p>
+		</div>
+
 
 		<h4>My Contribution:</h4>
-		<p>{{site.contribution}}</p>
+		<ul>
+			<li ng-repeat="contribution in site.contributions">{{contribution}}</li>
+		</ul>
 
-		<h4>Languages:</h4>
-
+		<h4>Technology:</h4>
 		<div class="centeredmenu">
 			<ul class="techs">
 				<li ng-repeat="tech in site.techs" ng-class="tech" class="lite"></li>

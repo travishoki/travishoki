@@ -99,6 +99,15 @@ body {
 .desktopVisible {
   display: none; }
 
+.btn {
+  margin: 20px auto 0 auto;
+  display: block;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 0; }
+
 .btn-green {
   background: #39B54C;
   color: white; }
@@ -421,7 +430,8 @@ div.home-gallery ul.site-gallery {
       div.home-gallery ul.site-gallery li.full h2 {
         padding: 20px; }
       div.home-gallery ul.site-gallery li.full h4 {
-        margin-top: 10px;
+        text-align: center;
+        margin: 10px 0;
         font-weight: bold; }
       div.home-gallery ul.site-gallery li.full .info-holder {
         margin: 0 auto;
@@ -431,6 +441,15 @@ div.home-gallery ul.site-gallery {
           width: 100%; }
         div.home-gallery ul.site-gallery li.full .info-holder .info {
           color: white; }
+      div.home-gallery ul.site-gallery li.full .client-info {
+        background: white;
+        color: black;
+        padding: 20px; }
+        div.home-gallery ul.site-gallery li.full .client-info img {
+          display: block;
+          margin: 0 auto 5px auto; }
+      div.home-gallery ul.site-gallery li.full a.btn {
+        width: 150px; }
 
 /*============================================================ Experience =========================================================*/
 div.experience-holder ul {
