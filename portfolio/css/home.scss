@@ -200,7 +200,8 @@ div.home-gallery{
 					padding: 20px;
 				}
 				h4 {
-					margin-top: 10px;
+					text-align: center;
+					margin: 10px 0;
 					font-weight: bold;
 				}
 				.info-holder {
@@ -213,6 +214,18 @@ div.home-gallery{
 					.info {
 						color: white;
 					}
+				}
+				.client-info {
+					background: white;
+					color: black;
+					padding: 20px;
+					img {
+						display: block;
+						margin: 0 auto 5px auto;
+					}
+				}
+				a.btn {
+				  width: 150px;
 				}
 			}
 		}

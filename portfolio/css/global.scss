@@ -102,6 +102,15 @@ body{
 .tabletVisible{display:none;}
 .desktopVisible{display:none;}
 
+.btn {
+  margin: 20px auto 0 auto;
+  display: block;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 0;
+}
 .btn-green {
 	background: $primaryColor;
 	color: white;
