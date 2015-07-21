@@ -59,6 +59,46 @@ config(function($routeProvider){
 	}
 })
 
+.filter('techFilter', function() {
+	// return function (items, site_filters) {
+	// 	angular.forEach(site_filters, function(filter){
+	// 		angular.forEach(items, function(item){
+	// 			if(filter.active){
+	// 				if(items.title == filter.title){
+
+	// 				}
+	// 			}			
+	// 		});
+	// 	});
+	// 	return item;
+	// };
+	return function(items, site_filters){
+		var filter_array = [];
+		angular.forEach(site_filters, function(filter){
+			if(filter.active){
+				filter_array.push(filter.title);
+			}
+		});
+
+		var new_items = [];
+		var valid_count = 0;
+		angular.forEach(items, function(item){
+			valid_count = 0;
+			angular.forEach(filter_array, function(filter){
+				angular.forEach(item.techs, function(tech){
+					if(filter == tech){
+						valid_count++;
+					}
+				});
+			});
+			if(valid_count === filter_array.length){
+				new_items.push(item);						
+			}
+		});
+		return new_items;
+	}
+});
+
 function portfolioCtrl($scope, $http, $modal, $compile){
 
 	$scope.init = function(){
@@ -132,17 +172,6 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 			}
 		}
 
-		// console.log("getBreakpoint: " + breakpoint);
-		// console.log("diff: " + diff);
-		// console.log('index: ' + current_index);
-		// console.log("new_index: " + new_index);
-
-		// console.log('site');
-		// console.dir(site);
-		// console.log('active: '+site.active);
-		// console.log('active: '+site['active']);
-		// console.log('active: '+alreadyClicked);
-
 		if(alreadyClicked){
 			//remove object
 			// console.log('remove object');
@@ -183,8 +212,71 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 
 	};
 
+	$scope.filterStyle = function(tech){
+		// return tech.title+'.' {'inactive':tech.active}
+		var str = tech.title;
+		if(!tech.active){
+			str += ' inactive';
+		}
+		return str;
+	};//filterStyle
+
+	$scope.clickFilter = function(tech){
+		tech.active = !tech.active;
+
+		//Unactivate opposite tech filters
+		switch(tech.title){
+			case 'PHP':
+			case 'WordPress':
+				$scope.switchFilter('Python', false);
+				break;
+			case 'Python':
+				$scope.switchFilter('PHP', false);
+				$scope.switchFilter('WordPress', false);
+				break;
+			case 'jQuery':
+				$scope.switchFilter('AngularJs', false);
+				break;
+			case 'AngularJs':
+				$scope.switchFilter('jQuery', false);
+				break;
+		}//switch
+	};//clickFilter
+
+	$scope.switchFilter = function(title, bool){
+		for(var i = 0 ; i < $scope.site_filters.length ; i++){
+			if($scope.site_filters[i].title == title){
+				$scope.site_filters[i].active = bool;
+				break;
+			}
+		}//for
+	}//switchFilter
+
 	$scope.getFilters = function(){
-		return ['HTML','JavaScript','CSS','jQuery','AngularJs','WordPress','Python','PHP','LESS CSS'];
+		var array = [
+				{
+					title: 'jQuery'
+				},
+				{
+					title: 'AngularJs'
+				},
+				{
+					title: 'WordPress'
+				},
+				{
+					title: 'Python'
+				},
+				{
+					title: 'PHP'
+				},
+				{
+					title: 'LESS-CSS'
+				}
+				];
+		angular.forEach(array, function(item){
+			item.active = false;
+		});
+		return array;
 	};//getFilters
 
 	$scope.getSites = function(){
@@ -195,7 +287,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'This is a steady downhill race perfect for first time runners, as well as those looking to improve their time. Fun to be had includes saints and sinners aid stations and heaven and heck finish lines.',
 				img: 'roomchoice.png',
 				contribution : 'Creationg of registration form, authorize.net intergration, customization of WordPress theme.',
-				techs: 'AngularJs|Python|JavaScript|jQuery|HTML|LESS CSS',
+				techs: 'Python|AngularJs|JavaScript|HTML|LESS-CSS',
 			},
 			{
 				title : 'Eric Aroca',
@@ -203,7 +295,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'This is a steady downhill race perfect for first time runners, as well as those looking to improve their time. Fun to be had includes saints and sinners aid stations and heaven and heck finish lines.',
 				img: 'ericaroca.png',
 				contribution : 'Creationg of registration form, authorize.net intergration, customization of WordPress theme.',
-				techs: 'WordPress|JavaScript|jQuery|HTML|CSS',
+				techs: 'PHP|WordPress|JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'Rooke Capital Management',
@@ -211,7 +303,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'This is a steady downhill race perfect for first time runners, as well as those looking to improve their time. Fun to be had includes saints and sinners aid stations and heaven and heck finish lines.',
 				img: 'rooke-capital-management.png',
 				contribution : 'Creationg of registration form, authorize.net intergration, customization of WordPress theme.',
-				techs: 'WordPress,PHP|JavaScript|jQuery|HTML|CSS',
+				techs: 'PHP|WordPress|JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'Saints and Sinners Half Marathon and Team Relay',
@@ -227,7 +319,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'Creative Media Group is a full service media production house based in Orem, Utah. We specialize in high quality digital video production, post-production, and motion graphics.',
 				img: 'newLife-recovery.png',
 				contribution : 'Customization of WordPress theme.',
-				techs: 'PHP|JavaScript|jQuery|HTML|CSS|WordPress',
+				techs: 'PHP|WordPress|JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'Creative Media Education',
@@ -267,7 +359,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				siteDesc : 'We provide discounted integrated solutions to ship your products or your customers products for less money.',
 				img : 'international-fulfillment.png',
 				contribution : 'All back-end. Worked with the Flash developer sending information to and from the mobile app. Creating a delivery route system, "text message like" system, and automated tasks.',
-				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
+				techs: 'PHP|AngularJs|JavaScript|jQuery|HTML|CSS',
 			},
 			{
 				title : 'The Putting Tour',
@@ -331,7 +423,7 @@ function portfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'Get a Free Online Report and recommended solution to your debt problem.',
 				img : 'debt-free-planning.png',
 				contribution : 'Front-end construction. Creating a email form for user information requests.',
-				techs: 'PHP,Less CSS|HTML|JavaScript'
+				techs: 'PHP,Less-CSS|HTML|JavaScript'
 			},
 			{
 				title : 'Southam Consulting',
