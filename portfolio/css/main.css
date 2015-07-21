@@ -477,20 +477,38 @@ div.resume-page div.resume-content ul {
   list-style: none;
   padding: 0 0 0 20px; }
   div.resume-page div.resume-content ul li {
-    margin-top: 10px;
-    padding-top: 10px;
+    padding: 40px 0;
     border-top: solid 1px #1A733B; }
-  div.resume-page div.resume-content ul p.job-position {
-    font-weight: bold;
-    clear: both; }
   div.resume-page div.resume-content ul ul {
     list-style: disc;
     margin-top: 5px; }
     div.resume-page div.resume-content ul ul li {
-      margin-top: 0px;
-      padding-top: 0px;
+      padding: 0;
       border: none; }
 
+ul.experience li {
+  overflow: hidden;
+  width: 100%; }
+
+/* Mobile
+-----------------------------------*/
+@media (max-width: 767px) {
+  ul.experience li img {
+    display: block;
+    margin: 0 auto; }
+  ul.experience li .experience-content {
+    clear: both; } }
+/* Tablet
+-----------------------------------*/
+@media (min-width: 768px) {
+  ul.experience li:nth-child(even) img {
+    float: right; }
+  ul.experience li:nth-child(even) .experience-content {
+    margin-right: 300px; }
+  ul.experience li:nth-child(odd) img {
+    float: left; }
+  ul.experience li:nth-child(odd) .experience-content {
+    margin-left: 300px; } }
 /*============================================================ Flash =========================================================*/
 div.flash-gallery .section {
   padding: 15px 0;
