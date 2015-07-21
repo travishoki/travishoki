@@ -293,8 +293,33 @@ ul.techs li {
     background-position: -192px 0; }
   ul.techs li.PHP {
     background-position: -224px 0; }
-  ul.techs li.LESS CSS {
+  ul.techs li.LESS-CSS {
     background-position: -256px 0; }
+  ul.techs li.filters {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-image: url("../imgs/icons/tech-icons-filters.png"); }
+    ul.techs li.filters.HTML {
+      background-position: 0 0; }
+    ul.techs li.filters.JavaScript {
+      background-position: -50px 0; }
+    ul.techs li.filters.CSS {
+      background-position: -100px 0; }
+    ul.techs li.filters.jQuery {
+      background-position: -150px 0; }
+    ul.techs li.filters.AngularJs {
+      background-position: -200px 0; }
+    ul.techs li.filters.WordPress {
+      background-position: -250px 0; }
+    ul.techs li.filters.Python {
+      background-position: -300px 0; }
+    ul.techs li.filters.PHP {
+      background-position: -350px 0; }
+    ul.techs li.filters.LESS-CSS {
+      background-position: -400px 0; }
+  ul.techs li.filters.inactive {
+    background-image: url("../imgs/icons/tech-icons-filters-inactive.png"); }
 
 /*============================================================ Centered Menu ============================================================*/
 .centeredmenu {
