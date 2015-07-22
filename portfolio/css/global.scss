@@ -89,7 +89,6 @@ p.caption {
 }
 
 body{
-	background-color: $primaryColor;
 	width:100%;
 	min-width:400px;
 	margin:0 auto;
@@ -132,17 +131,22 @@ body{
 
 h1{margin-bottom:10px;}
 
-#header{
+/*============================================================ Header =========================================================*/
+#header-holder {
+	background-color: $primaryColor;
 	overflow:hidden;
-	color:white;
-	max-width:$maxScreenWidth;
-	padding-top:20px;
-	margin:0 auto;
 	position: relative;
-	
-	div.branding{
-		img {
-			cursor: pointer;
+	z-index: 100;
+	#header{
+		color:white;
+		max-width:$maxScreenWidth;
+		padding-top:20px;
+		margin:0 auto;
+		position: relative;
+		div.branding{
+			img {
+				cursor: pointer;
+			}
 		}
 	}
 }
@@ -296,23 +300,30 @@ div.banner-holder{
 }
 
 
-#footer{
-	padding:10px;
-	overflow:hidden;
+/*============================================================ Footer =========================================================*/
+#footer-holder{
+	background-color: $primaryColor;
 	clear:both;
-	color:white;
-	text-align:center;
-	max-width:$maxScreenWidth;
-	margin:0 auto;
+	margin-top: 20px;
+	position: relative;
+	z-index: 100;
+	#footer{
+		padding:10px;
+		overflow:hidden;
+		color:white;
+		text-align:center;
+		max-width:$maxScreenWidth;
+		margin:0 auto;
 
-	p{
-		span{
-			float:left;
+		p{
+			span{
+				float:left;
+			}
 		}
-	}
-	p.backToTop{
-		float:right;
-		cursor:pointer;
+		p.backToTop{
+			float:right;
+			cursor:pointer;
+		}
 	}
 }
 

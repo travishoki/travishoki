@@ -21,35 +21,7 @@
 <body ng-controller="mainCtrl" class="{{currentPage}}">
 
     <div id="container">
-        <div id="header">
-        	<div class="branding">
-                <a ng-click="setRoute('portfolio')">
-                    <img src="portfolio/imgs/headerImg_shadow.png" title="TravisHoki.com"/>
-                </a>
-			</div><!-- branding -->
-            <i class="fa fa-reorder mobileMenuBtn hidden-sm hidden-md hidden-lg" ng-click="showMobileMenu = !showMobileMenu"></i>
-            
-            <nav collapse="!showMobileMenu" ng-init="showMobileMenu = false" ng-cloak>
-                <ul>
-<!--
-                    <li class="btn btn-green" ng-class="{active: currentPage == 'portfolio', active: currentPage == 'flash', active: currentPage == 'apps'}"><a ng-click="setRoute('portfolio')">PORTFOLIO</a></li>
--->
-                    <li>
-                        <a class="btn btn-green" ng-click="setRoute('portfolio')">PORTFOLIO</a>
-                    </li>
-                    <li>
-                        <a class="btn btn-green" ng-class="{active: currentPage == 'resume'}" ng-click="setRoute('resume')">RESUME</a>
-                    </li>
-                    <li>
-                        <a class="btn btn-green" ng-class="{active: currentPage == 'about'}" ng-click="setRoute('about')">ABOUT ME</a>
-                    </li>
-                    <li>
-                        <a class="btn btn-green" ng-class="{active: currentPage == 'contact'}" ng-click="setRoute('contact')">CONTACT</a>
-                    </li>
-                </ul>
-            </nav>
-        </div><!-- header -->
-
+        <?php include 'portfolio/inc/header.php';?>
         <div class="banner-container">
             <div class="banner-holder">
                 <div class="banner">
@@ -67,17 +39,9 @@
                 <div ng-view></div>
             </div><!-- content -->
         </div><!-- content-holder -->
-        
-        <div id="footer">
-            <p>
-                <span>Copyright Travishoki.com <?php echo date('Y');?></span> 
-                <br  class="phoneOnly"/>
-                <span class="tabletVisible desktopVisible">&nbsp;&minus;&nbsp;</span>
-                <span>All Rights Reserved</span>
-            </p>
-            
-            <p class="backToTop" ng-click="backToTop()">Back to Top</p>
-        </div><!-- #footer -->
+
+        <?php include 'portfolio/inc/footer.php';?>        
+
     </div><!--container-->
 
     <!-- jQuery -->
