@@ -304,7 +304,6 @@ div.banner-holder{
 #footer-holder{
 	background-color: $primaryColor;
 	clear:both;
-	margin-top: 20px;
 	position: relative;
 	z-index: 100;
 	#footer{
@@ -313,7 +312,7 @@ div.banner-holder{
 		color:white;
 		text-align:center;
 		max-width:$maxScreenWidth;
-		margin:0 auto;
+		margin: 0 auto;
 
 		p{
 			span{
