@@ -19,21 +19,9 @@
       
 </head>
 <body ng-controller="mainCtrl" class="{{currentPage}}">
+    <?php include 'portfolio/inc/header.php';?>
 
     <div id="container">
-        <?php include 'portfolio/inc/header.php';?>
-        <div class="banner-container">
-            <div class="banner-holder">
-                <div class="banner">
-                    <div class="bannerText">
-                        <h1>Travis Hoki</h1>
-                        <p>Back-end developer with <br/>front-end and flash experience.</p>
-                    </div><!-- bannerText -->
-                    <img src="portfolio/imgs/myPic_cutout.png"/>
-                </div><!-- banner -->
-            </div><!-- banner-holder -->
-        </div><!-- banner-container -->
-
         <div class="content-holder">
             <div class="content">
                 <div ng-view></div>

@@ -1,7 +1,5 @@
 <div class="home-gallery">
 
-	<?php include '../inc/portfolio_menu.php';?>
-
 	<div class="site-filters">
 		<h2>Filters</h2>
 		<div class="centeredmenu">

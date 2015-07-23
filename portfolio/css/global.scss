@@ -155,15 +155,6 @@ img.img-responsive {
 	width: 100%;
 }
 
-
-.banner-container{
-	display:none;
-}
-body.portfolio .banner-container,
-body.flash .banner-container,
-body.apps .banner-container{
-	display:block;
-}
 .mobileMenuBtn {
 	float:right;
 	font-size: 40px;
@@ -254,42 +245,6 @@ ul.viewNavigation{
 		img{
 			max-width:100%;
 			height:auto;
-		}
-	}
-}
-
-
-
-div.banner-holder{
-	background-color:black;
-	border-top: solid 2px #1a733b;
-	height:150px;
-
-	div.banner{
-		overflow:hidden;
-		color:white;
-		max-width:$maxScreenWidth;
-		margin:0 auto;
-		background:url('../imgs/bannerBackground.png');
-		background-repeat: no-repeat;
-
-		div.bannerText{
-			float:right;
-			padding-top:10px;
-			margin-right:10px;
-			
-			h1{
-				font-size:20px;
-			}
-			p{
-				font-size:16px;
-			}
-		}	
-		img{
-			margin-right:10px;
-			float:right;
-			height:150px;
-			width:auto;
 		}
 	}
 }
