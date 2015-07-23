@@ -36,7 +36,7 @@ init();
             <?php if($blog):?>
                 <a href="http://travishoki.com">
             <?php else:?>
-                <a ng-click="setRoute('portfolio')">
+                <a ng-click="setRoute('home')">
             <?php endif;?>
                 <img src="http://travishoki.com/portfolio/imgs/headerImg_shadow.png" title="TravisHoki.com"/>
             </a>
@@ -45,6 +45,9 @@ init();
 
         <nav collapse="!showMobileMenu" ng-init="showMobileMenu = false" ng-cloak>
             <ul>
+                <li>
+                    <a class="btn btn-green" <?php echo getLink('home');?>>Home</a>
+                </li>
                 <li>
                     <a class="btn btn-green" <?php echo getLink('portfolio');?>>PORTFOLIO</a>
                 </li>

@@ -22,6 +22,10 @@ app.controller('mainCtrl', function($scope, $http, $location){
 config(function($routeProvider){
 
 	$routeProvider.
+		when('/portfolio', {
+			templateUrl: 'portfolio/views/portfolio.php',
+			controller: portfolioCtrl
+		}).
 		when('/resume', {
 			templateUrl: 'portfolio/views/resume.php'
 		}).
@@ -41,9 +45,8 @@ config(function($routeProvider){
 			controller: FlashCtrl
 		}).
 		otherwise({
-			redirectTo:'/portfolio',
-			templateUrl: 'portfolio/views/portfolio.php',
-			controller: portfolioCtrl
+			redirectTo:'/home',
+			templateUrl: 'portfolio/views/home.php'
 		});
 })
 .directive('siteInfo', function(){
