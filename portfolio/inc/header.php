@@ -1,26 +1,42 @@
 <?php 
-if($_SERVER['HTTP_HOST'] == 'travishoki.com'){
-    $local = false;
-}else{
-    $local = true;
-}
+$local = true;
+$blog = true;
+
+function init(){
+    global $local;
+    global $blog;
+
+    if($_SERVER['HTTP_HOST'] == 'localhost'){
+        $local = true;
+    }else{
+        $local = false;
+    }
+
+    if($_SERVER['HTTP_HOST'] == 'blog.travishoki.com'){
+        $blog = true;
+    }else{
+        $blog = false;
+    }
+}//init
 
 function getLink($str){
-    global $local;
-    if($local){
-        return 'ng-class="{active: currentPage == \''.$str.'\'}" ng-click="setRoute(\''.$str.'\')"';
-    }else{
+    global $blog;
+    if($blog){
         return 'href="http://travishoki.com/#/'.$str.'"';
+    }else{
+        return 'ng-class="{active: currentPage == \''.$str.'\'}" ng-click="setRoute(\''.$str.'\')"';
     }
-}
+}//getLink
+
+init();
 ?>
 <div id="header-holder">
     <div id="header">
         <div class="branding">
-            <?php if($local):?>
-                <a ng-click="setRoute('portfolio')">
-            <?php else:?>
+            <?php if($blog):?>
                 <a href="http://travishoki.com">
+            <?php else:?>
+                <a ng-click="setRoute('portfolio')">
             <?php endif;?>
                 <img src="http://travishoki.com/portfolio/imgs/headerImg_shadow.png" title="TravisHoki.com"/>
             </a>
@@ -42,12 +58,14 @@ function getLink($str){
                     <a class="btn btn-green" <?php echo getLink('contact');?>>CONTACT</a>
                 </li>
                 <li>
-                <?php if($local):?>
-                    <a class="btn btn-green" href="http://travishoki.com">
-                <?php else:?>
-                    <a class="btn btn-green active">
+                <?php if(!$local):?>
+                    <?php if($blog):?>
+                        <a class="btn btn-green active">
+                    <?php else:?>
+                        <a class="btn btn-green" href="http://blog.travishoki.com">
+                    <?php endif;?>
+                        Blog</a>
                 <?php endif;?>
-                    Blog</a>
                 </li>
             </ul>
         </nav>
