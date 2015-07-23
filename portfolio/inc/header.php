@@ -1,8 +1,8 @@
 <?php 
 if($_SERVER['HTTP_HOST'] == 'travishoki.com'){
-    $local = true;
-}else{
     $local = false;
+}else{
+    $local = true;
 }
 
 function getLink($str){
@@ -47,6 +47,7 @@ function getLink($str){
                 <?php else:?>
                     <a class="btn btn-green active">
                 <?php endif;?>
+                    Blog</a>
                 </li>
             </ul>
         </nav>
