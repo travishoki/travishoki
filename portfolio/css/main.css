@@ -398,8 +398,8 @@ div.home-gallery ul.site-gallery {
       background: #333;
       width: 100%;
       clear: both;
-      margin-bottom: 20px;
-      padding-bottom: 20px; }
+      padding: 20px 0;
+      margin-bottom: 20px; }
       div.home-gallery ul.site-gallery li.full div.gallery-img-holder {
         float: left;
         margin: 0; }
@@ -418,14 +418,42 @@ div.home-gallery ul.site-gallery {
         div.home-gallery ul.site-gallery li.full .info-holder .info {
           color: white; }
       div.home-gallery ul.site-gallery li.full .client-info {
-        background: white;
-        color: black;
-        padding: 20px; }
+        position: relative;
+        overflow: hidden; }
+        div.home-gallery ul.site-gallery li.full .client-info h2 {
+          display: block;
+          position: absolute;
+          top: 35px;
+          left: 75px;
+          right: 0;
+          padding: 0;
+          font-weight: bold; }
         div.home-gallery ul.site-gallery li.full .client-info img {
           display: block;
-          margin: 0 auto 5px auto; }
-      div.home-gallery ul.site-gallery li.full a.btn {
-        width: 150px; }
+          position: absolute;
+          top: 0;
+          left: 0;
+          border: solid 5px #4f4f4f;
+          border-radius: 100px;
+          width: 150px; }
+        div.home-gallery ul.site-gallery li.full .client-info .p-holder {
+          margin-top: 75px;
+          margin-left: 75px;
+          border: solid 5px #4f4f4f;
+          min-height: 120px;
+          background: white; }
+          div.home-gallery ul.site-gallery li.full .client-info .p-holder p {
+            color: black;
+            padding: 20px 20px 20px 70px;
+            font-size: 16px;
+            color: #4f4f4f;
+            text-indent: 20px; }
+      div.home-gallery ul.site-gallery li.full .project-info {
+        margin-left: 75px;
+        background: #4f4f4f;
+        padding: 20px 0; }
+        div.home-gallery ul.site-gallery li.full .project-info a.btn {
+          width: 150px; }
 
 /*============================================================ Contacts =========================================================*/
 div.contact-page {

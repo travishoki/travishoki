@@ -279,7 +279,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 			{
 				title : 'First Mile',
 				url : 'http://enspark.net/internationalfulfillment/',
-				siteDesc : 'We provide discounted integrated solutions to ship your products or your customers products for less money.',
+				desc : 'We provide discounted integrated solutions to ship your products or your customers products for less money.',
 				img : 'first-mile.png',
 				contributions : 'All back-end. Worked with the Flash developer sending information to and from the mobile app. Creating a delivery route system, "text message like" system, and automated tasks.',
 				techs: 'PHP|AngularJs|JavaScript|jQuery|HTML|CSS',
