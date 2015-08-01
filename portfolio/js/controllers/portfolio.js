@@ -187,6 +187,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img: 'roomchoice.png',
 				contributions : 'Full Stack Development|Django and python|Restful API calls.',
 				techs: 'Python|AngularJs|JavaScript|HTML|LESS-CSS',
+				live: true
 			},
 			{
 				title : 'RGDJanitorial',
@@ -195,6 +196,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img: 'rgdjanitorial.png',
 				contributions : 'Wordpress theme customization|WP Advanced Custom Fields|Design',
 				techs: 'WordPress|JavaScript|HTML|CSS',
+				live: true
 			},
 			{
 				title : 'Wedding Website',
@@ -203,6 +205,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img: 'wedding.png',
 				contributions : 'Site design and development',
 				techs: 'AngularJs|JavaScript|HTML|SCSS',
+				live: true
 			},
 			{
 				title : 'Truly Lindsey Photography',
@@ -211,14 +214,16 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img: 'truly-lindsey-photography.png',
 				contributions : 'Wordpress customization, design and branding.',
 				techs: 'Wordpress|HTML|CSS',
+				live: true
 			},
 			{
 				title : 'Eric Aroca',
 				url : 'http://ericaroca.com/',
 				desc : 'This is a steady downhill race perfect for first time runners, as well as those looking to improve their time. Fun to be had includes saints and sinners aid stations and heaven and heck finish lines.',
 				img: 'eric-aroca.png',
-				contributions : 'Creationg of registration form|authorize.net intergration|customization of WordPress theme.',
+				contributions : 'Creationg of registration form|customization of WordPress theme.',
 				techs: 'PHP|WordPress|JavaScript|jQuery|HTML|CSS',
+				live: true
 			},
 			{
 				title : 'Rooke Capital Management',
@@ -227,6 +232,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img: 'rooke-capital-management.png',
 				contributions : 'Creationg of registration form|authorize.net intergration|customization of WordPress theme.',
 				techs: 'PHP|WordPress|JavaScript|jQuery|HTML|CSS',
+				live: true
 			},
 			{
 				title : 'Saints and Sinners Half Marathon and Team Relay',
@@ -235,6 +241,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img: 'saints-and-sinners.png',
 				contributions : 'Creationg of registration form, authorize.net intergration|customization of WordPress theme.',
 				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
+				live: true
 			},
 			{
 				title : 'New Life Recovery',
@@ -243,6 +250,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img: 'new-life-recovery.png',
 				contributions : 'Customization of WordPress theme.',
 				techs: 'PHP|WordPress|JavaScript|jQuery|HTML|CSS',
+				live: false
 			},
 			{
 				title : 'Creative Media Education',
@@ -251,6 +259,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img: 'creative-media-education.png',
 				contributions : 'Stripe Integration|Front-end and Back-end|integrating courses the custom LMS.',
 				techs: 'AngularJs|PHP|JavaScript|jQuery|HTML|CSS',
+				live: false
 			},
 			{
 				title : 'LavaVolt',
@@ -259,6 +268,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img: 'lavavolt.png',
 				contributions : 'All of the back-end|everything from user accounts, to film uploading, to querying from the film library.',
 				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
+				live: true
 			},
 			{
 				title : 'Enspark LMS',
@@ -267,6 +277,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img : 'enspark-lms.png',
 				contributions : 'Finished the second version of the LMS. Restructured the user account and course tracking database. Made information requests dynamic with page jQuery AJAX.',
 				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
+				live: true,
 			},
 			{
 				title : 'Paradigm Life LMS',
@@ -275,6 +286,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img : 'paradigm-life-lms.png',
 				contributions : 'The Paradigm Life LMS was created from the base of the Enspark LMS then customized to fit the needs of Paradigm Life. I added the functionality for multiple user tracks.',
 				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
+				live: true,
 			},
 			{
 				title : 'First Mile',
@@ -283,6 +295,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img : 'first-mile.png',
 				contributions : 'All back-end. Worked with the Flash developer sending information to and from the mobile app. Creating a delivery route system, "text message like" system, and automated tasks.',
 				techs: 'PHP|AngularJs|JavaScript|jQuery|HTML|CSS',
+				live: true,
 			},
 			{
 				title : 'The Putting Tour',
@@ -291,6 +304,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img : 'the-putting-tour.png',
 				contributions : 'Created the user account system, sending information to and from the mobile app. Helped to develop the mobile app for the golf kiosk, as well as the bracket system for the online competitions.',
 				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
+				live: true,
 			},
 			{
 				title : 'WinInsights',
@@ -299,6 +313,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img : 'wininsights.png',
 				contributions : 'Hand created a custom blog for communities to converse about their executive and cultural groups. Also created a custom slider, and several WordPress pages.',
 				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
+				live: true,
 			},
 			{
 				title : 'Barrier Pest Control',
@@ -307,6 +322,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img : 'barrier.png',
 				contributions : "Created a cronjob to store customer transactions in a MYSQL database then email a list of those transactions in a daily report to the company owners. Front-end fixes to the WordPress site, fixing styles and updating images. ",
 				techs: 'JavaScript|jQuery|HTML|CSS',
+				live: true,
 			},
 			{
 				title : 'Enspark',
@@ -315,6 +331,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img : 'enspark.png',
 				contributions : 'Helping to push the second version of Enspark.com live. Implementing a feed, creating forms, and various front-end fixes.',
 				techs: 'JavaScript|jQuery|HTML|CSS',
+				live: true,
 			},
 			{
 				title : 'Utah Casa',
@@ -323,6 +340,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img : 'utah-casa.png',
 				contributions : 'Helped to fix the blog functionality and structure in WordPress as well as front-end fixes.',
 				techs: 'PHP|HTML|CSS',
+				live: true,
 			},
 			{
 				title : 'All American Sod Farms',
@@ -331,6 +349,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				img : 'all-american-sod.png',
 				contributions : 'Before I started working full time as a web developer I was the office manager on the farm. I created and am maintaining this site. It is still a work in progress. I designed and created this custom WordPress theme.',
 				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
+				live: true,
 			},
 			{
 				title : 'Paradigm Life',
@@ -338,7 +357,8 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'Infinite Banking is a concept that allows individuals to utilize Permanent Life Insurance in ways that most individuals and even insurance professionals could never have imagined.',
 				img : 'paradigm-life.png',
 				contributions : 'Helped with the WordPress theme and structure architecture.',
-				techs: 'PHP|JavaScript|jQuery|HTML|CSS'
+				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
+				live: true,
 			},
 			{
 				title : 'Debt Free Planning',
@@ -346,7 +366,8 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'Get a Free Online Report and recommended solution to your debt problem.',
 				img : 'debt-free-planning.png',
 				contributions : 'Front-end construction. Creating a email form for user information requests.',
-				techs: 'PHP,Less-CSS|HTML|JavaScript'
+				techs: 'PHP,Less-CSS|HTML|JavaScript',
+				live: false
 			},
 			{
 				title : 'Southam Consulting',
@@ -354,7 +375,8 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				desc : 'Southam Consulting is a consortium of business specialists in several states who have extensive experience and expertise in helping clients achieve peak performance.',
 				img : 'southam-consulting.png',
 				contributions : 'Creating a email form for user information requests. Other front-end fixes.',
-				techs: 'PHP|CSS|HTML|JavaScript'
+				techs: 'PHP|CSS|HTML|JavaScript',
+				live: true
 			}
 		];
 		angular.forEach(array, function(site){
