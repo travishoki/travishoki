@@ -167,7 +167,9 @@ div.home-gallery{
 					h2 {
 						position: absolute;
 						bottom: 0;
-						width: 100%;
+						left: 0;
+						right: 0;
+						font-size: 20px;
 					}
 				}
 				img.website-img {
@@ -178,7 +180,8 @@ div.home-gallery{
 					.active-icon {
 						position: absolute;
 						bottom: 0;
-						width: 100%;
+						left: 0;
+						right: 0;
 						img {
 							margin: 0 auto;
 							display: block;
@@ -215,41 +218,68 @@ div.home-gallery{
 						-webkit-box-shadow: 0 0 10px 0 #222222;
 						box-shadow: 0 0 10px 0 #222222;
 						@media #{$phone} {
-							margin: 40px auto;
+							margin: 20px auto;
 						}
 					}
 					.info {
 						color: white;
 					}
 				}
+				.client-branding {
+					@media #{$tablet-up} {
+						position: absolute;
+						top: 15px;
+						left: 0;
+						right: 0;
+						z-index: 100;
+						width: 100%;
+					    margin: 0 auto;
+					    max-width: 900px;
+					}
+					.client-branding-inner {
+						@media #{$tablet-up} {
+							position: relative;
+							float: right;
+							height: 150px;
+						}
+						.client-branding-title-holder {
+							@media #{$tablet-up} {
+								height: 75px;
+								position: relative;
+							    margin-left: 75px;
+							}
+							h2 {
+								display: block;
+								padding: 0;
+								font-weight: bold;
+								@media #{$tablet-up} {
+									position: absolute;
+									bottom: 0;
+									left: 85px;
+									right: 85px;
+									text-align: center;
+								}
+							}
+						}
+						img {
+							display: block;
+							border: solid 5px #4f4f4f;
+							border-radius: 100px;
+							width: 150px;
+							@media #{$phone} {
+								margin: 15px auto 0 auto;
+							}
+							@media #{$tablet-up} {
+								position: absolute;
+								top: 0;
+								left: 20px;
+							}
+						}
+					}
+				}
 				.client-info {
 					position: relative;
 					overflow: hidden;
-					h2 {
-						display: block;
-						padding: 0;
-						font-weight: bold;
-						@media #{$tablet-up} {
-							position: absolute;
-							top: 35px;
-							left: 75px;					
-							right: 0;
-						}
-					}
-					img {
-						display: block;
-						border: solid 5px #4f4f4f;
-						border-radius: 100px;
-						width: 150px;
-						@media #{$phone} {
-							margin: 20px auto;
-						}
-						@media #{$tablet-up} {
-							position: absolute;
-							top: 0;
-							left: 0;
-						}
-					}
 					.p-holder {
 						border: solid 5px #4f4f4f;
 						min-height: 120px;
@@ -260,7 +290,7 @@ div.home-gallery{
 						}
 						p {
 							color: black;
-							padding: 20px 20px 20px 70px;
+							padding: 15px 15px 15px 70px;
 							font-size: 16px;
 							color: #4f4f4f;
 							text-indent: 20px;
@@ -269,7 +299,7 @@ div.home-gallery{
 				}
 				.project-info {
 					background: #4f4f4f;
-					padding: 20px 0;
+					padding: 15px 0;
 					@media #{$tablet-up} {
 						margin-left: 75px;
 					}

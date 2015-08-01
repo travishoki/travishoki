@@ -1,12 +1,20 @@
 <div class="row info-holder">
+
+	<div class="client-branding">
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 client-branding-inner">
+			<div class="client-branding-title-holder">
+				<h2>{{site.title}}</h2>				
+			</div>
+			<img ng-src="portfolio/imgs/clients/{{site.img}}" title="{{site.title}}" class="website-logo"/>
+		</div>
+	</div>
+
 	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 		<img ng-src="portfolio/imgs/websites/{{site.img}}" width="200" height="300" title="{{site.title}}" class="website-img"/>
 	</div>
 	<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 info">
 
 		<div class="client-info">
-			<h2>{{site.title}}</h2>
-			<img ng-src="portfolio/imgs/clients/{{site.img}}" title="{{site.title}}" class="website-logo"/>
 			<div class="p-holder">
 				<p>{{site.desc}}</p>
 			</div>
