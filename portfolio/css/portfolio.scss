@@ -167,31 +167,34 @@ div.home-gallery{
 					h2 {
 						position: absolute;
 						bottom: 0;
-						width: 100%;
+						left: 0;
+						right: 0;
+						font-size: 20px;
 					}
 				}
 				img.website-img {
 					width: 100%;
-					margin-bottom: 10px;
+					margin: 0 auto 10px auto;
 				}
 				&.active {
 					.active-icon {
 						position: absolute;
 						bottom: 0;
-						width: 100%;
+						left: 0;
+						right: 0;
 						img {
 							margin: 0 auto;
 							display: block;
 						}
 					}
 				}
-			}	
+			}
 			&.full {
 				background: #333;
 				width: 100%;
 				clear: both;
+				padding: 20px 0;
 				margin-bottom: 20px;
-				padding-bottom: 20px;
 				div.gallery-img-holder {
 					float: left;
 					margin: 0;
@@ -210,22 +213,99 @@ div.home-gallery{
 					overflow: hidden;
 					img.website-img {
 						width: 100%;
+						max-width: 400px;
+						display: block;
+						-webkit-box-shadow: 0 0 10px 0 #222222;
+						box-shadow: 0 0 10px 0 #222222;
+						@media #{$phone} {
+							margin: 20px auto;
+						}
 					}
 					.info {
 						color: white;
 					}
 				}
-				.client-info {
-					background: white;
-					color: black;
-					padding: 20px;
-					img {
-						display: block;
-						margin: 0 auto 5px auto;
+				.client-branding {
+					@media #{$tablet-up} {
+						position: absolute;
+						top: 15px;
+						left: 0;
+						right: 0;
+						z-index: 100;
+						width: 100%;
+					    margin: 0 auto;
+					    max-width: 900px;
+					}
+					.client-branding-inner {
+						@media #{$tablet-up} {
+							position: relative;
+							float: right;
+							height: 150px;
+						}
+						.client-branding-title-holder {
+							@media #{$tablet-up} {
+								height: 75px;
+								position: relative;
+							    margin-left: 75px;
+							}
+							h2 {
+								display: block;
+								padding: 0;
+								font-weight: bold;
+								@media #{$tablet-up} {
+									position: absolute;
+									bottom: 0;
+									left: 85px;
+									right: 85px;
+									text-align: center;
+								}
+							}
+						}
+						img {
+							display: block;
+							border: solid 5px #4f4f4f;
+							border-radius: 100px;
+							width: 150px;
+							@media #{$phone} {
+								margin: 15px auto 0 auto;
+							}
+							@media #{$tablet-up} {
+								position: absolute;
+								top: 0;
+								left: 20px;
+							}
+						}
 					}
 				}
-				a.btn {
-				  width: 150px;
+				.client-info {
+					position: relative;
+					overflow: hidden;
+					.p-holder {
+						border: solid 5px #4f4f4f;
+						min-height: 120px;
+						background: white;
+						@media #{$tablet-up} {
+							margin-top: 75px;
+							margin-left: 75px;
+						}
+						p {
+							color: black;
+							padding: 15px 15px 15px 70px;
+							font-size: 16px;
+							color: #4f4f4f;
+							text-indent: 20px;
+						}
+					}
+				}
+				.project-info {
+					background: #4f4f4f;
+					padding: 15px 0;
+					@media #{$tablet-up} {
+						margin-left: 75px;
+					}
+					a.btn {
+					  width: 150px;
+					}
 				}
 			}
 		}

@@ -1,31 +1,45 @@
-<h2>{{site.title}}</h2>
-
 <div class="row info-holder">
+
+	<div class="client-branding">
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 client-branding-inner">
+			<div class="client-branding-title-holder">
+				<h2>{{site.title}}</h2>				
+			</div>
+			<img ng-src="portfolio/imgs/clients/{{site.img}}" title="{{site.title}}" class="website-logo"/>
+		</div>
+	</div>
+
 	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 		<img ng-src="portfolio/imgs/websites/{{site.img}}" width="200" height="300" title="{{site.title}}" class="website-img"/>
 	</div>
 	<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 info">
 
 		<div class="client-info">
-			<img ng-src="portfolio/imgs/clients/{{site.img}}" title="{{site.title}}" class="website-logo"/>
-			<p>{{site.desc}}</p>
+			<div class="p-holder">
+				<p>{{site.desc}}</p>
+			</div>
 		</div>
 
-
-		<h4>My Contribution:</h4>
-		<ul>
-			<li ng-repeat="contribution in site.contributions">{{contribution}}</li>
-		</ul>
-
-		<h4>Technology:</h4>
-		<div class="centeredmenu">
-			<ul class="techs">
-				<li ng-repeat="tech in site.techs" ng-class="tech" class="lite"></li>
-			</ul>
+		<div class="project-info">
+			<div class="row">
+				<div class="col-xs-6">
+					<h4>My Contribution:</h4>
+					<ul>
+						<li ng-repeat="contribution in site.contributions">{{contribution}}</li>
+					</ul>
+				</div>
+				<div class="col-xs-6">
+					<h4>Technology:</h4>
+					<div class="centeredmenu">
+						<ul class="techs">
+							<li ng-repeat="tech in site.techs" ng-class="tech" class="lite"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<a href="{{site.url}}" class="btn btn-green" target="_blank">View</a>
 		</div>
 
-
-		<a href="{{site.url}}" class="btn btn-green" target="_blank">View</a>
 	</div>	
 </div>
 

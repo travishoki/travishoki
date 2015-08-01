@@ -193,8 +193,8 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				url : 'http://rgdjanitorial.com/',
 				desc : 'RGD Janitorial has been providing Janitorial Services in Utah for over 17 years.',
 				img: 'rgdjanitorial.png',
-				contributions : 'Full Stack Development|Django and python|Restful API calls.',
-				techs: 'Wordpress|JavaScript|HTML|CSS',
+				contributions : 'Wordpress theme customization|WP Advanced Custom Fields|Design',
+				techs: 'WordPress|JavaScript|HTML|CSS',
 			},
 			{
 				title : 'Wedding Website',
@@ -269,7 +269,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
 			},
 			{
-				title : 'Paradigm Life LMS (Infinite Banking)',
+				title : 'Paradigm Life LMS',
 				url : 'http://lms.paradigmlife.net/',
 				desc : 'Infinite Banking is a concept that allows individuals to utilize Permanent Life Insurance in ways that most individuals and even insurance professionals could never have imagined.',
 				img : 'paradigm-life-lms.png',
@@ -279,7 +279,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 			{
 				title : 'First Mile',
 				url : 'http://enspark.net/internationalfulfillment/',
-				siteDesc : 'We provide discounted integrated solutions to ship your products or your customers products for less money.',
+				desc : 'We provide discounted integrated solutions to ship your products or your customers products for less money.',
 				img : 'first-mile.png',
 				contributions : 'All back-end. Worked with the Flash developer sending information to and from the mobile app. Creating a delivery route system, "text message like" system, and automated tasks.',
 				techs: 'PHP|AngularJs|JavaScript|jQuery|HTML|CSS',
@@ -333,7 +333,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
 			},
 			{
-				title : 'Paradigm Life (Infinite Banking)',
+				title : 'Paradigm Life',
 				url : 'http://paradigmlife.net/',
 				desc : 'Infinite Banking is a concept that allows individuals to utilize Permanent Life Insurance in ways that most individuals and even insurance professionals could never have imagined.',
 				img : 'paradigm-life.png',
