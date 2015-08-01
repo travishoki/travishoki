@@ -172,7 +172,7 @@ div.home-gallery{
 				}
 				img.website-img {
 					width: 100%;
-					margin-bottom: 10px;
+					margin: 0 auto 10px auto;
 				}
 				&.active {
 					.active-icon {
@@ -185,7 +185,7 @@ div.home-gallery{
 						}
 					}
 				}
-			}	
+			}
 			&.full {
 				background: #333;
 				width: 100%;
@@ -210,6 +210,13 @@ div.home-gallery{
 					overflow: hidden;
 					img.website-img {
 						width: 100%;
+						max-width: 400px;
+						display: block;
+						-webkit-box-shadow: 0 0 10px 0 #222222;
+						box-shadow: 0 0 10px 0 #222222;
+						@media #{$phone} {
+							margin: 40px auto;
+						}
 					}
 					.info {
 						color: white;
@@ -220,28 +227,37 @@ div.home-gallery{
 					overflow: hidden;
 					h2 {
 						display: block;
-						position: absolute;
-						top: 35px;
-						left: 75px;					
-						right: 0;
 						padding: 0;
 						font-weight: bold;
+						@media #{$tablet-up} {
+							position: absolute;
+							top: 35px;
+							left: 75px;					
+							right: 0;
+						}
 					}
 					img {
 						display: block;
-						position: absolute;
-						top: 0;
-						left: 0;
 						border: solid 5px #4f4f4f;
 						border-radius: 100px;
 						width: 150px;
+						@media #{$phone} {
+							margin: 20px auto;
+						}
+						@media #{$tablet-up} {
+							position: absolute;
+							top: 0;
+							left: 0;
+						}
 					}
 					.p-holder {
-						margin-top: 75px;
-						margin-left: 75px;
 						border: solid 5px #4f4f4f;
 						min-height: 120px;
 						background: white;
+						@media #{$tablet-up} {
+							margin-top: 75px;
+							margin-left: 75px;
+						}
 						p {
 							color: black;
 							padding: 20px 20px 20px 70px;
@@ -252,9 +268,11 @@ div.home-gallery{
 					}
 				}
 				.project-info {
-					margin-left: 75px;
 					background: #4f4f4f;
 					padding: 20px 0;
+					@media #{$tablet-up} {
+						margin-left: 75px;
+					}
 					a.btn {
 					  width: 150px;
 					}

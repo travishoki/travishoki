@@ -1,4 +1,4 @@
-/* Variables
+/* Variables - Colors
 ----------------------*/
 $primaryColor:    #39B54C;
 $secondaryColor:  #1A733B;
@@ -45,3 +45,19 @@ $maxContentWidth : 1024px;
 	-ms-user-select: none;
 	user-select: none;
 }
+
+
+/* Media Queries
+----------------------*/
+$phone: "(max-width: 767px)";
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+
+$tablet-down: "(max-width: 767px)";
+$tablet-up: "(min-width: 768px)";
+
+
+
+
+
+

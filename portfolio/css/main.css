@@ -1,7 +1,9 @@
 /*---------------------------------------------- Variables ----------------------------------------------*/
-/* Variables
+/* Variables - Colors
 ----------------------*/
 /* Mixin
+----------------------*/
+/* Media Queries
 ----------------------*/
 /*---------------------------------------------- Imports ----------------------------------------------*/
 @import url(http://fonts.googleapis.com/css?family=Enriqueta);
@@ -82,7 +84,6 @@ p.caption {
 
 body {
   width: 100%;
-  min-width: 400px;
   margin: 0 auto;
   font-family: arial; }
 
@@ -198,6 +199,10 @@ ul.viewNavigation {
   ul.viewNavigation li.currentTab {
     background-color: #333; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 .content-holder {
   border-top: solid 2px #1A733B;
   border-bottom: solid 2px #1A733B;
@@ -210,9 +215,6 @@ ul.viewNavigation {
     max-width: 1024px;
     margin: 0 auto;
     padding: 20px; }
-    .content-holder .content img {
-      max-width: 100%;
-      height: auto; }
 
 .subnav {
   margin: 30px auto 50px auto; }
@@ -386,7 +388,7 @@ div.home-gallery ul.site-gallery {
           width: 100%; }
       div.home-gallery ul.site-gallery li.item img.website-img {
         width: 100%;
-        margin-bottom: 10px; }
+        margin: 0 auto 10px auto; }
       div.home-gallery ul.site-gallery li.item.active .active-icon {
         position: absolute;
         bottom: 0;
@@ -414,7 +416,14 @@ div.home-gallery ul.site-gallery {
         max-width: 900px;
         overflow: hidden; }
         div.home-gallery ul.site-gallery li.full .info-holder img.website-img {
-          width: 100%; }
+          width: 100%;
+          max-width: 400px;
+          display: block;
+          -webkit-box-shadow: 0 0 10px 0 #222222;
+          box-shadow: 0 0 10px 0 #222222; }
+          @media (max-width: 767px) {
+            div.home-gallery ul.site-gallery li.full .info-holder img.website-img {
+              margin: 40px auto; } }
         div.home-gallery ul.site-gallery li.full .info-holder .info {
           color: white; }
       div.home-gallery ul.site-gallery li.full .client-info {
@@ -422,26 +431,35 @@ div.home-gallery ul.site-gallery {
         overflow: hidden; }
         div.home-gallery ul.site-gallery li.full .client-info h2 {
           display: block;
-          position: absolute;
-          top: 35px;
-          left: 75px;
-          right: 0;
           padding: 0;
           font-weight: bold; }
+          @media (min-width: 768px) {
+            div.home-gallery ul.site-gallery li.full .client-info h2 {
+              position: absolute;
+              top: 35px;
+              left: 75px;
+              right: 0; } }
         div.home-gallery ul.site-gallery li.full .client-info img {
           display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
           border: solid 5px #4f4f4f;
           border-radius: 100px;
           width: 150px; }
+          @media (max-width: 767px) {
+            div.home-gallery ul.site-gallery li.full .client-info img {
+              margin: 20px auto; } }
+          @media (min-width: 768px) {
+            div.home-gallery ul.site-gallery li.full .client-info img {
+              position: absolute;
+              top: 0;
+              left: 0; } }
         div.home-gallery ul.site-gallery li.full .client-info .p-holder {
-          margin-top: 75px;
-          margin-left: 75px;
           border: solid 5px #4f4f4f;
           min-height: 120px;
           background: white; }
+          @media (min-width: 768px) {
+            div.home-gallery ul.site-gallery li.full .client-info .p-holder {
+              margin-top: 75px;
+              margin-left: 75px; } }
           div.home-gallery ul.site-gallery li.full .client-info .p-holder p {
             color: black;
             padding: 20px 20px 20px 70px;
@@ -449,9 +467,11 @@ div.home-gallery ul.site-gallery {
             color: #4f4f4f;
             text-indent: 20px; }
       div.home-gallery ul.site-gallery li.full .project-info {
-        margin-left: 75px;
         background: #4f4f4f;
         padding: 20px 0; }
+        @media (min-width: 768px) {
+          div.home-gallery ul.site-gallery li.full .project-info {
+            margin-left: 75px; } }
         div.home-gallery ul.site-gallery li.full .project-info a.btn {
           width: 150px; }
 

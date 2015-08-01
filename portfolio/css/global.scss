@@ -90,7 +90,6 @@ p.caption {
 
 body{
 	width:100%;
-	min-width:400px;
 	margin:0 auto;
 	font-family:arial;
 }
@@ -225,6 +224,10 @@ ul.viewNavigation{
 }
 
 
+img{
+	max-width:100%;
+	height:auto;
+}
 
 
 .content-holder{
@@ -241,11 +244,6 @@ ul.viewNavigation{
 		max-width:$maxScreenWidth;
 		margin:0 auto;
 		padding: 20px;
-		
-		img{
-			max-width:100%;
-			height:auto;
-		}
 	}
 }
 
