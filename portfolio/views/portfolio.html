@@ -1,17 +1,19 @@
 <div class="home-gallery">
 
-	<div class="site-filters">
-		<h2>Filters</h2>
-		<div class="centeredmenu">
-			<ul class="techs">
-				<li ng-repeat="tech in site_filters" 
-				ng-class="filterStyle(tech)" 
-				class="filters" 
-				title="{{tech.title}}" 
-				ng-click="clickFilter(tech)"></li>
-			</ul>
-		</div>
-	</div>	
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="site-filters">
+			<h2>Filters</h2>
+			<div class="centeredmenu">
+				<ul class="techs">
+					<li ng-repeat="tech in site_filters" 
+					ng-class="filterStyle(tech)" 
+					class="filters" 
+					title="{{tech.title}}" 
+					ng-click="clickFilter(tech)"></li>
+				</ul>
+			</div>
+		</div>	
+	</div>
 
 	<ul class="site-gallery">
 		<li ng-repeat="site in sites | techFilter : site_filters" 

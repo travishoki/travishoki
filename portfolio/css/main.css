@@ -213,7 +213,7 @@ img {
     overflow: hidden;
     max-width: 1024px;
     margin: 0 auto;
-    padding: 20px; }
+    padding: 20px 0; }
 
 .subnav {
   margin: 30px auto 50px auto; }
