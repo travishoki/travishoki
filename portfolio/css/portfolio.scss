@@ -4,10 +4,10 @@ ul.techs {
 		width: 32px;
 		height: 32px;
 		&.dark {
-			background-image: url('../imgs/icons/tech-icons-dark.png');
+			background-image: url('../imgs/icons/tech-icons/tech-icons-dark.png');
 		}
 		&.lite {
-			background-image: url('../imgs/icons/tech-icons-lite.png');
+			background-image: url('../imgs/icons/tech-icons/tech-icons-lite.png');
 		}
 
 		&.HTML {
@@ -42,7 +42,7 @@ ul.techs {
 			cursor: pointer;
 			width: 50px;
 			height: 50px;
-			background-image: url('../imgs/icons/tech-icons-filters.png');
+			background-image: url('../imgs/icons/tech-icons/tech-icons-filters.png');
 			&.HTML {
 				background-position: 0 0;
 			}
@@ -72,7 +72,7 @@ ul.techs {
 			}
 		}
 		&.filters.inactive {
-			background-image: url('../imgs/icons/tech-icons-filters-inactive.png');
+			background-image: url('../imgs/icons/tech-icons/tech-icons-filters-inactive.png');
 		}
 	}
 }
