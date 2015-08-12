@@ -29,11 +29,13 @@ h2 {
 /*---- Sections
 ----------------------*/
 section .section-inner {
-  padding: 20px 0;
+  padding: 20px 0 50px 0;
   max-width: 600px;
   margin: 0 auto;
   display: block;
   overflow: hidden; }
+  section .section-inner h2 {
+    margin: 30px 0; }
 
 section.grey {
   color: #FFF;
@@ -191,6 +193,9 @@ body.home {
     @media (max-width: 767px) {
       body.home #header {
         background: #39B54C; } }
+  @media (max-width: 767px) {
+    body.home {
+      margin-top: 80px; } }
 
 #header {
   position: fixed;
@@ -322,6 +327,7 @@ img {
       #footer .footer-inner p span {
         display: block; } }
     #footer .footer-inner i.back-to-top {
+      cursor: pointer;
       position: absolute;
       right: 15px;
       top: 15px;
@@ -512,9 +518,7 @@ div.home-gallery ul.site-gallery {
         div.home-gallery ul.site-gallery li.full .info-holder .info {
           color: white; }
       div.home-gallery ul.site-gallery li.full .client-info {
-        background: white;
-        color: black;
-        padding: 20px; }
+        color: black; }
         div.home-gallery ul.site-gallery li.full .client-info img {
           display: block;
           margin: 0 auto 5px auto; }
@@ -524,9 +528,9 @@ div.home-gallery ul.site-gallery {
 body.home {
   /*---------- Content ----------*/
   /*---------- Banner ----------*/
-  /*---------- Education ----------*/
   /*---------- Resume ----------*/
-  /*---------- Resume ----------*/ }
+  /*---------- Skills ----------*/
+  /*---------- Education ----------*/ }
   body.home .content {
     padding: 0;
     max-width: 100%; }
@@ -539,46 +543,54 @@ body.home {
       height: 100%; }
     body.home .banner img {
       width: 100%; }
-  body.home section.education {
+  @media (min-width: 768px) {
+    body.home section.resume .resume-section {
+      width: 50%;
+      float: left; } }
+  @media (max-width: 767px) {
+    body.home section.resume .resume-section.resume-1 {
+      margin-bottom: 60px; } }
+  body.home section.resume .resume-section h3 {
+    text-align: center; }
+    body.home section.resume .resume-section h3 span {
+      font-size: 10px; }
+  body.home section.resume .resume-section img {
+    display: block;
+    margin: 20px auto; }
+  body.home section.resume .resume-section a {
     text-align: center;
-    padding: 20px 0; }
+    color: white;
+    font-size: 30px;
+    display: block;
+    background-color: #888;
+    font-size: 20px;
+    margin: 0 auto;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none; }
+    body.home section.resume .resume-section a i {
+      padding-top: 5px; }
+    body.home section.resume .resume-section a:hover {
+      background-color: #666; }
+  body.home section.skills .list {
+    font-size: 20px; }
+    @media (min-width: 768px) {
+      body.home section.skills .list {
+        float: left;
+        width: 50%; } }
+    body.home section.skills .list ul {
+      margin: 0; }
+      body.home section.skills .list ul li {
+        padding-bottom: 20px; }
+  body.home section.education {
+    text-align: center; }
     body.home section.education img {
-      margin: 20px 0; }
-  body.home section.resume .resume-section {
-    width: 50%;
-    float: left;
-    margin: 30px 0; }
-    body.home section.resume .resume-section h3 {
-      text-align: center; }
-      body.home section.resume .resume-section h3 span {
-        font-size: 10px; }
-    body.home section.resume .resume-section img {
       display: block;
       margin: 20px auto; }
-    body.home section.resume .resume-section a {
-      text-align: center;
-      color: white;
-      font-size: 30px;
-      display: block;
-      background-color: #888;
-      font-size: 20px;
-      margin: 0 auto;
-      width: 150px;
-      height: 40px;
-      line-height: 40px;
-      text-decoration: none; }
-      body.home section.resume .resume-section a i {
-        padding-top: 5px; }
-      body.home section.resume .resume-section a:hover {
-        background-color: #666; }
-  body.home .skills .skills-inner {
-    max-width: 600px; }
-    body.home .skills .skills-inner ul {
-      list-style: none;
-      overflow: hidden; }
-      body.home .skills .skills-inner ul li {
-        float: left;
-        width: 25%; }
+    body.home section.education h3.degree {
+      font-weight: bold;
+      margin: 10px 0; }
 
 /*============================================================ Tech Icons ============================================================*/
 ul.techs li {
