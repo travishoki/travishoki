@@ -27,11 +27,14 @@ h2 {
 ----------------------*/
 section {
 	.section-inner {
-		padding: 20px 0;
+		padding: 20px 0 50px 0;
 		max-width: 600px;
 		margin: 0 auto;
 		display: block;
 		overflow: hidden;
+		h2 {
+			margin: 30px 0;
+		}
 	}
 }
 section.grey {
@@ -201,6 +204,9 @@ body.home {
 		@media #{$phone} {
 			background: $primaryColor;
 		}
+	}
+	@media #{$phone} {
+		margin-top: 80px;
 	}
 }
 #header {
@@ -375,6 +381,7 @@ img{
 			}
 		}
 		i.back-to-top{
+			cursor: pointer;
 			position: absolute;
 			right: 15px;
 			top: 15px;
