@@ -16,22 +16,6 @@
 	</div><!-- subnav -->
 
 	<div class="resume-content">
-        <h1>Objective</h1>
-        <ul>
-            <li>Back-end developer seeking to use my experience and creativity to make the web a more interactive and exciting place.</li>
-        </ul>
-    
-    
-        <h1>Personal Strengths</h1>
-        <ul>
-            <li>
-                <ul>
-                    <li>Work well with others in groups and independently</li>
-                    <li>Self-motivated and excited to work</li>
-                </ul> 
-            </li>
-        </ul> 
-        
         <h1>Experience</h1>
         <ul class="experience">
             <li>
@@ -129,24 +113,7 @@
             </li>
         </ul>
     
-    
-        <h1>Software</h1>
-        <ul>
-            <li>
-                <ul>
-                    <li>Photoshop</li>
-                    <li>Flash</li>
-                    <li>Dreamweaver</li>
-                    <li>InDesign</li>
-                    <li>Microsoft Office</li>
-                </ul>
-            </li>
-        </ul>
-    
-        <h1>Reference</h1>
-        <ul>
-            <li>References available upon request.</li>
-        </ul>
+
 	</div><!-- resume-content -->
         
 </div><!-- resume-page -->

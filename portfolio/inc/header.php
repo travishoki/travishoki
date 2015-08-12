@@ -30,8 +30,8 @@ function getLink($str){
 
 init();
 ?>
-<div id="header-holder">
-    <div id="header">
+<div id="header">
+    <div class="header-inner">
         <div class="branding">
             <?php if($blog):?>
                 <a href="http://travishoki.com">
@@ -72,5 +72,20 @@ init();
                 </li>
             </ul>
         </nav>
+
+        <ul class="social-icons">
+            <li>
+                <a href="https://github.com/travishoki/" target="_blank" title="Travis's Github">
+                    <i class="fa fa-git"></i>
+                </a>
+            </li>    
+            <li>
+                <a href="https://www.linkedin.com/pub/travis-hoki/85/b0b/113" target="_blank" title="Travis's Linked In">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </li>    
+        </ul>
+
+
     </div><!-- header -->
 </div><!-- header-holder -->
