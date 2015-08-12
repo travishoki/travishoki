@@ -58,14 +58,6 @@ div#view {
 .ng-leave-active {
   opacity: 0; }
 
-/*----------------------------------------------  Modal ----------------------------------------------*/
-.modal-header {
-  background: #39B54C;
-  color: white; }
-  .modal-header h2 {
-    color: inherit;
-    text-align: center; }
-
 /*---------------------------------------------- Other ----------------------------------------------*/
 .red {
   color: red; }
@@ -125,19 +117,35 @@ body {
 h1 {
   margin-bottom: 10px; }
 
+ul.social-icons {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; }
+  ul.social-icons li {
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    margin-left: 20px;
+    background: #ffffff; }
+    ul.social-icons li a {
+      color: #1A733B;
+      text-align: center;
+      line-height: 30px;
+      display: block; }
+
 /*============================================================ Header =========================================================*/
-#header-holder {
+#header {
   background-color: #39B54C;
   overflow: hidden;
   position: relative;
   z-index: 100; }
-  #header-holder #header {
+  #header #header-inner {
     color: white;
     max-width: 1024px;
-    padding-top: 20px;
     margin: 0 auto;
     position: relative; }
-    #header-holder #header div.branding img {
+    #header #header-inner div.branding img {
       cursor: pointer; }
 
 img.img-responsive {
@@ -151,23 +159,38 @@ img.img-responsive {
   top: 20px;
   right: 20px; }
 
-nav {
+#header nav {
   font-family: "Enriqueta", serif;
   background: #1A733B;
-  clear: both;
-  padding: 10px; }
-  nav ul {
+  clear: both; }
+  #header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     font-size: 15px; }
-    nav ul li {
-      margin-bottom: 10px; }
-      nav ul li .btn {
-        width: 100%; }
-      nav ul li .btn.active {
-        border: solid 1px black; }
+    #header nav ul li .btn {
+      margin: 0;
+      width: 100%;
+      padding: 20px 10px; }
+      #header nav ul li .btn.active {
+        box-shadow: none; }
+    #header nav ul li .btn:hover {
+      background: #39B54C;
+      color: #1A733B; }
+    @media (max-width: 767px) {
+      #header nav ul li .btn {
+        background: #1A733B; }
+      #header nav ul li .btn.active {
+        background: #39B54C; } }
+    @media (min-width: 768px) {
+      #header nav ul li .btn.active {
+        color: #1A733B;
+        background: none; } }
+#header ul.social-icons {
+  position: absolute;
+  bottom: 10px;
+  right: 20px; }
 
 button:hover,
 input[type="submit"]:hover {
@@ -199,11 +222,7 @@ ul.viewNavigation {
     background-color: #333; }
 
 .content-holder {
-  border-top: solid 2px #1A733B;
-  border-bottom: solid 2px #1A733B;
-  background-color: #FFFFFF;
-  -webkit-box-shadow: inset 0px 0px 15px 0px #000;
-  box-shadow: inset 0px 0px 15px 0px #000; }
+  background-color: #FFFFFF; }
   .content-holder .content {
     min-height: 400px;
     overflow: hidden;
@@ -218,23 +237,48 @@ ul.viewNavigation {
   margin: 30px auto 50px auto; }
 
 /*============================================================ Footer =========================================================*/
-#footer-holder {
-  background-color: #39B54C;
+.above-footer {
+  background: #333;
+  padding: 20px 0; }
+  .above-footer .above-footer-inner {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: block;
+    color: white; }
+    .above-footer .above-footer-inner ul.social-icons li a {
+      color: black; }
+
+#footer {
   clear: both;
   position: relative;
-  z-index: 100; }
-  #footer-holder #footer {
-    padding: 10px;
+  background-color: #39B54C; }
+  #footer .footer-inner {
     overflow: hidden;
     color: white;
     text-align: center;
     max-width: 1024px;
-    margin: 0 auto; }
-    #footer-holder #footer p span {
-      float: left; }
-    #footer-holder #footer p.backToTop {
-      float: right;
-      cursor: pointer; }
+    margin: 0 auto;
+    height: 60px; }
+    @media (max-width: 767px) {
+      #footer .footer-inner p {
+        margin-top: 10px; } }
+    @media (min-width: 768px) {
+      #footer .footer-inner p {
+        margin-top: 20px; } }
+    @media (max-width: 767px) {
+      #footer .footer-inner p span {
+        display: block; } }
+    #footer .footer-inner i.back-to-top {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      border-radius: 20px;
+      border: solid 2px white;
+      font-weight: bold;
+      width: 30px;
+      height: 30px;
+      line-height: 25px;
+      font-size: 20px; }
 
 /*============================================================ Responsive =========================================================*/
 /* Small devices (@screen-sm-min) */
@@ -254,6 +298,75 @@ ul.viewNavigation {
         border: none; } }
 /* Pages
 ---------------------------------*/
+body.home {
+  /*---------- Content ----------*/
+  /*---------- Banner ----------*/
+  /*---------- Education ----------*/
+  /*---------- Resume ----------*/
+  /*---------- Resume ----------*/ }
+  body.home .content {
+    padding: 0;
+    max-width: 100%; }
+  body.home h2 {
+    text-align: center; }
+  body.home .banner {
+    background: #111; }
+    body.home .banner .banner-inner {
+      max-width: 1024px;
+      display: block;
+      margin: 0 auto;
+      height: 300px;
+      overflow: hidden; }
+      body.home .banner .banner-inner img {
+        height: 100%;
+        float: left; }
+      body.home .banner .banner-inner .content {
+        padding: 20px; }
+        body.home .banner .banner-inner .content p {
+          color: white;
+          font-size: 30px;
+          text-align: center; }
+  body.home .education {
+    text-align: center;
+    padding: 20px 0; }
+    body.home .education img {
+      margin: 20px 0; }
+  body.home .resume {
+    background: #39B54C; }
+    body.home .resume .resume-inner {
+      max-width: 600px;
+      padding: 20px 0;
+      margin: 0 auto;
+      display: block;
+      overflow: hidden; }
+      body.home .resume .resume-inner .resume-section {
+        width: 50%;
+        float: left; }
+        body.home .resume .resume-inner .resume-section img {
+          display: block;
+          margin: 20px auto; }
+        body.home .resume .resume-inner .resume-section a {
+          display: block;
+          margin: 0 auto;
+          background: white;
+          color: #39B54C;
+          font-size: 20px;
+          line-height: 25px;
+          width: 30px;
+          height: 30px;
+          border-radius: 20px;
+          text-align: center; }
+          body.home .resume .resume-inner .resume-section a i {
+            padding-top: 5px; }
+  body.home .skills .skills-inner {
+    max-width: 600px; }
+    body.home .skills .skills-inner ul {
+      list-style: none;
+      overflow: hidden; }
+      body.home .skills .skills-inner ul li {
+        float: left;
+        width: 25%; }
+
 /*============================================================ Tech Icons ============================================================*/
 ul.techs li {
   width: 32px;
