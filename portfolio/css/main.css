@@ -1,7 +1,9 @@
 /*---------------------------------------------- Variables ----------------------------------------------*/
-/* Variables
+/* Variables - Colors
 ----------------------*/
 /* Mixin
+----------------------*/
+/* Media Queries
 ----------------------*/
 /*---------------------------------------------- Imports ----------------------------------------------*/
 @import url(http://fonts.googleapis.com/css?family=Enriqueta);
@@ -74,7 +76,6 @@ p.caption {
 
 body {
   width: 100%;
-  min-width: 400px;
   margin: 0 auto;
   font-family: arial; }
 
@@ -204,8 +205,7 @@ h2 {
   padding-top: 10px;
   padding-bottom: 10px;
   color: #1a733b;
-  font-size: 24px;
-  line-height: 25px; }
+  font-size: 24px; }
 
 ul.viewNavigation {
   list-style: none;
@@ -221,6 +221,10 @@ ul.viewNavigation {
   ul.viewNavigation li.currentTab {
     background-color: #333; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 .content-holder {
   background-color: #FFFFFF; }
   .content-holder .content {
@@ -228,10 +232,7 @@ ul.viewNavigation {
     overflow: hidden;
     max-width: 1024px;
     margin: 0 auto;
-    padding: 20px; }
-    .content-holder .content img {
-      max-width: 100%;
-      height: auto; }
+    padding: 20px 0; }
 
 .subnav {
   margin: 30px auto 50px auto; }
@@ -372,9 +373,9 @@ ul.techs li {
   width: 32px;
   height: 32px; }
   ul.techs li.dark {
-    background-image: url("../imgs/icons/tech-icons-dark.png"); }
+    background-image: url("../imgs/icons/tech-icons/tech-icons-dark.png"); }
   ul.techs li.lite {
-    background-image: url("../imgs/icons/tech-icons-lite.png"); }
+    background-image: url("../imgs/icons/tech-icons/tech-icons-lite.png"); }
   ul.techs li.HTML {
     background-position: 0 0; }
   ul.techs li.JavaScript {
@@ -397,7 +398,7 @@ ul.techs li {
     cursor: pointer;
     width: 50px;
     height: 50px;
-    background-image: url("../imgs/icons/tech-icons-filters.png"); }
+    background-image: url("../imgs/icons/tech-icons/tech-icons-filters.png"); }
     ul.techs li.filters.HTML {
       background-position: 0 0; }
     ul.techs li.filters.JavaScript {
@@ -417,7 +418,7 @@ ul.techs li {
     ul.techs li.filters.LESS-CSS {
       background-position: -400px 0; }
   ul.techs li.filters.inactive {
-    background-image: url("../imgs/icons/tech-icons-filters-inactive.png"); }
+    background-image: url("../imgs/icons/tech-icons/tech-icons-filters-inactive.png"); }
 
 /*============================================================ Centered Menu ============================================================*/
 .centeredmenu {
@@ -496,14 +497,17 @@ div.home-gallery ul.site-gallery {
         div.home-gallery ul.site-gallery li.item .title h2 {
           position: absolute;
           bottom: 0;
-          width: 100%; }
+          left: 0;
+          right: 0;
+          font-size: 20px; }
       div.home-gallery ul.site-gallery li.item img.website-img {
         width: 100%;
-        margin-bottom: 10px; }
+        margin: 0 auto 10px auto; }
       div.home-gallery ul.site-gallery li.item.active .active-icon {
         position: absolute;
         bottom: 0;
-        width: 100%; }
+        left: 0;
+        right: 0; }
         div.home-gallery ul.site-gallery li.item.active .active-icon img {
           margin: 0 auto;
           display: block; }
@@ -511,8 +515,8 @@ div.home-gallery ul.site-gallery {
       background: #333;
       width: 100%;
       clear: both;
-      margin-bottom: 20px;
-      padding-bottom: 20px; }
+      padding: 20px 0;
+      margin-bottom: 20px; }
       div.home-gallery ul.site-gallery li.full div.gallery-img-holder {
         float: left;
         margin: 0; }
@@ -527,30 +531,85 @@ div.home-gallery ul.site-gallery {
         max-width: 900px;
         overflow: hidden; }
         div.home-gallery ul.site-gallery li.full .info-holder img.website-img {
-          width: 100%; }
+          width: 100%;
+          max-width: 400px;
+          display: block;
+          -webkit-box-shadow: 0 0 10px 0 #222222;
+          box-shadow: 0 0 10px 0 #222222; }
+          @media (max-width: 767px) {
+            div.home-gallery ul.site-gallery li.full .info-holder img.website-img {
+              margin: 20px auto; } }
         div.home-gallery ul.site-gallery li.full .info-holder .info {
           color: white; }
-      div.home-gallery ul.site-gallery li.full .client-info {
-        background: white;
-        color: black;
-        padding: 20px; }
-        div.home-gallery ul.site-gallery li.full .client-info img {
-          display: block;
-          margin: 0 auto 5px auto; }
-      div.home-gallery ul.site-gallery li.full a.btn {
+      @media (min-width: 768px) {
+        div.home-gallery ul.site-gallery li.full .client-branding {
+          position: absolute;
+          top: 15px;
+          left: 0;
+          right: 0;
+          z-index: 100;
+          width: 100%;
+          margin: 0 auto;
+          max-width: 900px; } }
+      @media (min-width: 768px) {
+        div.home-gallery ul.site-gallery li.full .client-branding .client-branding-inner {
+          position: relative;
+          float: right;
+          height: 150px; } }
+      @media (min-width: 768px) {
+        div.home-gallery ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder {
+          height: 75px;
+          position: relative;
+          margin-left: 75px; } }
+      div.home-gallery ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder h2 {
+        display: block;
+        padding: 0;
+        font-weight: bold; }
+        @media (min-width: 768px) {
+          div.home-gallery ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder h2 {
+            position: absolute;
+            bottom: 0;
+            left: 85px;
+            right: 85px;
+            text-align: center; } }
+      div.home-gallery ul.site-gallery li.full .client-branding .client-branding-inner img {
+        display: block;
+        border: solid 5px #4f4f4f;
+        border-radius: 100px;
         width: 150px; }
-
-/*============================================================ Experience =========================================================*/
-div.experience-holder ul {
-  list-style: none; }
-  div.experience-holder ul li div.crsHeading {
-    padding: 10px;
-    border: solid 1px #1A733B; }
-  div.experience-holder ul li div.crsDesc {
-    margin: 0 10px;
-    padding: 10px;
-    border-left: solid 1px #1A733B;
-    border-right: solid 1px #1A733B; }
+        @media (max-width: 767px) {
+          div.home-gallery ul.site-gallery li.full .client-branding .client-branding-inner img {
+            margin: 15px auto 0 auto; } }
+        @media (min-width: 768px) {
+          div.home-gallery ul.site-gallery li.full .client-branding .client-branding-inner img {
+            position: absolute;
+            top: 0;
+            left: 20px; } }
+      div.home-gallery ul.site-gallery li.full .client-info {
+        position: relative;
+        overflow: hidden; }
+        div.home-gallery ul.site-gallery li.full .client-info .p-holder {
+          border: solid 5px #4f4f4f;
+          min-height: 120px;
+          background: white; }
+          @media (min-width: 768px) {
+            div.home-gallery ul.site-gallery li.full .client-info .p-holder {
+              margin-top: 75px;
+              margin-left: 75px; } }
+          div.home-gallery ul.site-gallery li.full .client-info .p-holder p {
+            color: black;
+            padding: 15px 15px 15px 70px;
+            font-size: 16px;
+            color: #4f4f4f;
+            text-indent: 20px; }
+      div.home-gallery ul.site-gallery li.full .project-info {
+        background: #4f4f4f;
+        padding: 15px 0; }
+        @media (min-width: 768px) {
+          div.home-gallery ul.site-gallery li.full .project-info {
+            margin-left: 75px; } }
+        div.home-gallery ul.site-gallery li.full .project-info a.btn {
+          width: 150px; }
 
 /*============================================================ Contacts =========================================================*/
 div.contact-page {

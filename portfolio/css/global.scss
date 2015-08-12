@@ -78,7 +78,6 @@ p.caption {
 
 body{
 	width:100%;
-	min-width:400px;
 	margin:0 auto;
 	font-family:arial;
 }
@@ -236,7 +235,6 @@ h2{
 	padding-bottom:10px;
 	color:#1a733b;
 	font-size: 24px;
-	line-height: 25px;
 }
 
 ul.viewNavigation{
@@ -258,6 +256,10 @@ ul.viewNavigation{
 }
 
 
+img{
+	max-width:100%;
+	height:auto;
+}
 
 
 .content-holder{
@@ -267,12 +269,7 @@ ul.viewNavigation{
 		overflow:hidden;
 		max-width:$maxScreenWidth;
 		margin:0 auto;
-		padding: 20px;
-		
-		img{
-			max-width:100%;
-			height:auto;
-		}
+		padding: 20px 0;
 	}
 }
 

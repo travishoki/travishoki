@@ -40,12 +40,19 @@
 
     <!-- Angular JS -->
     <script src="portfolio/lib/angular/angular.min.js" type="text/javascript"></script>
-    <script src="portfolio/lib/angular/angular.route.min.js" type="text/javascript"></script>
+    <script src="portfolio/lib/angular/angular-route.min.js" type="text/javascript"></script>
     <script src="portfolio/lib/angular/angular.animate.min.js" type="text/javascript"></script>
     <script src="portfolio/lib/angular/angular-ui-bootstrap.js" type="text/javascript"></script>
 
     <!-- Custom -->
-    <script src="portfolio/controllers/controller.js" type="text/javascript"></script>
+    <script src="portfolio/js/main.js" type="text/javascript"></script>
+    <script src="portfolio/js/config.js" type="text/javascript"></script>
+    <script src="portfolio/js/directives.js" type="text/javascript"></script>
+    <script src="portfolio/js/filters.js" type="text/javascript"></script>
+    <!-- Controllers -->
+    <script src="portfolio/js/controllers/portfolio.js" type="text/javascript"></script>
+    <script src="portfolio/js/controllers/flash.js" type="text/javascript"></script>
+    <script src="portfolio/js/controllers/contact.js" type="text/javascript"></script>
 
 </body>
 </html>

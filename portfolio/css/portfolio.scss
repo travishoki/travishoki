@@ -1,0 +1,313 @@
+/*============================================================ Tech Icons ============================================================*/
+ul.techs {
+	li {
+		width: 32px;
+		height: 32px;
+		&.dark {
+			background-image: url('../imgs/icons/tech-icons/tech-icons-dark.png');
+		}
+		&.lite {
+			background-image: url('../imgs/icons/tech-icons/tech-icons-lite.png');
+		}
+
+		&.HTML {
+			background-position: 0 0;
+		}
+		&.JavaScript {
+			background-position: -32px 0;
+		}
+		&.CSS {
+			background-position: -64px 0;
+		}
+		&.jQuery {
+			background-position: -96px 0;
+		}
+		&.AngularJs {
+			background-position: -128px 0;
+		}
+		&.WordPress {
+			background-position: -160px 0;
+		}
+		&.Python {
+			background-position: -192px 0;
+		}
+		&.PHP {
+			background-position: -224px 0;
+		}
+		&.LESS-CSS {
+			background-position: -256px 0;
+		}
+
+		&.filters {
+			cursor: pointer;
+			width: 50px;
+			height: 50px;
+			background-image: url('../imgs/icons/tech-icons/tech-icons-filters.png');
+			&.HTML {
+				background-position: 0 0;
+			}
+			&.JavaScript {
+				background-position: -50px 0;
+			}
+			&.CSS {
+				background-position: -100px 0;
+			}
+			&.jQuery {
+				background-position: -150px 0;
+			}
+			&.AngularJs {
+				background-position: -200px 0;
+			}
+			&.WordPress {
+				background-position: -250px 0;
+			}
+			&.Python {
+				background-position: -300px 0;
+			}
+			&.PHP {
+				background-position: -350px 0;
+			}
+			&.LESS-CSS {
+				background-position: -400px 0;
+			}
+		}
+		&.filters.inactive {
+			background-image: url('../imgs/icons/tech-icons/tech-icons-filters-inactive.png');
+		}
+	}
+}
+
+/*============================================================ Centered Menu ============================================================*/
+.centeredmenu {
+   width:100%;
+   overflow:hidden;
+   position:relative;
+}
+.centeredmenu ul {
+   clear:left;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   left:50%;
+   text-align:center;
+}
+.centeredmenu ul li {
+   display:block;
+   float:left;
+   list-style:none;
+   margin:0;
+   padding:0;
+   position:relative;
+   right:50%;
+}
+.centeredmenu ul li a {
+   display:block;
+   margin:0 0 0 1px;
+   padding:3px 10px;
+   background:#ddd;
+   color:#000;
+   text-decoration:none;
+   line-height:1.3em;
+}
+.centeredmenu ul li a:hover {
+   background:#369;
+   color:#fff;
+}
+.centeredmenu ul li a.active,
+.centeredmenu ul li a.active:hover {
+   color:#fff;
+   background:#000;
+   font-weight:bold;
+}
+
+
+/*============================================================ Home ============================================================*/
+div.home-gallery{
+	p{
+		display:block;
+		margin-bottom:5px;
+	}
+	h2{
+		text-align: center;
+		padding-top:0px;
+	}
+	ul.techs {
+		li {
+			margin: 2px;
+		}
+	}
+	.site-filters {
+		background: $primaryColor;
+		margin-bottom: 20px;
+		padding: 20px;
+		ul li {
+			img {
+				width: 32px;
+				height: 32px;
+			}
+		}
+	}
+	ul.site-gallery {
+		list-style:none;
+		padding:0;
+		li{
+			overflow: hidden;
+			position: relative;
+			h2 {
+				color: white;
+			}
+			&.item {
+				cursor: pointer;
+				.title {
+					height: 70px;
+					position: relative;
+					background: $primaryColor;				
+					h2 {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						font-size: 20px;
+					}
+				}
+				img.website-img {
+					width: 100%;
+					margin: 0 auto 10px auto;
+				}
+				&.active {
+					.active-icon {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						img {
+							margin: 0 auto;
+							display: block;
+						}
+					}
+				}
+			}
+			&.full {
+				background: #333;
+				width: 100%;
+				clear: both;
+				padding: 20px 0;
+				margin-bottom: 20px;
+				div.gallery-img-holder {
+					float: left;
+					margin: 0;
+				}				
+				h2 {
+					padding: 20px;
+				}
+				h4 {
+					text-align: center;
+					margin: 10px 0;
+					font-weight: bold;
+				}
+				.info-holder {
+					margin: 0 auto;
+					max-width: 900px;
+					overflow: hidden;
+					img.website-img {
+						width: 100%;
+						max-width: 400px;
+						display: block;
+						-webkit-box-shadow: 0 0 10px 0 #222222;
+						box-shadow: 0 0 10px 0 #222222;
+						@media #{$phone} {
+							margin: 20px auto;
+						}
+					}
+					.info {
+						color: white;
+					}
+				}
+				.client-branding {
+					@media #{$tablet-up} {
+						position: absolute;
+						top: 15px;
+						left: 0;
+						right: 0;
+						z-index: 100;
+						width: 100%;
+					    margin: 0 auto;
+					    max-width: 900px;
+					}
+					.client-branding-inner {
+						@media #{$tablet-up} {
+							position: relative;
+							float: right;
+							height: 150px;
+						}
+						.client-branding-title-holder {
+							@media #{$tablet-up} {
+								height: 75px;
+								position: relative;
+							    margin-left: 75px;
+							}
+							h2 {
+								display: block;
+								padding: 0;
+								font-weight: bold;
+								@media #{$tablet-up} {
+									position: absolute;
+									bottom: 0;
+									left: 85px;
+									right: 85px;
+									text-align: center;
+								}
+							}
+						}
+						img {
+							display: block;
+							border: solid 5px #4f4f4f;
+							border-radius: 100px;
+							width: 150px;
+							@media #{$phone} {
+								margin: 15px auto 0 auto;
+							}
+							@media #{$tablet-up} {
+								position: absolute;
+								top: 0;
+								left: 20px;
+							}
+						}
+					}
+				}
+				.client-info {
+					position: relative;
+					overflow: hidden;
+					.p-holder {
+						border: solid 5px #4f4f4f;
+						min-height: 120px;
+						background: white;
+						@media #{$tablet-up} {
+							margin-top: 75px;
+							margin-left: 75px;
+						}
+						p {
+							color: black;
+							padding: 15px 15px 15px 70px;
+							font-size: 16px;
+							color: #4f4f4f;
+							text-indent: 20px;
+						}
+					}
+				}
+				.project-info {
+					background: #4f4f4f;
+					padding: 15px 0;
+					@media #{$tablet-up} {
+						margin-left: 75px;
+					}
+					a.btn {
+					  width: 150px;
+					}
+				}
+			}
+		}
+	}
+}
