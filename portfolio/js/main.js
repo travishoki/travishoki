@@ -18,4 +18,15 @@ app.controller('mainCtrl', function($scope, $http, $location){
 			scrollTop: 0
 		}, 800);
 	}	
+})
+.directive("scrollNav", function ($window) {
+    return function(scope, element, attrs) {
+        angular.element($window).bind("scroll", function() {
+             if (this.pageYOffset >= 50) {
+                 element.addClass('scrolled');
+             } else {
+                 element.removeClass('scrolled');
+             }
+        });
+    };
 });

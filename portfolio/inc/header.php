@@ -30,7 +30,7 @@ function getLink($str){
 
 init();
 ?>
-<div id="header">
+<div id="header" scroll-nav>
     <div class="header-inner">
         <div class="branding">
             <?php if($blog):?>
@@ -38,7 +38,7 @@ init();
             <?php else:?>
                 <a ng-click="setRoute('home')">
             <?php endif;?>
-                <img src="http://travishoki.com/portfolio/imgs/headerImg_shadow.png" title="TravisHoki.com"/>
+                <h1>Travis Hoki</h1>
             </a>
         </div><!-- branding -->
         <i class="fa fa-reorder mobileMenuBtn hidden-sm hidden-md hidden-lg" ng-click="showMobileMenu = !showMobileMenu"></i>
@@ -46,19 +46,19 @@ init();
         <nav collapse="!showMobileMenu" ng-init="showMobileMenu = false" ng-cloak>
             <ul>
                 <li>
-                    <a class="btn btn-green" <?php echo getLink('home');?>>Home</a>
+                    <a <?php echo getLink('home');?>>Home</a>
                 </li>
                 <li>
-                    <a class="btn btn-green" <?php echo getLink('portfolio');?>>PORTFOLIO</a>
+                    <a <?php echo getLink('portfolio');?>>Portfolio</a>
                 </li>
                 <li>
-                    <a class="btn btn-green" <?php echo getLink('resume');?>>RESUME</a>
+                    <a <?php echo getLink('resume');?>>Resume</a>
                 </li>
                 <li>
-                    <a class="btn btn-green" <?php echo getLink('about');?>>ABOUT ME</a>
+                    <a <?php echo getLink('about');?>>About Me</a>
                 </li>
                 <li>
-                    <a class="btn btn-green" <?php echo getLink('contact');?>>CONTACT</a>
+                    <a <?php echo getLink('contact');?>>Contact</a>
                 </li>
                 <li>
                 <?php if(!$local):?>
@@ -72,20 +72,6 @@ init();
                 </li>
             </ul>
         </nav>
-
-        <ul class="social-icons">
-            <li>
-                <a href="https://github.com/travishoki/" target="_blank" title="Travis's Github">
-                    <i class="fa fa-git"></i>
-                </a>
-            </li>    
-            <li>
-                <a href="https://www.linkedin.com/pub/travis-hoki/85/b0b/113" target="_blank" title="Travis's Linked In">
-                    <i class="fa fa-linkedin"></i>
-                </a>
-            </li>    
-        </ul>
-
 
     </div><!-- header -->
 </div><!-- header-holder -->
