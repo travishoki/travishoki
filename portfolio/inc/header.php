@@ -63,9 +63,9 @@ init();
                 <li>
                 <?php if(!$local):?>
                     <?php if($blog):?>
-                        <a class="btn btn-green active">
+                        <a class="active">
                     <?php else:?>
-                        <a class="btn btn-green" href="http://blog.travishoki.com">
+                        <a href="http://blog.travishoki.com">
                     <?php endif;?>
                         Blog</a>
                 <?php endif;?>
