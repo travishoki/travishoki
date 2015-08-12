@@ -1,4 +1,11 @@
-
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+	text-align: center;
+	padding: 0;
+	margin: 20px 0;
+}
 
 .loaderHolder {
 	position: relative;
@@ -14,6 +21,29 @@
 	.loader.ng-hide {
 		opacity: 0;
 	}
+}
+
+/*---- Sections
+----------------------*/
+section {
+	.section-inner {
+		padding: 20px 0;
+		max-width: 600px;
+		margin: 0 auto;
+		display: block;
+		overflow: hidden;
+	}
+}
+section.grey {
+	color: #FFF;
+	background: #333;
+}
+section.white {
+	color: #333;
+}
+section.green {
+	color: #FFF;
+	background: $primaryColor;
 }
 
 /*---- Centered List
@@ -141,29 +171,11 @@ ul.social-icons {
 
 
 /*============================================================ Header =========================================================*/
-#header {
-	background-color: $primaryColor;
-	overflow:hidden;
-	position: relative;
-	z-index: 100;
-	#header-inner {
-		color:white;
-		max-width:$maxScreenWidth;
-		margin:0 auto;
-		position: relative;
-		div.branding{
-			img {
-				cursor: pointer;
-			}
-		}
-	}
-}
-
 img.img-responsive {
 	width: 100%;
 }
-
 .mobileMenuBtn {
+	color: white;
 	float:right;
 	font-size: 40px;
 	cursor: pointer;
@@ -171,51 +183,98 @@ img.img-responsive {
 	top: 20px;
 	right: 20px;
 }
+body {
+	margin-top: 80px;
+	#header {
+		background: $primaryColor;
+	}	
+}
+body.home {
+	margin-top: 0;
+	#header {
+		background: transparent;
+		-webkit-transition: height .45s, background-color .45s;
+		transition: height .45s, background-color .45s;
+		&.scrolled {
+			background-color: $primaryColor;
+		}
+		@media #{$phone} {
+			background: $primaryColor;
+		}
+	}
+}
 #header {
+	position: fixed;
+	overflow:hidden;
+	z-index: 100;
+	top: 0;
+	width: 100%;
+	.header-inner {
+		color:white;
+		position: relative;
+		div.branding {
+			a {
+				text-decoration: none;
+				cursor: pointer;
+				h1 {
+					color: white;
+					line-height: 80px;
+					margin: 0 0 0 20px;
+				}
+			}
+		}
+	}
 	nav{
 		font-family: $brandedFont;
-		background: $secondaryColor;
 		clear: both;
+		@media #{$phone} {
+			background: $secondaryColor;
+		}
 		ul{
 			list-style:none;
 			margin:0;
 			padding:0;
 			overflow:hidden;
-			font-size:15px;
+			font-size: 16px;
+			@media #{$tablet-up} {
+				margin-right: 20px;
+			}
 			li {
-				.btn {
+				a {
 					margin: 0;
 					width: 100%;
+					color: white;
+					font-weight: bold;
+					text-transform: uppercase;
+					text-decoration: none;
+					cursor: pointer;
 					padding: 20px 10px;
 					&.active {
 						box-shadow: none;
 					}
-				}
-				.btn:hover {
-					background: $primaryColor;
-					color: $secondaryColor;
-				}
-				@media #{$phone} {
-					.btn {
-						background: $secondaryColor;
+					@media #{$phone} {
+						display: block;
+						text-align: center;
+						&.active {
+							background: $secondaryColor;
+						}
+						&:hover {
+							background: $primaryColor;
+						}
 					}
-					.btn.active {
-						background: $primaryColor;
-					}
-				}
-				@media #{$tablet-up} {
-					.btn.active {
-						color: $secondaryColor;
-						background: none;
+					@media #{$tablet-up} {
+					    height: 80px;
+					    line-height: 80px;
+						&:hover {
+							color: $secondaryColor;
+						}
+						&.active {
+							color: $secondaryColor;
+						}
 					}
 				}
 			}
 		}
-	}
-	ul.social-icons {
-	    position: absolute;
-	    bottom: 10px;
-	    right: 20px;
 	}
 }
 
@@ -230,12 +289,6 @@ button a{
 	color:white;
 }
 
-h2{
-	padding-top: 10px;
-	padding-bottom:10px;
-	color:#1a733b;
-	font-size: 24px;
-}
 
 ul.viewNavigation{
 	list-style:none;
