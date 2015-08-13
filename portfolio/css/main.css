@@ -286,10 +286,7 @@ img {
   background-color: #FFFFFF; }
   .content-holder .content {
     min-height: 400px;
-    overflow: hidden;
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 20px 0; }
+    overflow: hidden; }
 
 .subnav {
   margin: 30px auto 50px auto; }
@@ -936,6 +933,25 @@ div.flash-gallery ul.ensparkCourseThumbs li {
 /*============================================================ About ============================================================*/
 div.about-page h2 {
   text-align: center; }
+div.about-page ul.images {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  div.about-page ul.images li {
+    position: relative;
+    color: white; }
+    div.about-page ul.images li h3 {
+      font-size: 50px;
+      font-weight: bold; }
+    div.about-page ul.images li p {
+      font-size: 20px; }
+    div.about-page ul.images li .image-content {
+      position: absolute;
+      top: 30px; }
+    div.about-page ul.images li:nth-child(odd) .image-content {
+      left: 30px; }
+    div.about-page ul.images li:nth-child(even) .image-content {
+      right: 30px; }
 
 /*============================================================ Apps =========================================================*/
 div.app-gallery .section {
