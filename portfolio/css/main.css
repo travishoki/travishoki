@@ -6,6 +6,10 @@
 /* Media Queries
 ----------------------*/
 /*---------------------------------------------- Imports ----------------------------------------------*/
+body {
+  background: #333;
+  color: white; }
+
 h2 {
   font-size: 30px;
   font-weight: bold;
@@ -20,11 +24,23 @@ h2 {
     width: 100%; }
   .loaderHolder .loader {
     position: absolute;
+    -webkit-transition: 0.5s linear all;
     transition: 0.5s linear all;
     opacity: 1;
     width: 100%; }
   .loaderHolder .loader.ng-hide {
     opacity: 0; }
+
+/*---- Form
+----------------------*/
+form input,
+form textarea {
+  background-color: #444;
+  border: none;
+  border-radius: 0;
+  display: block;
+  margin-bottom: 20px;
+  padding: 10px; }
 
 /*---- Sections
 ----------------------*/
@@ -42,7 +58,8 @@ section.grey {
   background: #333; }
 
 section.white {
-  color: #333; }
+  color: #333;
+  background: white; }
 
 section.green {
   color: #FFF;
@@ -96,6 +113,9 @@ div#view {
 h1, h2, h3, h4, p {
   margin: 0; }
 
+h1 {
+  margin: 20px 0; }
+
 p {
   margin-bottom: 10px; }
 
@@ -143,9 +163,6 @@ body {
 
 .center {
   text-align: center; }
-
-h1 {
-  margin-bottom: 10px; }
 
 ul.social-icons {
   list-style: none;
@@ -282,11 +299,14 @@ img {
   max-width: 100%;
   height: auto; }
 
-.content-holder {
-  background-color: #FFFFFF; }
-  .content-holder .content {
-    min-height: 400px;
-    overflow: hidden; }
+.content-holder .content {
+  min-height: 400px;
+  overflow: hidden; }
+  .content-holder .content .page-content {
+    max-width: 1024px;
+    margin: 0 auto; }
+    .content-holder .content .page-content.full {
+      max-width: 100%; }
 
 .subnav {
   margin: 30px auto 50px auto; }
@@ -406,50 +426,6 @@ ul.techs li {
   ul.techs li.filters.inactive {
     background-image: url("../imgs/icons/tech-icons-filters-inactive.png"); }
 
-/*============================================================ Centered Menu ============================================================*/
-.centeredmenu {
-  width: 100%;
-  overflow: hidden;
-  position: relative; }
-
-.centeredmenu ul {
-  clear: left;
-  float: left;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  left: 50%;
-  text-align: center; }
-
-.centeredmenu ul li {
-  display: block;
-  float: left;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  right: 50%; }
-
-.centeredmenu ul li a {
-  display: block;
-  margin: 0 0 0 1px;
-  padding: 3px 10px;
-  background: #ddd;
-  color: #000;
-  text-decoration: none;
-  line-height: 1.3em; }
-
-.centeredmenu ul li a:hover {
-  background: #369;
-  color: #fff; }
-
-.centeredmenu ul li a.active,
-.centeredmenu ul li a.active:hover {
-  color: #fff;
-  background: #000;
-  font-weight: bold; }
-
 /*============================================================ Home ============================================================*/
 div.home-gallery p {
   display: block;
@@ -473,14 +449,6 @@ div.home-gallery ul.site-gallery {
       color: white; }
     div.home-gallery ul.site-gallery li.item {
       cursor: pointer; }
-      div.home-gallery ul.site-gallery li.item .title {
-        height: 70px;
-        position: relative;
-        background: #39B54C; }
-        div.home-gallery ul.site-gallery li.item .title h2 {
-          position: absolute;
-          bottom: 0;
-          width: 100%; }
       div.home-gallery ul.site-gallery li.item img.website-img {
         width: 100%;
         margin-bottom: 10px; }
@@ -642,12 +610,12 @@ ul.techs li {
     background-image: url("../imgs/icons/tech-icons/tech-icons-filters-inactive.png"); }
 
 /*============================================================ Centered Menu ============================================================*/
-.centeredmenu {
+.centered-list {
   width: 100%;
   overflow: hidden;
   position: relative; }
 
-.centeredmenu ul {
+.centered-list ul {
   clear: left;
   float: left;
   list-style: none;
@@ -657,7 +625,7 @@ ul.techs li {
   left: 50%;
   text-align: center; }
 
-.centeredmenu ul li {
+.centered-list ul li {
   display: block;
   float: left;
   list-style: none;
@@ -666,7 +634,7 @@ ul.techs li {
   position: relative;
   right: 50%; }
 
-.centeredmenu ul li a {
+.centered-list ul li a {
   display: block;
   margin: 0 0 0 1px;
   padding: 3px 10px;
@@ -675,95 +643,105 @@ ul.techs li {
   text-decoration: none;
   line-height: 1.3em; }
 
-.centeredmenu ul li a:hover {
+.centered-list ul li a:hover {
   background: #369;
   color: #fff; }
 
-.centeredmenu ul li a.active,
-.centeredmenu ul li a.active:hover {
+.centered-list ul li a.active,
+.centered-list ul li a.active:hover {
   color: #fff;
   background: #000;
   font-weight: bold; }
 
-/*============================================================ Home ============================================================*/
-div.home-gallery p {
+/*============================================================ Portfolio Page ============================================================*/
+div.portfolio-page p {
   display: block;
   margin-bottom: 5px; }
-div.home-gallery h2 {
+div.portfolio-page h2 {
   text-align: center;
   padding-top: 0px; }
-div.home-gallery ul.techs li {
+div.portfolio-page ul.techs li {
   margin: 2px; }
-div.home-gallery .site-filters {
+div.portfolio-page .site-filters {
   background: #39B54C;
   margin-bottom: 20px;
   padding: 20px; }
-  div.home-gallery .site-filters ul li img {
+  div.portfolio-page .site-filters ul li img {
     width: 32px;
     height: 32px; }
-div.home-gallery ul.site-gallery {
+div.portfolio-page ul.site-gallery {
   list-style: none;
-  padding: 0; }
-  div.home-gallery ul.site-gallery li {
+  padding: 0 15px; }
+  div.portfolio-page ul.site-gallery li {
     overflow: hidden;
     position: relative; }
-    div.home-gallery ul.site-gallery li h2 {
+    div.portfolio-page ul.site-gallery li h2 {
       color: white; }
-    div.home-gallery ul.site-gallery li.item {
-      cursor: pointer; }
-      div.home-gallery ul.site-gallery li.item .title {
-        height: 70px;
-        position: relative;
-        background: #39B54C; }
-        div.home-gallery ul.site-gallery li.item .title h2 {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          font-size: 20px; }
-      div.home-gallery ul.site-gallery li.item img.website-img {
+    div.portfolio-page ul.site-gallery li.item {
+      padding: 0 5px 10px 5px;
+      cursor: pointer;
+      position: relative; }
+      div.portfolio-page ul.site-gallery li.item img.website-img {
         width: 100%;
-        margin: 0 auto 10px auto; }
-      div.home-gallery ul.site-gallery li.item.active .active-icon {
+        margin: 0 auto; }
+      div.portfolio-page ul.site-gallery li.item .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: .5s background;
+        /* Chrome */
+        transition: .5s background;
+        display: none; }
+        div.portfolio-page ul.site-gallery li.item .overlay p {
+          margin-top: 100px;
+          color: white;
+          font-weight: bold;
+          font-size: 30px;
+          text-align: center;
+          text-transform: uppercase; }
+      div.portfolio-page ul.site-gallery li.item:hover .overlay {
+        background: rgba(0, 0, 0, 0.5);
+        display: block; }
+      div.portfolio-page ul.site-gallery li.item.active .active-icon {
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0; }
-        div.home-gallery ul.site-gallery li.item.active .active-icon img {
+        div.portfolio-page ul.site-gallery li.item.active .active-icon img {
           margin: 0 auto;
           display: block; }
-    div.home-gallery ul.site-gallery li.full {
+    div.portfolio-page ul.site-gallery li.full {
       background: #333;
       width: 100%;
       clear: both;
       padding: 20px 0;
       margin-bottom: 20px; }
-      div.home-gallery ul.site-gallery li.full div.gallery-img-holder {
+      div.portfolio-page ul.site-gallery li.full div.gallery-img-holder {
         float: left;
         margin: 0; }
-      div.home-gallery ul.site-gallery li.full h2 {
+      div.portfolio-page ul.site-gallery li.full h2 {
         padding: 20px; }
-      div.home-gallery ul.site-gallery li.full h4 {
+      div.portfolio-page ul.site-gallery li.full h4 {
         text-align: center;
         margin: 10px 0;
         font-weight: bold; }
-      div.home-gallery ul.site-gallery li.full .info-holder {
+      div.portfolio-page ul.site-gallery li.full .info-holder {
         margin: 0 auto;
         max-width: 900px;
         overflow: hidden; }
-        div.home-gallery ul.site-gallery li.full .info-holder img.website-img {
+        div.portfolio-page ul.site-gallery li.full .info-holder img.website-img {
           width: 100%;
           max-width: 400px;
           display: block;
           -webkit-box-shadow: 0 0 10px 0 #222222;
           box-shadow: 0 0 10px 0 #222222; }
           @media (max-width: 767px) {
-            div.home-gallery ul.site-gallery li.full .info-holder img.website-img {
+            div.portfolio-page ul.site-gallery li.full .info-holder img.website-img {
               margin: 20px auto; } }
-        div.home-gallery ul.site-gallery li.full .info-holder .info {
+        div.portfolio-page ul.site-gallery li.full .info-holder .info {
           color: white; }
       @media (min-width: 768px) {
-        div.home-gallery ul.site-gallery li.full .client-branding {
+        div.portfolio-page ul.site-gallery li.full .client-branding {
           position: absolute;
           top: 15px;
           left: 0;
@@ -773,63 +751,63 @@ div.home-gallery ul.site-gallery {
           margin: 0 auto;
           max-width: 900px; } }
       @media (min-width: 768px) {
-        div.home-gallery ul.site-gallery li.full .client-branding .client-branding-inner {
+        div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner {
           position: relative;
           float: right;
           height: 150px; } }
       @media (min-width: 768px) {
-        div.home-gallery ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder {
+        div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder {
           height: 75px;
           position: relative;
           margin-left: 75px; } }
-      div.home-gallery ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder h2 {
+      div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder h2 {
         display: block;
         padding: 0;
         font-weight: bold; }
         @media (min-width: 768px) {
-          div.home-gallery ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder h2 {
+          div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder h2 {
             position: absolute;
             bottom: 0;
             left: 85px;
             right: 85px;
             text-align: center; } }
-      div.home-gallery ul.site-gallery li.full .client-branding .client-branding-inner img {
+      div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner img {
         display: block;
         border: solid 5px #4f4f4f;
         border-radius: 100px;
         width: 150px; }
         @media (max-width: 767px) {
-          div.home-gallery ul.site-gallery li.full .client-branding .client-branding-inner img {
+          div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner img {
             margin: 15px auto 0 auto; } }
         @media (min-width: 768px) {
-          div.home-gallery ul.site-gallery li.full .client-branding .client-branding-inner img {
+          div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner img {
             position: absolute;
             top: 0;
             left: 20px; } }
-      div.home-gallery ul.site-gallery li.full .client-info {
+      div.portfolio-page ul.site-gallery li.full .client-info {
         position: relative;
         overflow: hidden; }
-        div.home-gallery ul.site-gallery li.full .client-info .p-holder {
+        div.portfolio-page ul.site-gallery li.full .client-info .p-holder {
           border: solid 5px #4f4f4f;
           min-height: 120px;
           background: white; }
           @media (min-width: 768px) {
-            div.home-gallery ul.site-gallery li.full .client-info .p-holder {
+            div.portfolio-page ul.site-gallery li.full .client-info .p-holder {
               margin-top: 75px;
               margin-left: 75px; } }
-          div.home-gallery ul.site-gallery li.full .client-info .p-holder p {
+          div.portfolio-page ul.site-gallery li.full .client-info .p-holder p {
             color: black;
             padding: 15px 15px 15px 70px;
             font-size: 16px;
             color: #4f4f4f;
             text-indent: 20px; }
-      div.home-gallery ul.site-gallery li.full .project-info {
+      div.portfolio-page ul.site-gallery li.full .project-info {
         background: #4f4f4f;
         padding: 15px 0; }
         @media (min-width: 768px) {
-          div.home-gallery ul.site-gallery li.full .project-info {
+          div.portfolio-page ul.site-gallery li.full .project-info {
             margin-left: 75px; } }
-        div.home-gallery ul.site-gallery li.full .project-info a.btn {
+        div.portfolio-page ul.site-gallery li.full .project-info a.btn {
           width: 150px; }
 
 /*============================================================ Contacts =========================================================*/
@@ -866,7 +844,7 @@ div.resume-page div.resume-content ul {
   padding: 0 0 0 20px; }
   div.resume-page div.resume-content ul li {
     padding: 40px 0;
-    border-top: solid 1px #1A733B; }
+    border-top: solid 5px #444; }
   div.resume-page div.resume-content ul ul {
     list-style: disc;
     margin-top: 5px; }

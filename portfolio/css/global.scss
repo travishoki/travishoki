@@ -1,3 +1,8 @@
+body {
+	background: #333;
+	color: white;
+}
+
 h2 {
     font-size: 30px;
     font-weight: bold;
@@ -14,12 +19,27 @@ h2 {
 	}
 	.loader {
 		position: absolute;
+		-webkit-transition: 0.5s linear all;
 		transition: 0.5s linear all;
 		opacity: 1;
 		width: 100%;
 	}
 	.loader.ng-hide {
 		opacity: 0;
+	}
+}
+
+/*---- Form
+----------------------*/
+form {
+	input,
+	textarea {
+	    background-color: #444;
+	    border: none;
+	    border-radius: 0;
+	    display: block;
+	    margin-bottom: 20px;
+	    padding: 10px;
 	}
 }
 
@@ -43,6 +63,7 @@ section.grey {
 }
 section.white {
 	color: #333;
+	background: white;
 }
 section.green {
 	color: #FFF;
@@ -98,7 +119,12 @@ div#view{
 /*---------------------------------------------- Other ----------------------------------------------*/
 .red{color:red;}
 
-h1,h2,h3,h4,p{margin:0;}
+h1, h2, h3, h4, p {
+	margin:0;
+}
+h1 {
+	margin: 20px 0;
+}
 
 p{
 	margin-bottom:10px;
@@ -146,10 +172,8 @@ body{
 
 
 .center{
-	text-align:center;
+	text-align: center;
 }
-
-h1{margin-bottom:10px;}
 
 
 ul.social-icons {
@@ -322,13 +346,18 @@ img{
 
 
 .content-holder{
-	background-color:#FFFFFF;
 	.content{
 		min-height:400px;
 		overflow:hidden;
+		.page-content {
+			max-width: 1024px;
+			margin: 0 auto;
+			&.full {
+				max-width: 100%;			
+			}
+		}
 	}
 }
-
 
 .subnav{
 	margin:30px auto 50px auto;
