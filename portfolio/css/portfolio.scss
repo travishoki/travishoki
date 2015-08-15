@@ -78,12 +78,12 @@ ul.techs {
 }
 
 /*============================================================ Centered Menu ============================================================*/
-.centeredmenu {
+.centered-list {
    width:100%;
    overflow:hidden;
    position:relative;
 }
-.centeredmenu ul {
+.centered-list ul {
    clear:left;
    float:left;
    list-style:none;
@@ -93,7 +93,7 @@ ul.techs {
    left:50%;
    text-align:center;
 }
-.centeredmenu ul li {
+.centered-list ul li {
    display:block;
    float:left;
    list-style:none;
@@ -102,7 +102,7 @@ ul.techs {
    position:relative;
    right:50%;
 }
-.centeredmenu ul li a {
+.centered-list ul li a {
    display:block;
    margin:0 0 0 1px;
    padding:3px 10px;
@@ -111,20 +111,20 @@ ul.techs {
    text-decoration:none;
    line-height:1.3em;
 }
-.centeredmenu ul li a:hover {
+.centered-list ul li a:hover {
    background:#369;
    color:#fff;
 }
-.centeredmenu ul li a.active,
-.centeredmenu ul li a.active:hover {
+.centered-list ul li a.active,
+.centered-list ul li a.active:hover {
    color:#fff;
    background:#000;
    font-weight:bold;
 }
 
 
-/*============================================================ Home ============================================================*/
-div.home-gallery{
+/*============================================================ Portfolio Page ============================================================*/
+div.portfolio-page{
 	p{
 		display:block;
 		margin-bottom:5px;
@@ -151,7 +151,7 @@ div.home-gallery{
 	}
 	ul.site-gallery {
 		list-style:none;
-		padding:0;
+		padding:0 15px;
 		li{
 			overflow: hidden;
 			position: relative;
@@ -159,22 +159,34 @@ div.home-gallery{
 				color: white;
 			}
 			&.item {
+				padding: 0 5px 10px 5px;
 				cursor: pointer;
-				.title {
-					height: 70px;
-					position: relative;
-					background: $primaryColor;				
-					h2 {
-						position: absolute;
-						bottom: 0;
-						left: 0;
-						right: 0;
-						font-size: 20px;
-					}
-				}
+				position: relative;
 				img.website-img {
 					width: 100%;
-					margin: 0 auto 10px auto;
+					margin: 0 auto;
+				}
+				.overlay {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					-webkit-transition: .5s background; /* Chrome */
+					transition: .5s background;
+					display: none;
+					p {
+						margin-top: 100px;
+						color: white;
+						font-weight: bold;
+						font-size: 30px;
+						text-align: center;
+						text-transform: uppercase;
+					}
+				}
+				&:hover {
+					.overlay {
+						background: rgba(0,0,0,.5);
+						display: block;
+					}
 				}
 				&.active {
 					.active-icon {

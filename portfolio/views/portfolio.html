@@ -1,9 +1,9 @@
-<div class="home-gallery">
+<div class="page-content portfolio-page">
 
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class="site-filters">
 			<h2>Filters</h2>
-			<div class="centeredmenu">
+			<div class="centered-list">
 				<ul class="techs">
 					<li ng-repeat="tech in site_filters" 
 					ng-class="filterStyle(tech)" 
@@ -17,8 +17,8 @@
 
 	<ul class="site-gallery">
 		<li ng-repeat="site in sites | techFilter : site_filters" 
-		class="col-xs-6 col-sm-4 col-md-4 col-lg-4"
-		ng-click="openModal($event, $index, site)" 
+		class="col-xs-6 col-sm-4 col-md-3"
+		ng-click="site.full || openModal($event, $index, site)" 
 		ng-class="{full: site.full, item: !site.full, active: site.active}"
 		>
 			<!-- Items -->
@@ -29,4 +29,5 @@
 
 		</li>
 	</ul><!-- site-gallery -->
-</div><!--home-gallery-->
+	
+</div><!--portfolio-page-->
