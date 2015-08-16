@@ -10,7 +10,7 @@ if(isset($_REQUEST['cmd'])){
 }
 
 function sendContactForm($name, $email, $comment){
-	$to = 'hokirocko@gmail.com';
+	$to = 'travis.hoki@gmail.com';
 	$subject = 'TravisHoki.com Contact Form';
 
 	$msg = 'TravisHoki.com Contact Form';
@@ -19,6 +19,10 @@ function sendContactForm($name, $email, $comment){
 	$msg .= 'Comment: '.$comment;
 
 	// Send email
-	mail($to,$subject,$msg);
+	if(mail($to,$subject,$msg)) {
+		echo 'success';
+	}else{
+		echo 'fail';
+	}
 }//sendContactForm
 ?>

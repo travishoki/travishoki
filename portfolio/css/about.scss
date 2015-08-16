@@ -1,5 +1,8 @@
 /*============================================================ About ============================================================*/
 div.about-page{
+	&.page-content {
+		margin: 0;	
+	}
 	h2 {
 		text-align: center;
 	}
@@ -11,24 +14,39 @@ div.about-page{
 			position: relative;
 			color: white;
 			h3 {
-				font-size: 50px;
 				font-weight: bold;
+				@media #{$xs} {
+					font-size: 30px;
+				}
+				@media #{$sm} {
+					font-size: 50px;
+				}
 			}
 			p {
 				font-size: 20px;
-				}
-			.image-content {
-				position: absolute;
-				top: 30px;
-			}
-			&:nth-child(odd) {
-				.image-content {
-					left: 30px;
-				}
 			}
 			&:nth-child(even) {
 				.image-content {
-					right: 30px;
+					@media #{$xs} {
+						left: 100px;
+					}
+					@media #{$sm} {
+						right: 0;
+					}
+				}
+			}
+			&:nth-child(odd) {
+				.image-content {
+					left: 0;
+				}
+			}
+			.image-content {
+				position: absolute;
+				@media #{$xs} {
+					padding: 10px;
+				}
+				@media #{$sm} {
+					padding: 30px;
 				}
 			}
 		}

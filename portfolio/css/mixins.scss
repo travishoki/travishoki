@@ -49,13 +49,20 @@ $maxContentWidth : 1024px;
 
 /* Media Queries
 ----------------------*/
-$phone: "(max-width: 767px)";
-$tablet: "(min-width: 768px) and (max-width: 1023px)";
-$desktop: "(min-width: 1024px)";
+/* Large devices (large desktops, 1200px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Small devices (tablets, 768px and up) */
 
-$tablet-down: "(max-width: 767px)";
-$tablet-up: "(min-width: 768px)";
 
+
+
+$lg: "(min-width: 1201px)";
+$md: "(min-width: 993px)";
+$sm: "(min-width: 769px)";
+$xs: "(max-width: 768px)";
+
+$md-down: "(max-width: 1200px)";
+$sm-down: "(max-width: 992px)";
 
 
 

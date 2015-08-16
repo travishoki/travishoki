@@ -1,71 +1,64 @@
 /*============================================================ Resume =========================================================*/
-div.resume-page{
+
+div.resume-page {
+	padding: 0 15px;			
+	.resume-header {
+		padding: 20px 0; 
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
 	div.resume-content {
-		ul{
+		h2 {
+			text-align: left;
+		} 
+		img {
+			border-radius: 50%;
+			border: solid 5px #444;
+		}
+		ul {
 			list-style: none;
-			padding: 0 0 0 20px;
+			padding: 0;
 			li{
 				padding: 40px 0;
 				border-top: solid 5px #444;
+
+				@media #{$xs} {
+					img {
+						display: block;
+						margin: 0 auto;
+					}
+				}
+				@media #{$sm} {
+					&:nth-child(even) {
+						img {
+							float: right;
+						}
+						.experience-content {
+							margin-right: 300px;
+						}
+					}
+					&:nth-child(odd) {
+						img {
+							float: left;
+						}
+						.experience-content {
+							margin-left: 300px;
+						}
+					}
+				}
+
 			}
 			
-			ul{
-				list-style:disc;
-				margin-top:5px;
-	
-				li{
+			ul {
+				list-style: disc;
+				margin: 5px 20px;	
+				li {
 					padding: 0;
-					border:none;
+					border: none;
 				}
 			}
 		}
 	}
-}
-
-
-ul.experience {
-	li {
-		overflow:hidden;
-		width: 100%;
-	}
-}
-
-/* Mobile
------------------------------------*/
-@media (max-width: 767px) {
-	ul.experience {
-		li {
-			img {
-				display: block;
-				margin: 0 auto;
-			}
-			.experience-content {
-				clear: both;
-			}
-		}
-	}	
-}
-/* Tablet
------------------------------------*/
-@media (min-width: 768px) {
-	ul.experience {
-		li {
-			&:nth-child(even) {
-				img {
-					float: right;
-				}
-				.experience-content {
-					margin-right: 300px;
-				}
-			}
-			&:nth-child(odd) {
-				img {
-					float: left;
-				}
-				.experience-content {
-					margin-left: 300px;
-				}
-			}
-		}
-	}	
 }

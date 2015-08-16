@@ -4,13 +4,16 @@
 		<div class="site-filters">
 			<h2>Filters</h2>
 			<div class="centered-list">
-				<ul class="techs">
+				<ul class="techs filters">
 					<li ng-repeat="tech in site_filters" 
 					ng-class="filterStyle(tech)" 
-					class="filters" 
 					title="{{tech.title}}" 
-					ng-click="clickFilter(tech)"></li>
+					ng-click="clickFilter(tech)"
+					popover="{{tech.title}}" 
+					popover-trigger="mouseenter"
+					></li>
 				</ul>
+				<div class="clearFix"></div>
 			</div>
 		</div>	
 	</div>
@@ -20,7 +23,7 @@
 		class="col-xs-6 col-sm-4 col-md-3"
 		ng-click="site.full || openModal($event, $index, site)" 
 		ng-class="{full: site.full, item: !site.full, active: site.active}"
-		>
+		 >
 			<!-- Items -->
 			<site-item site="site" ng-if="!site.full"></site-item>
 

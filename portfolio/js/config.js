@@ -24,6 +24,7 @@ app.config(function($routeProvider){
 		}).
 		otherwise({
 			redirectTo:'/home',
-			templateUrl: 'portfolio/views/home.html'
+			templateUrl: 'portfolio/views/home.html',
+			controller: HomeCtrl
 		});
 });

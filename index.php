@@ -33,10 +33,10 @@
     </div><!--container-->
 
     <!-- jQuery -->
-    <script src="portfolio/lib/jquery.min.js" type="text/javascript"></script>
+    <script src="portfolio/lib/jquery/jquery.min.js" type="text/javascript"></script>
 
     <!-- Bootstrap -->  
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="portfolio/lib/bootstrap/bootstrap.js"></script>
 
     <!-- Angular JS -->
     <script src="portfolio/lib/angular/angular.min.js" type="text/javascript"></script>
@@ -50,6 +50,7 @@
     <script src="portfolio/js/directives.js" type="text/javascript"></script>
     <script src="portfolio/js/filters.js" type="text/javascript"></script>
     <!-- Controllers -->
+    <script src="portfolio/js/controllers/home.js" type="text/javascript"></script>
     <script src="portfolio/js/controllers/portfolio.js" type="text/javascript"></script>
     <script src="portfolio/js/controllers/flash.js" type="text/javascript"></script>
     <script src="portfolio/js/controllers/contact.js" type="text/javascript"></script>
