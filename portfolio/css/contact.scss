@@ -10,7 +10,19 @@ div.contact-page {
 			color: white;
 		}
 	}
-	form {
-		padding-top: 20px;
+	.contact-info {
+		form {
+			padding-top: 20px;
+		}	
+	}
+	.form-sending {
+		margin: 60px 0; 
+		h2 {
+			margin: 10px 0;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+		}
 	}
 }

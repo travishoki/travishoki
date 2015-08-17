@@ -713,8 +713,15 @@ div.contact-page {
   div.contact-page p i {
     background: #444;
     color: white; }
-  div.contact-page form {
+  div.contact-page .contact-info form {
     padding-top: 20px; }
+  div.contact-page .form-sending {
+    margin: 60px 0; }
+    div.contact-page .form-sending h2 {
+      margin: 10px 0; }
+    div.contact-page .form-sending img {
+      display: block;
+      margin: 0 auto; }
 
 /*============================================================ Resume =========================================================*/
 div.resume-page {
