@@ -627,12 +627,12 @@ div.portfolio-page ul.site-gallery {
           display: block;
           -webkit-box-shadow: 0 0 10px 0 #222222;
           box-shadow: 0 0 10px 0 #222222; }
-          @media (min-width: 769px) {
+          @media (max-width: 992px) {
             div.portfolio-page ul.site-gallery li.full .info-holder img.website-img {
               margin: 20px auto; } }
         div.portfolio-page ul.site-gallery li.full .info-holder .info {
           color: white; }
-      @media (min-width: 993px) {
+      @media (min-width: 769px) {
         div.portfolio-page ul.site-gallery li.full .client-branding {
           position: absolute;
           top: 15px;
@@ -642,12 +642,12 @@ div.portfolio-page ul.site-gallery {
           width: 100%;
           margin: 0 auto;
           max-width: 900px; } }
-      @media (min-width: 993px) {
+      @media (min-width: 769px) {
         div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner {
           position: relative;
           float: right;
           height: 150px; } }
-      @media (min-width: 993px) {
+      @media (min-width: 769px) {
         div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder {
           height: 75px;
           position: relative;
@@ -668,10 +668,10 @@ div.portfolio-page ul.site-gallery {
         border: solid 5px #4f4f4f;
         border-radius: 100px;
         width: 150px; }
-        @media (min-width: 769px) {
+        @media (max-width: 768px) {
           div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner img {
             margin: 15px auto 0 auto; } }
-        @media (min-width: 993px) {
+        @media (min-width: 769px) {
           div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner img {
             position: absolute;
             top: 0;
@@ -683,20 +683,23 @@ div.portfolio-page ul.site-gallery {
           border: solid 5px #4f4f4f;
           min-height: 120px;
           background: white; }
-          @media (min-width: 993px) {
+          @media (min-width: 769px) {
             div.portfolio-page ul.site-gallery li.full .client-info .p-holder {
               margin-top: 75px;
               margin-left: 75px; } }
           div.portfolio-page ul.site-gallery li.full .client-info .p-holder p {
             color: black;
-            padding: 15px 15px 15px 70px;
+            padding: 15px;
             font-size: 16px;
             color: #4f4f4f;
             text-indent: 20px; }
+            @media (min-width: 769px) {
+              div.portfolio-page ul.site-gallery li.full .client-info .p-holder p {
+                padding-left: 70px; } }
       div.portfolio-page ul.site-gallery li.full .project-info {
         background: #4f4f4f;
         padding: 15px 0; }
-        @media (min-width: 993px) {
+        @media (min-width: 769px) {
           div.portfolio-page ul.site-gallery li.full .project-info {
             margin-left: 75px; } }
         div.portfolio-page ul.site-gallery li.full .project-info a.btn {
