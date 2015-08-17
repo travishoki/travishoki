@@ -116,7 +116,7 @@ div.portfolio-page{
 						display: block;
 						-webkit-box-shadow: 0 0 10px 0 #222222;
 						box-shadow: 0 0 10px 0 #222222;
-						@media #{$sm} {
+						@media #{$sm-down} {
 							margin: 20px auto;
 						}
 					}
@@ -125,7 +125,7 @@ div.portfolio-page{
 					}
 				}
 				.client-branding {
-					@media #{$md} {
+					@media #{$sm} {
 						position: absolute;
 						top: 15px;
 						left: 0;
@@ -136,13 +136,13 @@ div.portfolio-page{
 					    max-width: 900px;
 					}
 					.client-branding-inner {
-						@media #{$md} {
+						@media #{$sm} {
 							position: relative;
 							float: right;
 							height: 150px;
 						}
 						.client-branding-title-holder {
-							@media #{$md} {
+							@media #{$sm} {
 								height: 75px;
 								position: relative;
 							    margin-left: 75px;
@@ -165,10 +165,10 @@ div.portfolio-page{
 							border: solid 5px #4f4f4f;
 							border-radius: 100px;
 							width: 150px;
-							@media #{$sm} {
+							@media #{$xs} {
 								margin: 15px auto 0 auto;
 							}
-							@media #{$md} {
+							@media #{$sm} {
 								position: absolute;
 								top: 0;
 								left: 20px;
@@ -183,13 +183,16 @@ div.portfolio-page{
 						border: solid 5px #4f4f4f;
 						min-height: 120px;
 						background: white;
-						@media #{$md} {
+						@media #{$sm} {
 							margin-top: 75px;
 							margin-left: 75px;
 						}
 						p {
 							color: black;
-							padding: 15px 15px 15px 70px;
+							padding: 15px;
+							@media #{$sm} {
+								padding-left: 70px;
+							}
 							font-size: 16px;
 							color: #4f4f4f;
 							text-indent: 20px;
@@ -199,7 +202,7 @@ div.portfolio-page{
 				.project-info {
 					background: #4f4f4f;
 					padding: 15px 0;
-					@media #{$md} {
+					@media #{$sm} {
 						margin-left: 75px;
 					}
 					a.btn {

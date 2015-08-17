@@ -1,14 +1,29 @@
-function PortfolioCtrl($scope, $http, $modal, $compile){
+function PortfolioCtrl($scope, $http, $modal, $compile, $window){
 
 	$scope.init = function(){
 		$scope.sites = $scope.getSites();
 		$scope.site_filters = $scope.getFilters();
+
+		var w = angular.element($window);
+		w.bind('resize', function () {
+		    $scope.resize();
+		});
 	};//init
 
-	$scope.openModal = function ($event, $index, site) {		
-		// console.log('---- openModal ----');
-			// $scope.sites = $scope.getSites();
+	$scope.resize = function(){
+		// Unactivate all items and remove the ones that are the full descriptions
+		var new_array = [];
+		angular.forEach($scope.sites, function(s){
+			if(s.full != true){
+				s.active = false;
+				new_array.push(s);
+			}
+		});
+		$scope.sites = new_array;		
+	    $scope.$apply();
+	};//resize
 
+	$scope.openModal = function ($event, $index, site) {		
 		//Get the count of the previously injected items before this index
 		var actives_before = 0;
 		for(var i = 0 ; i < $index ; i++){
@@ -53,10 +68,13 @@ function PortfolioCtrl($scope, $http, $modal, $compile){
 				diff = 2 - diff;
 				break;
 			case 'sm':
-			case 'md':
-			case 'lg':
 				diff = current_index % 3;
 				diff = 3 - diff;
+				break;
+			case 'md':
+			case 'lg':
+				diff = current_index % 4;
+				diff = 4 - diff;
 				break;
 			default:
 
