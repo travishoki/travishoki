@@ -6,23 +6,27 @@
             <img src="portfolio/imgs/contact/travis-hoki-2.jpg" class="img-responsive" width="400" height="267"/>
         </div><!-- col-md-6 col-sm-6 -->
         <div class="col-md-6 col-sm-6">
-            <p>Needing full-time or contract work</p>
-            <p>Contact me with comments or critiques</p>
-            <p><i class="fa fa-phone"></i> 801-691-2373</p>
-            <p><i class="fa fa-envelope"></i> travis.hoki@gmail.com</p>
 
             <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
 
-            <form role="form" ng-submit="sendContactForm()" ng-hide="sendingContactForm">
-                <input type="text" ng-model="contactName" placeholder="Name" required/>
-                <input type="email" ng-model="contactEmail" placeholder="Email" required/>
-                <textarea id="last-name" ng-model="contactComment" placeholder="Comment" required></textarea>
+            <div class="contact-info" ng-hide="sending">
+                <p>Needing full-time or contract work</p>
+                <p>Contact me with comments or critiques</p>
+                <p><i class="fa fa-phone"></i> 801-691-2373</p>
+                <p><i class="fa fa-envelope"></i> travis.hoki@gmail.com</p>
 
-                <input type="submit" class="btn" value="Send"/>
-            </form>
-            <div ng-show="sendingContactForm">
-                <h2>Thank You</h2>
-                <p class="center">I'll be contacting you soon</p>
+                <form role="form" ng-submit="sendContactForm()">
+                    <input type="text" ng-model="contactName" placeholder="Name" required/>
+                    <input type="email" ng-model="contactEmail" placeholder="Email" required/>
+                    <textarea id="last-name" ng-model="contactComment" placeholder="Comment" required></textarea>
+
+                    <input type="submit" class="btn" value="Send"/>
+                </form>
+            </div>
+
+            <div class="form-sending" ng-show="sending">
+                <h2>Sending...</h2>
+                <img src="portfolio/imgs/global/loader.gif">
             </div>
 
         </div><!-- col-md-6 col-sm-6 -->
