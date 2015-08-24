@@ -144,8 +144,13 @@ function PortfolioCtrl($scope, $http, $modal, $compile, $window){
 		//Unactivate opposite tech filters
 		switch(tech.title){
 			case 'PHP':
+				$scope.switchFilter('Python', false);
+				$scope.switchFilter('LESS-CSS', false);
+				break;
 			case 'WordPress':
 				$scope.switchFilter('Python', false);
+				$scope.switchFilter('LESS-CSS', false);
+				$scope.switchFilter('AngularJs', false);
 				break;
 			case 'Python':
 				$scope.switchFilter('PHP', false);
@@ -156,6 +161,11 @@ function PortfolioCtrl($scope, $http, $modal, $compile, $window){
 				break;
 			case 'AngularJs':
 				$scope.switchFilter('jQuery', false);
+				$scope.switchFilter('WordPress', false);
+				break;
+			case 'LESS-CSS':
+				$scope.switchFilter('PHP', false);
+				$scope.switchFilter('WordPress', false);
 				break;
 		}//switch
 	};//clickFilter
@@ -213,7 +223,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile, $window){
 				desc : 'RGD Janitorial has been providing Janitorial Services in Utah for over 17 years.',
 				img: 'rgdjanitorial',
 				contributions : 'Wordpress theme customization|WP Advanced Custom Fields|Design',
-				techs: 'WordPress|JavaScript|HTML|CSS',
+				techs: 'PHP|WordPress|JavaScript|HTML|CSS',
 				live: true
 			},
 			{

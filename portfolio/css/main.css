@@ -76,7 +76,8 @@ form textarea {
 /*---- Sections
 ----------------------*/
 section .section-inner {
-  padding: 20px 0 50px 0;
+  padding: 20px;
+  padding-bottom: 50px;
   max-width: 600px;
   margin: 0 auto;
   display: block; }
@@ -316,7 +317,7 @@ i.fa.mobileMenuBtn {
 body {
   margin-top: 60px; }
   body #header {
-    background: #39B54C; }
+    background: #1A733B; }
 
 body.home {
   margin-top: 0; }
@@ -328,12 +329,12 @@ body.home {
       body.home #header h1 {
         display: none; } }
     body.home #header.scrolled {
-      background-color: #39B54C; }
+      background-color: #1A733B; }
       body.home #header.scrolled h1 {
         display: block; }
     @media (max-width: 768px) {
       body.home #header {
-        background: #39B54C; } }
+        background: #1A733B; } }
   @media (max-width: 768px) {
     body.home {
       margin-top: 60px; } }
@@ -399,10 +400,8 @@ body.home {
             #header nav ul li a:hover, #header nav ul li a.active {
               background: #39B54C; } }
         @media (min-width: 769px) {
-          #header nav ul li a:hover {
-            color: #1A733B; }
-          #header nav ul li a.active {
-            color: #1A733B; } }
+          #header nav ul li a:hover, #header nav ul li a.active {
+            color: #39B54C; } }
 
 /*============================================================ Content =========================================================*/
 .content-holder .content {
@@ -512,6 +511,9 @@ body.home {
       .home-page .banner .banner-content h1 {
         text-align: center;
         font-weight: bold; }
+        @media (max-width: 768px) {
+          .home-page .banner .banner-content h1 {
+            display: none; } }
       .home-page .banner .banner-content h2 {
         color: #39B54C;
         text-align: center; }
@@ -553,9 +555,13 @@ div.portfolio-page .site-filters {
   background: #39B54C;
   margin-bottom: 20px;
   padding: 20px; }
-  div.portfolio-page .site-filters .centered-list ul li img {
-    width: 32px;
-    height: 32px; }
+  div.portfolio-page .site-filters p {
+    text-align: center; }
+  div.portfolio-page .site-filters .centered-list {
+    margin-top: 20px; }
+    div.portfolio-page .site-filters .centered-list ul li img {
+      width: 32px;
+      height: 32px; }
 div.portfolio-page ul.site-gallery {
   list-style: none;
   padding: 0 15px; }
@@ -800,43 +806,20 @@ div.flash-gallery ul.ensparkCourseThumbs li {
   margin-bottom: 20px; }
 
 /*============================================================ About ============================================================*/
-div.about-page.page-content {
-  margin: 0; }
-div.about-page h2 {
-  text-align: center; }
-div.about-page ul.images {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-  div.about-page ul.images li {
-    position: relative;
-    color: white; }
-    div.about-page ul.images li h3 {
-      font-weight: bold; }
-      @media (max-width: 768px) {
-        div.about-page ul.images li h3 {
-          font-size: 30px; } }
-      @media (min-width: 769px) {
-        div.about-page ul.images li h3 {
-          font-size: 50px; } }
-    div.about-page ul.images li p {
-      font-size: 20px; }
+div.about-page .row {
+  margin: 30px auto;
+  display: block;
+  max-width: 600px; }
+  div.about-page .row p {
+    text-indent: 20px; }
+  div.about-page .row img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block; }
     @media (max-width: 768px) {
-      div.about-page ul.images li:nth-child(even) .image-content {
-        left: 100px; } }
-    @media (min-width: 769px) {
-      div.about-page ul.images li:nth-child(even) .image-content {
-        right: 0; } }
-    div.about-page ul.images li:nth-child(odd) .image-content {
-      left: 0; }
-    div.about-page ul.images li .image-content {
-      position: absolute; }
-      @media (max-width: 768px) {
-        div.about-page ul.images li .image-content {
-          padding: 10px; } }
-      @media (min-width: 769px) {
-        div.about-page ul.images li .image-content {
-          padding: 30px; } }
+      div.about-page .row img {
+        margin-bottom: 20px; } }
 
 /*============================================================ Apps =========================================================*/
 div.app-gallery .section {

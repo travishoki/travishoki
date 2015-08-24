@@ -34,6 +34,9 @@
 		    h1 {
 		    	text-align: center;
 		    	font-weight: bold;
+				@media #{$xs} {
+					display: none;
+				}
 		    }
 		    h2 {
 		    	color: $primaryColor;

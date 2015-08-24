@@ -1,10 +1,10 @@
 /*============================================================ Portfolio Page ============================================================*/
 div.portfolio-page{
-	p{
+	p {
 		display:block;
 		margin-bottom:5px;
 	}
-	h2{
+	h2 {
 		text-align: center;
 		padding-top:0px;
 	}
@@ -17,7 +17,11 @@ div.portfolio-page{
 		background: $primaryColor;
 		margin-bottom: 20px;
 		padding: 20px;
+		p {
+			text-align: center;
+		}
 		.centered-list {	
+			margin-top: 20px;
 			ul li {
 				img {
 					width: 32px;
