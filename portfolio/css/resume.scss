@@ -21,6 +21,9 @@ div.resume-page {
 			list-style: none;
 			padding: 0;
 			li{
+				.date {
+					float: right;
+				}
 				padding: 40px 0;
 				border-top: solid 5px #444;
 

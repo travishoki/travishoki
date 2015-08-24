@@ -241,7 +241,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile, $window){
 				desc : 'Truly Lindsey Photography is my wife\'s photography company.',
 				img: 'truly-lindsey-photography',
 				contributions : 'Wordpress customization, design and branding.',
-				techs: 'Wordpress|HTML|CSS',
+				techs: 'WordPress|HTML|CSS',
 				live: true
 			},
 			{

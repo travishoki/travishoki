@@ -4,8 +4,19 @@ div.about-page{
 		margin: 30px auto;
 		display: block;
 		max-width: 600px;
-		p {
-			text-indent: 20px;
+		.text {
+			@media #{$sm}{
+				margin-bottom: 40px;
+			}
+			@media #{$sm}{
+				margin-top: 40px;
+			}
+			@media #{$md}{
+				margin-top: 60px;
+			}
+			p {
+				text-indent: 20px;
+			}
 		}
 		img {
 			width: 100%;

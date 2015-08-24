@@ -17,37 +17,62 @@
 		}
 		.banner-content {
 			position: absolute;
-			left: 0;
 			@media #{$xs} {
-				top: 100px;
+				top: 20px;
+				left: 10px;
+			    width: 180px;
 			}
 			@media #{$sm} {
 				top: 210px;
+				left: 0;
+			    width: 400px;
 			}
 			@media #{$md} {
 				top: 250px;
+			    width: 600px;
 			}
 			@media #{$lg} {
+				top: 300px;
 				left: 50px;
 			}
-		    width: 300px;
 		    h1 {
 		    	text-align: center;
 		    	font-weight: bold;
 				@media #{$xs} {
 					display: none;
 				}
+				@media #{$sm} {
+					font-size: 60px;
+				}
+				@media #{$md} {
+					font-size: 70px;
+				}
 		    }
 		    h2 {
 		    	color: $primaryColor;
-		    	text-align: center;
+				@media #{$xs} {
+					font-size: 20px;
+				}		    	
+				@media #{$sm} {
+			    	text-align: center;
+			    }
+		    }
+		    .btn {
+				@media #{$xs} {
+					width: 100px;			    
+					font-size: 12px;
+					padding: 0;
+					line-height: 30px;
+					height: 30px;
+					margin-top: 10px;
+			    }
 		    }
 		}
 	}	
 	/*---------- Tech ----------*/
 	section.tech {
 		.section-inner {
-			padding: 0;
+			padding: 20px 0;
 			ul {
 				padding: 10px 0;
 			}
@@ -55,17 +80,19 @@
 	}
 	/*---------- Skills ----------*/
 	section.skills {
-		overflow: hidden;
-		.list {
-			font-size: 20px;
-			@media #{$md} {
-				float: left;
-				width: 50%;
-			}
-			ul {
-				margin: 0;
-				li {
-					padding-bottom: 20px;
+		.section-inner {
+			overflow: hidden;
+			.list {
+				font-size: 20px;
+				@media #{$md} {
+					float: left;
+					width: 50%;
+				}
+				ul {
+					margin: 0;
+					li {
+						padding-bottom: 20px;
+					}
 				}
 			}
 		}
