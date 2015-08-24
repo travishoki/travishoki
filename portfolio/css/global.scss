@@ -84,7 +84,8 @@ form {
 ----------------------*/
 section {
 	.section-inner {
-		padding: 20px 0 50px 0;
+		padding: 20px;
+		padding-bottom: 50px;
 		max-width: 600px;
 		margin: 0 auto;
 		display: block;
@@ -390,7 +391,7 @@ i.fa.mobileMenuBtn {
 body {
 	margin-top: 60px;
 	#header {
-		background: $primaryColor;
+		background: $secondaryColor;
 	}	
 }
 body.home {
@@ -405,13 +406,13 @@ body.home {
 			}
 		}
 		&.scrolled {
-			background-color: $primaryColor;
+			background-color: $secondaryColor;
 			h1 {
 				display: block;
 			}
 		}
 		@media #{$xs} {
-			background: $primaryColor;
+			background: $secondaryColor;
 		}
 	}
 	@media #{$xs} {
@@ -488,11 +489,9 @@ body.home {
 						}
 					}
 					@media #{$sm} {
-						&:hover {
-							color: $secondaryColor;
-						}
+						&:hover,
 						&.active {
-							color: $secondaryColor;
+							color: $primaryColor;
 						}
 					}
 				}
