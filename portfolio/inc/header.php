@@ -61,7 +61,7 @@ init();
                     <a <?php echo getLink('contact');?>>Contact</a>
                 </li>
                 <li>
-                <?php if(!$local):?>
+                <?php if($local):?>
                     <?php if($blog):?>
                         <a class="active">
                     <?php else:?>

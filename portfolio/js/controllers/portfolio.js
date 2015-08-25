@@ -218,6 +218,15 @@ function PortfolioCtrl($scope, $http, $modal, $compile, $window){
 				live: true
 			},
 			{
+				title : 'Rooke Capital Management',
+				url : 'http://rookecapital.com/',
+				desc : 'This is a steady downhill race perfect for first time runners, as well as those looking to improve their time. Fun to be had includes saints and sinners aid stations and heaven and heck finish lines.',
+				img: 'rooke-capital-management',
+				contributions : 'Creationg of registration form|authorize.net intergration|customization of WordPress theme.',
+				techs: 'PHP|WordPress|JavaScript|jQuery|HTML|CSS',
+				live: true
+			},
+			{
 				title : 'RGDJanitorial',
 				url : 'http://rgdjanitorial.com/',
 				desc : 'RGD Janitorial has been providing Janitorial Services in Utah for over 17 years.',
@@ -236,29 +245,11 @@ function PortfolioCtrl($scope, $http, $modal, $compile, $window){
 				live: true
 			},
 			{
-				title : 'Truly Lindsey Photography',
-				url : 'http://trulylindseyphotography.com/',
-				desc : 'Truly Lindsey Photography is my wife\'s photography company.',
-				img: 'truly-lindsey-photography',
-				contributions : 'Wordpress customization, design and branding.',
-				techs: 'WordPress|HTML|CSS',
-				live: true
-			},
-			{
 				title : 'Eric Aroca',
 				url : 'http://ericaroca.com/',
 				desc : 'This is a steady downhill race perfect for first time runners, as well as those looking to improve their time. Fun to be had includes saints and sinners aid stations and heaven and heck finish lines.',
 				img: 'eric-aroca',
 				contributions : 'Creationg of registration form|customization of WordPress theme.',
-				techs: 'PHP|WordPress|JavaScript|jQuery|HTML|CSS',
-				live: true
-			},
-			{
-				title : 'Rooke Capital Management',
-				url : 'http://rookecapital.com/',
-				desc : 'This is a steady downhill race perfect for first time runners, as well as those looking to improve their time. Fun to be had includes saints and sinners aid stations and heaven and heck finish lines.',
-				img: 'rooke-capital-management',
-				contributions : 'Creationg of registration form|authorize.net intergration|customization of WordPress theme.',
 				techs: 'PHP|WordPress|JavaScript|jQuery|HTML|CSS',
 				live: true
 			},
@@ -308,13 +299,13 @@ function PortfolioCtrl($scope, $http, $modal, $compile, $window){
 				live: true,
 			},
 			{
-				title : 'Paradigm Life LMS',
-				url : 'http://lms.paradigmlife.net/',
-				desc : 'Infinite Banking is a concept that allows individuals to utilize Permanent Life Insurance in ways that most individuals and even insurance professionals could never have imagined.',
-				img : 'paradigm-life-lms',
-				contributions : 'The Paradigm Life LMS was created from the base of the Enspark LMS then customized to fit the needs of Paradigm Life. I added the functionality for multiple user tracks.',
-				techs: 'PHP|JavaScript|jQuery|HTML|CSS',
-				live: true,
+				title : 'Truly Lindsey Photography',
+				url : 'http://trulylindseyphotography.com/',
+				desc : 'Truly Lindsey Photography is my wife\'s photography company.',
+				img: 'truly-lindsey-photography',
+				contributions : 'Wordpress customization, design and branding.',
+				techs: 'WordPress|HTML|CSS',
+				live: true
 			},
 			{
 				title : 'First Mile',

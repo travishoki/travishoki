@@ -8,7 +8,7 @@
                 </a>
             </li>    
             <li>
-                <a href="https://www.linkedin.com/pub/travis-hoki/85/b0b/113" target="_blank" title="Travis's Linked In">
+                <a href="https://www.linkedin.com/in/travishoki" target="_blank" title="Travis's Linked In">
                     <i class="fa fa-linkedin"></i>
                 </a>
             </li>    

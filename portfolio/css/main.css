@@ -481,6 +481,7 @@ body.home {
   /*---------- Banner ----------*/
   /*---------- Tech ----------*/
   /*---------- Skills ----------*/
+  /*---------- Skills ----------*/
   /*---------- Education ----------*/ }
   .home-page.page-content {
     margin: 0; }
@@ -545,6 +546,9 @@ body.home {
     padding: 20px 0; }
     .home-page section.tech .section-inner ul {
       padding: 10px 0; }
+  .home-page section.portfolio .section-inner img {
+    display: block;
+    margin: 0 auto; }
   .home-page section.skills .section-inner {
     overflow: hidden; }
     .home-page section.skills .section-inner .list {
@@ -765,6 +769,8 @@ div.resume-page {
     div.resume-page .resume-header img {
       display: block;
       margin: 0 auto; }
+    div.resume-page .resume-header a {
+      text-decoration: none; }
   div.resume-page div.resume-content h2 {
     text-align: left; }
   div.resume-page div.resume-content img {
