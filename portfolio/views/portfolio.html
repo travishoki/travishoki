@@ -21,7 +21,7 @@
 	</div>
 
 	<ul class="site-gallery">
-		<li ng-repeat="site in sites | techFilter : site_filters" 
+		<li ng-repeat="site in sites" 
 		class="col-xs-6 col-sm-4 col-md-3"
 		ng-click="site.full || openModal($event, $index, site)" 
 		ng-class="{full: site.full, item: !site.full, active: site.active}"

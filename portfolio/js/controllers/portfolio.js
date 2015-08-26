@@ -1,4 +1,4 @@
-function PortfolioCtrl($scope, $http, $modal, $compile, $window){
+function PortfolioCtrl($scope, $http, $modal, $compile, $window, $filter){
 
 	$scope.init = function(){
 		$scope.sites = $scope.getSites();
@@ -14,17 +14,6 @@ function PortfolioCtrl($scope, $http, $modal, $compile, $window){
 
 	$scope.resetSites = function(){
 		// Unactivate all items and remove the ones that are the full descriptions
-
-		// var new_array = [];
-		// angular.forEach($scope.sites, function(s){
-		// 	if(s.full != true){
-		// 		s.active = false;
-		// 		new_array.push(s);
-		// 	}
-		// });
-		// $scope.sites = new_array;		
-	 //    $scope.$apply();
-
 		var i = $scope.sites.length;
 		while (i--){
 			$scope.sites[i].active = false;
@@ -151,7 +140,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile, $window){
 	};//filterStyle
 
 	$scope.clickFilter = function(tech){
-		$scope.resetSites();
+		// $scope.resetSites();
 		if($scope.current_filter === tech){
 			$scope.current_filter.active = false;
 			$scope.current_filter = null;
@@ -165,6 +154,7 @@ function PortfolioCtrl($scope, $http, $modal, $compile, $window){
 				}
 			});
 		}
+		$scope.sites = $filter('techFilter')($scope.getSites(), $scope.current_filter);
 	};//clickFilter
 
 	$scope.getFilters = function(){
