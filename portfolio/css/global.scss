@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 body {
-	background: #333;
+	background: $grey-dk;
 	color: white;
 	width:100%;
 	margin:0 auto;
@@ -22,12 +22,12 @@ h1, h2, h3, h4, p {
 }
 
 h1 {
-	margin: 20px 0;
+	text-align: center;
+	margin: 40px 0;
 }
 h2 {
     font-size: 30px;
     font-weight: bold;
-    text-transform: uppercase;
 	text-align: center;
 	padding: 0;
 	margin: 20px 0;
@@ -60,6 +60,13 @@ p{
 	.loader.ng-hide {
 		opacity: 0;
 	}
+}
+
+
+/*---- Cloak
+----------------------*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
 }
 
 /*---- Form
@@ -318,6 +325,10 @@ div#view{
 	width: 150px;
 	background: $primaryColor;
 	color: white;
+	&:focus,
+	&:active:focus {
+		outline: none;
+	}
 	&:hover,
 	&.active {
 		color: white;
@@ -444,7 +455,6 @@ body.home {
 		}
 	}
 	nav{
-		font-family: $brandedFont;
 		@media #{$sm} {
 			/* Important used to make sure the nav is showing even if collaped. 
 			This would happen if the menus is collaped in a mobile size then resized to a desktop size */
@@ -591,5 +601,31 @@ body.home {
 	}
 }
 
+/*============================================================ Carousel =========================================================*/
+.carousel {
+	@include no-select;
+	.carousel-inner {
+		margin-bottom: 60px;
+		img {
+			margin: 0 auto;
+		}
+	}
+	.carousel-indicators {
+		bottom: -50px;
+		li {
+			margin: 0 2px;
+			background: $grey-md;
+			border: solid 1px $grey-md;			
+		}
+		li.active {
+			background: $grey;
+			border: solid 1px $grey;			
+		}
+	}
+	.carousel-control {
+		background: none;
+		cursor: pointer;
+	}
+}
 
 

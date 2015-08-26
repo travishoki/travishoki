@@ -5,8 +5,9 @@ div.about-page{
 		display: block;
 		max-width: 600px;
 		.text {
-			@media #{$sm}{
-				margin-bottom: 40px;
+			@media #{$xs}{
+				max-width: 300px;
+				margin: 0 auto 40px auto;
 			}
 			@media #{$sm}{
 				margin-top: 40px;
@@ -15,7 +16,9 @@ div.about-page{
 				margin-top: 60px;
 			}
 			p {
-				text-indent: 20px;
+				@media #{$sm}{
+					text-align: center;
+				}
 			}
 		}
 		img {

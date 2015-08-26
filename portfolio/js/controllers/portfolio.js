@@ -2,26 +2,37 @@ function PortfolioCtrl($scope, $http, $modal, $compile, $window){
 
 	$scope.init = function(){
 		$scope.sites = $scope.getSites();
+		$scope.current_filter = null;
 		$scope.site_filters = $scope.getFilters();
 
 		var w = angular.element($window);
 		w.bind('resize', function () {
-		    $scope.resize();
+		    $scope.resetSites();
+		    $scope.$apply();
 		});
 	};//init
 
-	$scope.resize = function(){
+	$scope.resetSites = function(){
 		// Unactivate all items and remove the ones that are the full descriptions
-		var new_array = [];
-		angular.forEach($scope.sites, function(s){
-			if(s.full != true){
-				s.active = false;
-				new_array.push(s);
-			}
-		});
-		$scope.sites = new_array;		
-	    $scope.$apply();
-	};//resize
+
+		// var new_array = [];
+		// angular.forEach($scope.sites, function(s){
+		// 	if(s.full != true){
+		// 		s.active = false;
+		// 		new_array.push(s);
+		// 	}
+		// });
+		// $scope.sites = new_array;		
+	 //    $scope.$apply();
+
+		var i = $scope.sites.length;
+		while (i--){
+			$scope.sites[i].active = false;
+		    if ($scope.sites[i].full){
+		        $scope.sites.splice(i, 1);
+		    }
+		}//while
+	};//resetSites
 
 	$scope.openModal = function ($event, $index, site) {		
 		//Get the count of the previously injected items before this index
@@ -130,54 +141,31 @@ function PortfolioCtrl($scope, $http, $modal, $compile, $window){
 	};
 
 	$scope.filterStyle = function(tech){
-		// return tech.title+'.' {'inactive':tech.active}
-		var str = tech.title;
-		if(!tech.active){
-			str += ' inactive';
+		var str = '';
+		if($scope.current_filter !== null){
+			if(!tech.active){
+				str = 'inactive';
+			}
 		}
 		return str;
 	};//filterStyle
 
 	$scope.clickFilter = function(tech){
-		tech.active = !tech.active;
-
-		//Unactivate opposite tech filters
-		switch(tech.title){
-			case 'PHP':
-				$scope.switchFilter('Python', false);
-				$scope.switchFilter('LESS-CSS', false);
-				break;
-			case 'WordPress':
-				$scope.switchFilter('Python', false);
-				$scope.switchFilter('LESS-CSS', false);
-				$scope.switchFilter('AngularJs', false);
-				break;
-			case 'Python':
-				$scope.switchFilter('PHP', false);
-				$scope.switchFilter('WordPress', false);
-				break;
-			case 'jQuery':
-				$scope.switchFilter('AngularJs', false);
-				break;
-			case 'AngularJs':
-				$scope.switchFilter('jQuery', false);
-				$scope.switchFilter('WordPress', false);
-				break;
-			case 'LESS-CSS':
-				$scope.switchFilter('PHP', false);
-				$scope.switchFilter('WordPress', false);
-				break;
-		}//switch
+		$scope.resetSites();
+		if($scope.current_filter === tech){
+			$scope.current_filter.active = false;
+			$scope.current_filter = null;
+		}else{
+			$scope.current_filter = tech;
+			angular.forEach($scope.site_filters, function(t){
+				if(t === tech){
+					t.active = true;
+				}else{
+					t.active = false;
+				}
+			});
+		}
 	};//clickFilter
-
-	$scope.switchFilter = function(title, bool){
-		for(var i = 0 ; i < $scope.site_filters.length ; i++){
-			if($scope.site_filters[i].title == title){
-				$scope.site_filters[i].active = bool;
-				break;
-			}
-		}//for
-	}//switchFilter
 
 	$scope.getFilters = function(){
 		var array = [

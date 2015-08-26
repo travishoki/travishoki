@@ -23,7 +23,7 @@
 			    width: 180px;
 			}
 			@media #{$sm} {
-				top: 210px;
+				top: 150px;
 				left: 0;
 			    width: 400px;
 			}
@@ -73,17 +73,33 @@
 	section.tech {
 		.section-inner {
 			padding: 20px 0;
+			@media #{$xs}{
+				width: 250px;
+			}
 			ul {
 				padding: 10px 0;
 			}
 		}
 	}
-	/*---------- Skills ----------*/
+	/*---------- Portfolio ----------*/
 	section.portfolio {
 		.section-inner {
 			img {
 				display: block;
 				margin: 0 auto;
+			}
+			@media #{$xs}{
+				h2 {
+					font-size: 14px;
+				}
+				.btn {
+					width: 100px;
+				}
+				.row {
+					div	{
+						padding: 0 5px;
+					}
+				}
 			}
 		}
 	}

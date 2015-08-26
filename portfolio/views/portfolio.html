@@ -7,6 +7,7 @@
 			<div class="centered-list">
 				<ul class="techs filters">
 					<li ng-repeat="tech in site_filters" 
+					class="{{tech.title}}"
 					ng-class="filterStyle(tech)" 
 					title="{{tech.title}}" 
 					ng-click="clickFilter(tech)"

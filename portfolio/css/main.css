@@ -8,6 +8,8 @@
 /* Large devices (large desktops, 1200px and up) */
 /* Medium devices (desktops, 992px and up) */
 /* Small devices (tablets, 768px and up) */
+/* variables
+----------------------*/
 /*---------------------------------------------- Imports ----------------------------------------------*/
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 body {
@@ -28,12 +30,12 @@ h1, h2, h3, h4, p {
   margin: 0; }
 
 h1 {
-  margin: 20px 0; }
+  text-align: center;
+  margin: 40px 0; }
 
 h2 {
   font-size: 30px;
   font-weight: bold;
-  text-transform: uppercase;
   text-align: center;
   padding: 0;
   margin: 20px 0; }
@@ -59,6 +61,11 @@ p {
     width: 100%; }
   .loaderHolder .loader.ng-hide {
     opacity: 0; }
+
+/*---- Cloak
+----------------------*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
 
 /*---- Form
 ----------------------*/
@@ -261,6 +268,8 @@ div#view {
   width: 150px;
   background: #39B54C;
   color: white; }
+  .btn:focus, .btn:active:focus {
+    outline: none; }
   .btn:hover, .btn.active {
     color: white;
     background: #1A733B; }
@@ -359,50 +368,48 @@ body.home {
           color: white;
           line-height: 60px;
           margin: 0 0 0 20px; }
-  #header nav {
-    font-family: "Arial", serif; }
+  @media (min-width: 769px) {
+    #header nav {
+      /* Important used to make sure the nav is showing even if collaped. 
+      This would happen if the menus is collaped in a mobile size then resized to a desktop size */
+      display: block !important;
+      height: auto !important;
+      float: right; } }
+  @media (max-width: 768px) {
+    #header nav {
+      background: #1A733B;
+      clear: both; } }
+  #header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 16px; }
     @media (min-width: 769px) {
-      #header nav {
-        /* Important used to make sure the nav is showing even if collaped. 
-        This would happen if the menus is collaped in a mobile size then resized to a desktop size */
-        display: block !important;
-        height: auto !important;
-        float: right; } }
-    @media (max-width: 768px) {
-      #header nav {
-        background: #1A733B;
-        clear: both; } }
-    #header nav ul {
-      list-style: none;
+      #header nav ul li {
+        float: left; } }
+    #header nav ul li a {
       margin: 0;
-      padding: 0;
-      overflow: hidden;
-      font-size: 16px; }
-      @media (min-width: 769px) {
-        #header nav ul li {
-          float: left; } }
-      #header nav ul li a {
-        margin: 0;
-        width: 100%;
-        color: white;
-        font-weight: bold;
-        text-transform: uppercase;
-        text-decoration: none;
-        cursor: pointer;
-        padding: 0 10px;
-        height: 60px;
-        line-height: 60px; }
-        #header nav ul li a.active {
-          box-shadow: none; }
-        @media (max-width: 768px) {
-          #header nav ul li a {
-            display: block;
-            text-align: center; }
-            #header nav ul li a:hover, #header nav ul li a.active {
-              background: #39B54C; } }
-        @media (min-width: 769px) {
+      width: 100%;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      padding: 0 10px;
+      height: 60px;
+      line-height: 60px; }
+      #header nav ul li a.active {
+        box-shadow: none; }
+      @media (max-width: 768px) {
+        #header nav ul li a {
+          display: block;
+          text-align: center; }
           #header nav ul li a:hover, #header nav ul li a.active {
-            color: #39B54C; } }
+            background: #39B54C; } }
+      @media (min-width: 769px) {
+        #header nav ul li a:hover, #header nav ul li a.active {
+          color: #39B54C; } }
 
 /*============================================================ Content =========================================================*/
 .content-holder .content {
@@ -474,13 +481,38 @@ body.home {
         background: #444;
         color: white; }
 
+/*============================================================ Carousel =========================================================*/
+.carousel {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .carousel .carousel-inner {
+    margin-bottom: 60px; }
+    .carousel .carousel-inner img {
+      margin: 0 auto; }
+  .carousel .carousel-indicators {
+    bottom: -50px; }
+    .carousel .carousel-indicators li {
+      margin: 0 2px;
+      background: #444;
+      border: solid 1px #444; }
+    .carousel .carousel-indicators li.active {
+      background: #777;
+      border: solid 1px #777; }
+  .carousel .carousel-control {
+    background: none;
+    cursor: pointer; }
+
 /* Pages
 ---------------------------------*/
 /*============================================================ Home ============================================================*/
 .home-page {
   /*---------- Banner ----------*/
   /*---------- Tech ----------*/
-  /*---------- Skills ----------*/
+  /*---------- Portfolio ----------*/
   /*---------- Skills ----------*/
   /*---------- Education ----------*/ }
   .home-page.page-content {
@@ -503,7 +535,7 @@ body.home {
           width: 180px; } }
       @media (min-width: 769px) {
         .home-page .banner .banner-content {
-          top: 210px;
+          top: 150px;
           left: 0;
           width: 400px; } }
       @media (min-width: 993px) {
@@ -544,11 +576,21 @@ body.home {
           margin-top: 10px; } }
   .home-page section.tech .section-inner {
     padding: 20px 0; }
+    @media (max-width: 768px) {
+      .home-page section.tech .section-inner {
+        width: 250px; } }
     .home-page section.tech .section-inner ul {
       padding: 10px 0; }
   .home-page section.portfolio .section-inner img {
     display: block;
     margin: 0 auto; }
+  @media (max-width: 768px) {
+    .home-page section.portfolio .section-inner h2 {
+      font-size: 14px; }
+    .home-page section.portfolio .section-inner .btn {
+      width: 100px; }
+    .home-page section.portfolio .section-inner .row div {
+      padding: 0 5px; } }
   .home-page section.skills .section-inner {
     overflow: hidden; }
     .home-page section.skills .section-inner .list {
@@ -580,13 +622,17 @@ div.portfolio-page h2 {
 div.portfolio-page ul.techs li {
   margin: 2px; }
 div.portfolio-page .site-filters {
-  background: #39B54C;
   margin-bottom: 20px;
   padding: 20px; }
   div.portfolio-page .site-filters p {
-    text-align: center; }
+    text-align: center;
+    max-width: 250px;
+    margin: 0 auto; }
   div.portfolio-page .site-filters .centered-list {
-    margin-top: 20px; }
+    margin: 20px auto 0 auto; }
+    @media (max-width: 768px) {
+      div.portfolio-page .site-filters .centered-list {
+        max-width: 162px; } }
     div.portfolio-page .site-filters .centered-list ul li img {
       width: 32px;
       height: 32px; }
@@ -804,11 +850,13 @@ div.resume-page {
         padding: 0;
         border: none; }
 
-/*============================================================ Flash =========================================================*/
 div.flash-gallery .section {
   padding: 15px 0;
   margin-top: 15px;
-  border-top: solid 1px #1A733B; }
+  border-top: solid 5px #444; }
+  div.flash-gallery .section p {
+    text-align: center;
+    margin: 10px 0; }
 div.flash-gallery div.flashHolder {
   padding-top: 5px; }
   div.flash-gallery div.flashHolder object {
@@ -821,38 +869,32 @@ div.flash-gallery ul {
   overflow: hidden; }
   div.flash-gallery ul li {
     float: left; }
-div.flash-gallery ul.flashBannerThumbs {
-  background: black;
-  /*	
-  		margin:5px auto;
-  		max-width:400px;
-  		background-color:black;
-  		
-  */ }
-  div.flash-gallery ul.flashBannerThumbs li {
-    cursor: pointer; }
-    div.flash-gallery ul.flashBannerThumbs li img {
-      margin: 0 auto;
-      display: block; }
-div.flash-gallery ul.ensparkCourseThumbs li {
-  margin-bottom: 20px; }
+  div.flash-gallery ul.flashBannerThumbs {
+    background: black; }
+    div.flash-gallery ul.flashBannerThumbs li {
+      cursor: pointer; }
+      div.flash-gallery ul.flashBannerThumbs li img {
+        margin: 0 auto;
+        display: block; }
 
 /*============================================================ About ============================================================*/
 div.about-page .row {
   margin: 30px auto;
   display: block;
   max-width: 600px; }
-  @media (min-width: 769px) {
+  @media (max-width: 768px) {
     div.about-page .row .text {
-      margin-bottom: 40px; } }
+      max-width: 300px;
+      margin: 0 auto 40px auto; } }
   @media (min-width: 769px) {
     div.about-page .row .text {
       margin-top: 40px; } }
   @media (min-width: 993px) {
     div.about-page .row .text {
       margin-top: 60px; } }
-  div.about-page .row .text p {
-    text-indent: 20px; }
+  @media (min-width: 769px) {
+    div.about-page .row .text p {
+      text-align: center; } }
   div.about-page .row img {
     width: 100%;
     max-width: 300px;
@@ -866,7 +908,10 @@ div.about-page .row {
 div.app-gallery .section {
   padding: 15px 0;
   margin-top: 15px;
-  border-top: solid 1px #1A733B;
+  border-top: solid 5px #444;
   overflow: hidden; }
+  div.app-gallery .section img {
+    margin: 0 auto;
+    display: block; }
 
 /*# sourceMappingURL=main.css.map */

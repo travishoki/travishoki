@@ -11,6 +11,28 @@ function FlashCtrl($scope){
 
 	$scope.ensparCourses = [
 		{
+			title: 'Powerful Presentation',
+			link: 'powerful-presentations'
+		},
+		{
+			title: 'Work Life Balance',
+			link: 'work-life-balance'
+		},
+		{
+			title: 'Business Email Etiquette',
+			link: 'email-etiquette'
+		},
+		{
+			title: 'Developing Leadership Style',
+			link: 'developing-leadership-style'
+		},
+		{
+			title: 'It\'s My Job: Taking Charge of Your Career',
+			link: 'its-my-job'
+		}
+	];
+/*
+		{
 			title: 'Conflict Resolution',
 			link: 'conflict-resolution'
 		},
@@ -27,10 +49,6 @@ function FlashCtrl($scope){
 			link: 'managing-up'
 		},
 		{
-			title: 'Powerful Presentation',
-			link: 'powerful-presentations'
-		},
-		{
 			title: 'Sexual Harassment - Employee',
 			link: 'sexual-harassment-employee'
 		},
@@ -38,10 +56,6 @@ function FlashCtrl($scope){
 		{
 			title: 'Sexual Harassment - Manager',
 			link: 'sexual-harassment-manager'
-		},
-		{
-			title: 'Work Life Balance',
-			link: 'work-life-balance'
 		},
 		{
 			title: 'Time Management',
@@ -76,16 +90,8 @@ function FlashCtrl($scope){
 			link: 'giving-feedback'
 		},
 		{
-			title: 'It\'s My Job: Taking Charge of Your Career',
-			link: 'its-my-job'
-		},
-		{
 			title: 'Business Ethics & Code of Conduct',
 			link: 'business-ethics'
-		},
-		{
-			title: 'Developing Leadership Style',
-			link: 'developing-leadership-style'
 		},
 		{
 			title: 'Guide to Networking',
@@ -103,9 +109,6 @@ function FlashCtrl($scope){
 			title: 'Critical Thinking & Problem Solving',
 			link: 'critical-thinking'
 		},
-		{
-			title: 'Business Email Etiquette',
-			link: 'email-etiquette'
-		}
 	];
+*/
 }//FlashCtrl

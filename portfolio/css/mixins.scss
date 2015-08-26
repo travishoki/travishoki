@@ -3,9 +3,11 @@
 $primaryColor:    #39B54C;
 $secondaryColor:  #1A733B;
 $maxScreenWidth:  1024px;
-$brandedFont:     'Arial', serif;
 
-$sidebarWidth : 75px;
+$grey: #777;
+$grey-md: #444;
+$grey-dk: #333;
+
 
 $maxContentWidth : 1024px;
 
@@ -65,6 +67,9 @@ $md-down: "(max-width: 1200px)";
 $sm-down: "(max-width: 992px)";
 
 
+/* variables
+----------------------*/
+$border-grey: solid 5px $grey-md;
 
 
 
