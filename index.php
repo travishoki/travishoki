@@ -16,7 +16,12 @@
 
     <!-- favicon -->
     <link rel="icon" type="image/ico" href="portfolio/imgs/favicon.ico" />
-      
+
+    <!-- Open Graphic -->
+    <meta property="og:title" content="TravisHoki.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://travishoki.com/" />
+    <meta property="og:image" content="http://travishoki.com/portfolio/imgs/global/travis-hoki-og.jpg" />      
 </head>
 <body ng-controller="mainCtrl" class="{{currentPage}}">
     <?php include 'portfolio/inc/header.php';?>
