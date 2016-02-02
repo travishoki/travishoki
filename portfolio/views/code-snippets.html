@@ -1,0 +1,40 @@
+<div class="page-content full code-snippets-page">
+
+    <h1>Code Snippets</h1>
+
+    <div class="collection-options">
+		<button ng-show="currentCollection" ng-click="showOptions()" class="btn">Show Collections <i class="fa" ng-class="{'fa-chevron-up': showingOptions, 'fa-chevron-down': !showingOptions}"></i></button>
+		<ul ng-show="showingOptions">
+			<li ng-repeat="collection in collections">
+                <a href="/#/code-snippets/{{collection.id}}">{{collection.title}}</a>
+			</li>
+		</ul>
+    </div>
+
+    <h2>{{pageTitle}}</h2>
+
+	<div ng-show="currentCollection" class="current-collection">
+    	<div ng-repeat="codepen in codepens" ng-class="penHolderClass()" class="current-collection-pin">
+        	<div class="current-collection-pin-inner">
+                <h3><a href="{{codepen.link}}" target="_blank">{{codepen.title}}</a></h3>
+
+                <p data-height="268" data-theme-id="0" data-slug-hash="{{codepen.id}}" data-default-tab="result" data-user="travis-hoki" class='codepen'>See the Pen 
+                    <a href='http://codepen.io/travis-hoki/pen/{{codepen.id}}/'>{{codepen.title}}</a>
+                     by Travis Hoki (
+                     <a href='http://codepen.io/travis-hoki'>@travis-hoki</a>
+                    ) on 
+                    <a href='http://codepen.io'>CodePen</a>
+                    .
+                </p>
+	            <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+
+        	</div>
+    	</div>
+    </div>
+
+
+</div><!-- code-snippets-page -->
+
+
+
