@@ -1,4 +1,4 @@
-var app = angular.module('APP',['ngRoute','ngAnimate','ui.bootstrap']);
+var app = angular.module('APP',['ngRoute','ngAnimate','ui.bootstrap', 'ngSanitize']);
 
 app.controller('mainCtrl', function($scope, $http, $location, anchorSmoothScroll){
 

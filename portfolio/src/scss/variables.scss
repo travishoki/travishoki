@@ -1,0 +1,33 @@
+/* Colors
+---------------------------------*/
+$primaryColor:    #39B54C;
+$secondaryColor:  #1A733B;
+$maxScreenWidth:  1024px;
+
+$grey: #777;
+$grey-md: #444;
+$grey-dk: #333;
+
+$maxContentWidth : 1024px;
+
+$white: white;
+
+
+/* Media Queries
+---------------------------------*/
+/* Large devices (large desktops, 1200px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Small devices (tablets, 768px and up) */
+$lg: "(min-width: 1201px)";
+$md: "(min-width: 993px)";
+$sm: "(min-width: 769px)";
+$xs: "(max-width: 768px)";
+
+$md-down: "(max-width: 1200px)";
+$sm-down: "(max-width: 992px)";
+
+/* variables
+----------------------*/
+$border-grey: solid 5px $grey-md;
+
+

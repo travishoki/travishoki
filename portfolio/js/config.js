@@ -22,6 +22,12 @@ app.config(function($routeProvider){
 			templateUrl: 'portfolio/views/apps.html',
 			controller: FlashCtrl
 		}).
+
+		when('/code-snippets/:collection?', {
+			templateUrl: 'portfolio/views/code-snippets.html',
+			controller: CodeSnippetsCtrl
+		}).
+
 		otherwise({
 			redirectTo:'/home',
 			templateUrl: 'portfolio/views/home.html',

@@ -1,0 +1,63 @@
+.page-content.code-snippets-page {
+	h1 {
+		margin: 60px 0 0;
+	}
+	h2 {
+		margin: 60px 0 0;
+		font-size: 40px;
+	}
+	.collection-options {
+		margin: 20px auto 10px auto;
+		max-width: 400px;
+		button {
+			width: 100%;
+			i {
+				background: none;
+				color: $white;
+			}
+		}
+		ul {
+			padding: 0;
+			list-style: none;
+			background: $grey;
+			li {
+				cursor: pointer;
+				&:nth-child(odd) {
+					background: $grey-dk;
+				}
+				&:hover {
+					background: $grey;
+				}
+				a {
+					display: block;
+					padding: 15px;
+					color: $white;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.current-collection {
+		list-style: none;
+		overflow: hidden;
+		padding: 0 10px;
+		margin: 10px auto 60px auto;
+		max-width: 1600px;
+		.current-collection-pin {
+			margin-top: 20px;
+			.current-collection-pin-inner {
+				padding: 20px;
+				background: $grey-dk;
+				max-width: 600px;
+				margin: 0 auto;
+				h3 {
+					padding: 10px 10px 20px 10px;
+					a {
+						color: $white;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
