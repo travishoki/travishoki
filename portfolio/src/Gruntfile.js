@@ -3,6 +3,7 @@
 npm install grunt;
 npm install load-grunt-tasks --save-dev;
 npm install grunt-contrib-sass --save-dev;
+npm install grunt-contrib-concat --save-dev;
 npm install grunt-contrib-watch --save-dev;
 npm install grunt-contrib-connect --save-dev;
 
@@ -28,6 +29,20 @@ module.exports = function(grunt) {
 			}
 		},
 
+    	//Compile all of the js files
+		concat: {
+			js: {
+				src: [
+					'js/main.js',
+					'js/config.js',
+					'js/directives.js',
+					'js/filters.js',
+					'js/controllers/*.js'
+				],
+				dest: '../js/main.js'
+			}
+		},
+
 		//Live Reload
 		watch: {
 			src: {
@@ -36,7 +51,7 @@ module.exports = function(grunt) {
 		        	'../../index.html',
 		        	'scss/*.scss'
 		        ],
-		        tasks: ['sass'],
+		        tasks: ['sass', 'concat'],
 		        options: {
 		          livereload: true
 				}
@@ -57,7 +72,7 @@ module.exports = function(grunt) {
 	});
 
 	//Default task
-	grunt.registerTask('default', ['sass']);
+	grunt.registerTask('default', ['sass', 'concat']);
 	grunt.registerTask('server', ['connect', 'watch']);
 
 };
