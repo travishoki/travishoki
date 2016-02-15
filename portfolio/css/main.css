@@ -615,45 +615,45 @@ body.home {
       margin: 10px 0; }
 
 /*============================================================ Portfolio Page ============================================================*/
-div.portfolio-page p {
+div.websites-page p {
   display: block;
   margin-bottom: 5px; }
-div.portfolio-page h2 {
+div.websites-page h2 {
   text-align: center;
   padding-top: 0px; }
-div.portfolio-page ul.techs li {
+div.websites-page ul.techs li {
   margin: 2px; }
-div.portfolio-page .site-filters {
+div.websites-page .site-filters {
   margin-bottom: 20px;
   padding: 20px; }
-  div.portfolio-page .site-filters p {
+  div.websites-page .site-filters p {
     text-align: center;
     max-width: 250px;
     margin: 0 auto; }
-  div.portfolio-page .site-filters .centered-list {
+  div.websites-page .site-filters .centered-list {
     margin: 20px auto 0 auto; }
     @media (max-width: 768px) {
-      div.portfolio-page .site-filters .centered-list {
+      div.websites-page .site-filters .centered-list {
         max-width: 162px; } }
-    div.portfolio-page .site-filters .centered-list ul li img {
+    div.websites-page .site-filters .centered-list ul li img {
       width: 32px;
       height: 32px; }
-div.portfolio-page ul.site-gallery {
+div.websites-page ul.site-gallery {
   list-style: none;
   padding: 0 15px; }
-  div.portfolio-page ul.site-gallery li {
+  div.websites-page ul.site-gallery li {
     overflow: hidden;
     position: relative; }
-    div.portfolio-page ul.site-gallery li h2 {
+    div.websites-page ul.site-gallery li h2 {
       color: white; }
-    div.portfolio-page ul.site-gallery li.item {
+    div.websites-page ul.site-gallery li.item {
       padding: 0 5px 10px 5px;
       cursor: pointer;
       position: relative; }
-      div.portfolio-page ul.site-gallery li.item img.website-img {
+      div.websites-page ul.site-gallery li.item img.website-img {
         width: 100%;
         margin: 0 auto; }
-      div.portfolio-page ul.site-gallery li.item .overlay {
+      div.websites-page ul.site-gallery li.item .overlay {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -661,11 +661,11 @@ div.portfolio-page ul.site-gallery {
         /* Chrome */
         transition: .5s background;
         display: none; }
-        div.portfolio-page ul.site-gallery li.item .overlay .overlay-inner {
+        div.websites-page ul.site-gallery li.item .overlay .overlay-inner {
           position: relative;
           width: 100%;
           height: 100%; }
-          div.portfolio-page ul.site-gallery li.item .overlay .overlay-inner p {
+          div.websites-page ul.site-gallery li.item .overlay .overlay-inner p {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -677,49 +677,49 @@ div.portfolio-page ul.site-gallery {
             font-weight: bold;
             text-align: center;
             text-transform: uppercase; }
-      div.portfolio-page ul.site-gallery li.item:hover .overlay {
+      div.websites-page ul.site-gallery li.item:hover .overlay {
         background: rgba(0, 0, 0, 0.5);
         display: block; }
-      div.portfolio-page ul.site-gallery li.item.active .active-icon {
+      div.websites-page ul.site-gallery li.item.active .active-icon {
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0; }
-        div.portfolio-page ul.site-gallery li.item.active .active-icon img {
+        div.websites-page ul.site-gallery li.item.active .active-icon img {
           margin: 0 auto;
           display: block; }
-    div.portfolio-page ul.site-gallery li.full {
+    div.websites-page ul.site-gallery li.full {
       background: #222;
       width: 100%;
       clear: both;
       padding: 20px 0;
       margin-bottom: 20px; }
-      div.portfolio-page ul.site-gallery li.full div.gallery-img-holder {
+      div.websites-page ul.site-gallery li.full div.gallery-img-holder {
         float: left;
         margin: 0; }
-      div.portfolio-page ul.site-gallery li.full h2 {
+      div.websites-page ul.site-gallery li.full h2 {
         padding: 20px; }
-      div.portfolio-page ul.site-gallery li.full h4 {
+      div.websites-page ul.site-gallery li.full h4 {
         text-align: center;
         margin: 10px 0;
         font-weight: bold; }
-      div.portfolio-page ul.site-gallery li.full .info-holder {
+      div.websites-page ul.site-gallery li.full .info-holder {
         margin: 0 auto;
         max-width: 900px;
         overflow: hidden; }
-        div.portfolio-page ul.site-gallery li.full .info-holder img.website-img {
+        div.websites-page ul.site-gallery li.full .info-holder img.website-img {
           width: 100%;
           max-width: 400px;
           display: block;
           -webkit-box-shadow: 0 0 10px 0 #222222;
           box-shadow: 0 0 10px 0 #222222; }
           @media (max-width: 992px) {
-            div.portfolio-page ul.site-gallery li.full .info-holder img.website-img {
+            div.websites-page ul.site-gallery li.full .info-holder img.website-img {
               margin: 20px auto; } }
-        div.portfolio-page ul.site-gallery li.full .info-holder .info {
+        div.websites-page ul.site-gallery li.full .info-holder .info {
           color: white; }
       @media (min-width: 769px) {
-        div.portfolio-page ul.site-gallery li.full .client-branding {
+        div.websites-page ul.site-gallery li.full .client-branding {
           position: absolute;
           top: 15px;
           left: 0;
@@ -729,66 +729,66 @@ div.portfolio-page ul.site-gallery {
           margin: 0 auto;
           max-width: 900px; } }
       @media (min-width: 769px) {
-        div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner {
+        div.websites-page ul.site-gallery li.full .client-branding .client-branding-inner {
           position: relative;
           float: right;
           height: 150px; } }
       @media (min-width: 769px) {
-        div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder {
+        div.websites-page ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder {
           height: 75px;
           position: relative;
           margin-left: 75px; } }
-      div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder h2 {
+      div.websites-page ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder h2 {
         display: block;
         padding: 0;
         font-weight: bold; }
         @media (min-width: 993px) {
-          div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder h2 {
+          div.websites-page ul.site-gallery li.full .client-branding .client-branding-inner .client-branding-title-holder h2 {
             position: absolute;
             bottom: 0;
             left: 85px;
             right: 85px;
             text-align: center; } }
-      div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner img {
+      div.websites-page ul.site-gallery li.full .client-branding .client-branding-inner img {
         display: block;
         border: solid 5px #4f4f4f;
         border-radius: 100px;
         width: 150px; }
         @media (max-width: 768px) {
-          div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner img {
+          div.websites-page ul.site-gallery li.full .client-branding .client-branding-inner img {
             margin: 15px auto 0 auto; } }
         @media (min-width: 769px) {
-          div.portfolio-page ul.site-gallery li.full .client-branding .client-branding-inner img {
+          div.websites-page ul.site-gallery li.full .client-branding .client-branding-inner img {
             position: absolute;
             top: 0;
             left: 20px; } }
-      div.portfolio-page ul.site-gallery li.full .client-info {
+      div.websites-page ul.site-gallery li.full .client-info {
         position: relative;
         overflow: hidden; }
-        div.portfolio-page ul.site-gallery li.full .client-info .p-holder {
+        div.websites-page ul.site-gallery li.full .client-info .p-holder {
           border: solid 5px #4f4f4f;
           min-height: 120px;
           background: white; }
           @media (min-width: 769px) {
-            div.portfolio-page ul.site-gallery li.full .client-info .p-holder {
+            div.websites-page ul.site-gallery li.full .client-info .p-holder {
               margin-top: 75px;
               margin-left: 75px; } }
-          div.portfolio-page ul.site-gallery li.full .client-info .p-holder p {
+          div.websites-page ul.site-gallery li.full .client-info .p-holder p {
             color: black;
             padding: 15px;
             font-size: 16px;
             color: #4f4f4f;
             text-indent: 20px; }
             @media (min-width: 769px) {
-              div.portfolio-page ul.site-gallery li.full .client-info .p-holder p {
+              div.websites-page ul.site-gallery li.full .client-info .p-holder p {
                 padding-left: 70px; } }
-      div.portfolio-page ul.site-gallery li.full .project-info {
+      div.websites-page ul.site-gallery li.full .project-info {
         background: #4f4f4f;
         padding: 15px 0; }
         @media (min-width: 769px) {
-          div.portfolio-page ul.site-gallery li.full .project-info {
+          div.websites-page ul.site-gallery li.full .project-info {
             margin-left: 75px; } }
-        div.portfolio-page ul.site-gallery li.full .project-info a.btn {
+        div.websites-page ul.site-gallery li.full .project-info a.btn {
           width: 150px; }
 
 /*============================================================ Contacts =========================================================*/

@@ -1,4 +1,4 @@
-function PortfolioCtrl($scope, $http, $modal, $compile, $window, $filter){
+function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 
 	$scope.init = function(){
 		$scope.sites = $scope.getSites();
@@ -385,4 +385,4 @@ function PortfolioCtrl($scope, $http, $modal, $compile, $window, $filter){
 
 	$scope.init();
 
-}//PortfolioCtrl
+}//WebsitesCtrl

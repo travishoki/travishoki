@@ -1,9 +1,9 @@
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
 	$routeProvider.
-		when('/portfolio', {
-			templateUrl: 'portfolio/views/portfolio.html',
-			controller: PortfolioCtrl
+		when('/websites', {
+			templateUrl: 'portfolio/views/websites.html',
+			controller: WebsitesCtrl
 		}).
 		when('/resume', {
 			templateUrl: 'portfolio/views/resume.html'
