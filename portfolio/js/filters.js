@@ -13,5 +13,5 @@ app.filter('techFilter', function() {
 			});
 			return new_items;
 		}
-	}
+	};
 });

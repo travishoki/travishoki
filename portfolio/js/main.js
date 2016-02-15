@@ -15,7 +15,7 @@ app.controller('mainCtrl', function($scope, $http, $location, anchorSmoothScroll
 
 	$scope.scrollTo = function(str){
 		anchorSmoothScroll.scrollTo(str);
-	}//backToTop
+	};//backToTop
 })
 .directive("scrollNav", function ($window) {
     return function(scope, element, attrs) {
@@ -53,7 +53,7 @@ app.controller('mainCtrl', function($scope, $http, $location, anchorSmoothScroll
                 leapY += step; if (leapY > stopY) leapY = stopY; timer++;
             } return;
         }
-        for ( var i=startY; i>stopY; i-=step ) {
+        for (var k = startY; k > stopY; k -= step ) {
             setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
             leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
         }

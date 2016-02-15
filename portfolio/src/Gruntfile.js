@@ -4,7 +4,7 @@ npm install grunt;
 npm install load-grunt-tasks --save-dev;
 npm install grunt-contrib-sass --save-dev;
 npm install grunt-contrib-watch --save-dev;
-npm install grunt-processhtml --save-dev
+npm install grunt-contrib-connect --save-dev;
 
 2) Run the compiler:
 grunt watch
