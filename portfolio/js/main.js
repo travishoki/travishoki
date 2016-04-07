@@ -270,7 +270,7 @@ function ContactCtrl($scope, $http){
 		$scope.sending = true;
 
 		var url = 'portfolio/api/api.php';
-		url += '?cmd=sendContactForm'
+		url += '?cmd=sendContactForm';
 		url += '&name=' + $scope.contactName;
 		url += '&email=' + $scope.contactEmail;
 		url += '&comment=' + $scope.contactComment;
@@ -478,10 +478,10 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 		//Remove the injected items
 		//Loop backwards because of the array splicing
 		if(!alreadyClicked){
-			var i = $scope.sites.length;
-			while (i--) {
-			    if ($scope.sites[i].full) {
-			        $scope.sites.splice(i, 1);
+			var k = $scope.sites.length;
+			while (k--) {
+			    if ($scope.sites[k].full) {
+			        $scope.sites.splice(k, 1);
 			    }
 			}//while
 		}
@@ -629,7 +629,28 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 	$scope.getSites = function(){
 		var array = [
 			{
+				title : 'Overstock.com',
+				subtitle : 'Reviews breakout',
+				url : 'http://overstock.com/',
+				desc : 'Allowing a user to leave rating only reviews.',
+				img: 'overstock',
+				contributions : 'Coordinate deployments with multiple departments.',
+				techs: 'HTML|LESS-CSS|JavaScript|jQuery',
+				live: true
+			},
+			{
+				title : 'Truly Lindsey Photography',
+				subtitle : '',
+				url : 'http://trulylindseyphotography.com/',
+				desc : 'Truly Lindsey Photography is my wife\'s photography company. I am helping to brand her company.',
+				img: 'truly-lindsey-photography',
+				contributions : 'Wordpress customization, design and branding.',
+				techs: 'WordPress|HTML|CSS',
+				live: true
+			},
+			{
 				title : 'Room Choice',
+				subtitle : '',
 				url : 'http://roomchoice.com/',
 				desc : 'Room Choice is a student housing property management software that allows you to see room assignments and reservation requests.',
 				img: 'roomchoice',
@@ -639,6 +660,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'Rooke Capital Management',
+				subtitle : '',
 				url : 'http://rookecapital.com/',
 				desc : 'This is a steady downhill race perfect for first time runners, as well as those looking to improve their time. Fun to be had includes saints and sinners aid stations and heaven and heck finish lines.',
 				img: 'rooke-capital-management',
@@ -648,6 +670,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'RGDJanitorial',
+				subtitle : '',
 				url : 'http://rgdjanitorial.com/',
 				desc : 'RGD Janitorial has been providing Janitorial Services in Utah for over 17 years.',
 				img: 'rgdjanitorial',
@@ -657,6 +680,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'Wedding Website',
+				subtitle : '',
 				url : 'http://wedding.hokihappenings.com/',
 				desc : 'This is the wedding website that I made for my wedding.',
 				img: 'wedding',
@@ -666,6 +690,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'Eric Aroca',
+				subtitle : '',
 				url : 'http://ericaroca.com/',
 				desc : 'This is a steady downhill race perfect for first time runners, as well as those looking to improve their time. Fun to be had includes saints and sinners aid stations and heaven and heck finish lines.',
 				img: 'eric-aroca',
@@ -675,6 +700,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'Saints and Sinners Half Marathon and Team Relay',
+				subtitle : '',
 				url : 'http://saintsandsinnershalf.com/',
 				desc : 'This is a steady downhill race perfect for first time runners, as well as those looking to improve their time. Fun to be had includes saints and sinners aid stations and heaven and heck finish lines.',
 				img: 'saints-and-sinners',
@@ -684,6 +710,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'New Life Recovery',
+				subtitle : '',
 				url : 'http://www.newlife-recovery.org/',
 				desc : 'Creative Media Group is a full service media production house based in Orem|Utah. We specialize in high quality digital video production, post-production, and motion graphics.',
 				img: 'new-life-recovery',
@@ -693,6 +720,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'Creative Media Education',
+				subtitle : '',
 				url : 'http://cmeducation.org/',
 				desc : 'Creative Media Group is a full service media production house based in Orem, Utah. We specialize in high quality digital video production, post-production, and motion graphics.',
 				img: 'creative-media-education',
@@ -702,6 +730,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'LavaVolt',
+				subtitle : '',
 				url : 'http://lavavolt.com',
 				desc : 'LavaVolt is an online film festival and digital distribution solution for independent filmmakers.',
 				img: 'lavavolt',
@@ -711,6 +740,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'Enspark LMS',
+				subtitle : '',
 				url : 'http://lms.enspark.com',
 				desc : 'From Leadership Skills to Time Management, our interactive e-Learning courses make people better.',
 				img : 'enspark-lms',
@@ -719,16 +749,8 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 				live: true,
 			},
 			{
-				title : 'Truly Lindsey Photography',
-				url : 'http://trulylindseyphotography.com/',
-				desc : 'Truly Lindsey Photography is my wife\'s photography company.',
-				img: 'truly-lindsey-photography',
-				contributions : 'Wordpress customization, design and branding.',
-				techs: 'WordPress|HTML|CSS',
-				live: true
-			},
-			{
 				title : 'First Mile',
+				subtitle : '',
 				url : 'http://enspark.net/internationalfulfillment/',
 				desc : 'We provide discounted integrated solutions to ship your products or your customers products for less money.',
 				img : 'first-mile',
@@ -738,6 +760,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'The Putting Tour',
+				subtitle : '',
 				url : 'http://theputtingtour.com',
 				desc : 'The Putting Tour at Qualifiers Golf will train your nervous system by challenging you with dozens of such putts in a 30 minute round. It really works!',
 				img : 'the-putting-tour',
@@ -747,6 +770,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'WinInsights',
+				subtitle : '',
 				url : 'http://wininsights.com',
 				desc : 'WIN Insights is a Diversity and Inclusion - focused learning management system that delivers training, networking, tools, resources, and analytics.',
 				img : 'wininsights',
@@ -756,6 +780,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'Barrier Pest Control',
+				subtitle : '',
 				url : 'http://barrierpc.com',
 				desc : 'Barrier Pest Control will proactively conquer your existing pest populations and prevent future invasions.',
 				img : 'barrier',
@@ -765,6 +790,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'Enspark',
+				subtitle : '',
 				url : 'http://enspark.com',
 				desc : 'From Leadership Skills to Time Management, our interactive e-Learning courses make people better.',
 				img : 'enspark',
@@ -774,6 +800,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'Utah Casa',
+				subtitle : '',
 				url : 'http://utahcasa.org/',
 				desc : 'Casa is a volunteer organization that empowers everyday citizens with the ability to transform the lives of abused and neglected children.',
 				img : 'utah-casa',
@@ -783,6 +810,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'All American Sod Farms',
+				subtitle : '',
 				url : 'http://allamericansod.com/',
 				desc : 'All American Sod Farms is a family owned and operated business.',
 				img : 'all-american-sod',
@@ -792,6 +820,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'Paradigm Life',
+				subtitle : '',
 				url : 'http://paradigmlife.net/',
 				desc : 'Infinite Banking is a concept that allows individuals to utilize Permanent Life Insurance in ways that most individuals and even insurance professionals could never have imagined.',
 				img : 'paradigm-life',
@@ -801,6 +830,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'Debt Free Planning',
+				subtitle : '',
 				url : 'http://debt-free-planning.com',
 				desc : 'Get a Free Online Report and recommended solution to your debt problem.',
 				img : 'debt-free-planning',
@@ -810,6 +840,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 			},
 			{
 				title : 'Southam Consulting',
+				subtitle : '',
 				url : 'http://southamconsulting.net',
 				desc : 'Southam Consulting is a consortium of business specialists in several states who have extensive experience and expertise in helping clients achieve peak performance.',
 				img : 'southam-consulting',
@@ -818,6 +849,7 @@ function WebsitesCtrl($scope, $http, $modal, $compile, $window, $filter){
 				live: true
 			}
 		];
+
 		angular.forEach(array, function(site){
 			site.techs = site.techs.split('|');
 			site.contributions = site.contributions.split('|');

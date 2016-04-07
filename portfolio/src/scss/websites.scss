@@ -195,15 +195,23 @@ div.websites-page{
 							margin-top: 75px;
 							margin-left: 75px;
 						}
+						h3 {
+							padding: 20px 0 0 0;
+							text-align: center;
+							color: $grey-dk;
+						}
 						p {
-							color: black;
 							padding: 15px;
-							@media #{$sm} {
-								padding-left: 70px;
-							}
+							color: black;
 							font-size: 16px;
 							color: #4f4f4f;
 							text-indent: 20px;
+						}
+						h3, p {
+							@media #{$sm} {
+								padding-left: 70px;
+								padding-right: 70px;
+							}
 						}
 					}
 				}

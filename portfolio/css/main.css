@@ -773,15 +773,20 @@ div.websites-page ul.site-gallery {
             div.websites-page ul.site-gallery li.full .client-info .p-holder {
               margin-top: 75px;
               margin-left: 75px; } }
+          div.websites-page ul.site-gallery li.full .client-info .p-holder h3 {
+            padding: 20px 0 0 0;
+            text-align: center;
+            color: #333; }
           div.websites-page ul.site-gallery li.full .client-info .p-holder p {
-            color: black;
             padding: 15px;
+            color: black;
             font-size: 16px;
             color: #4f4f4f;
             text-indent: 20px; }
-            @media (min-width: 769px) {
-              div.websites-page ul.site-gallery li.full .client-info .p-holder p {
-                padding-left: 70px; } }
+          @media (min-width: 769px) {
+            div.websites-page ul.site-gallery li.full .client-info .p-holder h3, div.websites-page ul.site-gallery li.full .client-info .p-holder p {
+              padding-left: 70px;
+              padding-right: 70px; } }
       div.websites-page ul.site-gallery li.full .project-info {
         background: #4f4f4f;
         padding: 15px 0; }

@@ -9,7 +9,7 @@ function ContactCtrl($scope, $http){
 		$scope.sending = true;
 
 		var url = 'portfolio/api/api.php';
-		url += '?cmd=sendContactForm'
+		url += '?cmd=sendContactForm';
 		url += '&name=' + $scope.contactName;
 		url += '&email=' + $scope.contactEmail;
 		url += '&comment=' + $scope.contactComment;
