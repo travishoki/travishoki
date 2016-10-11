@@ -1,4 +1,5 @@
 portfolio/src/node_modules/
 .DS_Store
+**/.DS_Store
 phploy.ini
 node_modules
